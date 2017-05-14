@@ -61,6 +61,7 @@ class StarterSite extends TimberSite
         return $twig;
     }
 
+
     function removejQuery(&$scripts)
     {
         if (!is_admin()) {
