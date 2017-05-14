@@ -27,6 +27,7 @@ class StarterSite extends TimberSite
         add_filter('get_twig', array($this, 'add_to_twig'));
         add_action('init', array($this, 'register_post_types'));
         add_action('init', array($this, 'register_taxonomies'));
+        add_filter('wp_default_scripts', array($this, 'removejQuery'));
         parent::__construct();
     }
 
@@ -60,6 +61,15 @@ class StarterSite extends TimberSite
         return $twig;
     }
 
+    function removejQuery(&$scripts)
+    {
+        if (!is_admin()) {
+            $scripts->remove('jquery');
+        }
+    }
+
 }
 
 new StarterSite();
+
+
