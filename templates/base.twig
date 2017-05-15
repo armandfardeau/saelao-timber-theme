@@ -11,7 +11,7 @@
     {% block header %}
         <div class='menu-navigation'>
             <div class='menu-navigation__logo'>
-                <img src="{{site.theme.link}}/dist/images/logo.png" alt="">
+                <a href="{{ site.url }}"><img src="{{ site.theme.link }}/dist/images/logo.png" alt=""></a>
             </div>
             <nav id="nav-main" class="class='menu-navigation__elements'" role="navigation">
                 {% include "menu.twig" with {'menu': menu.get_items} %}
