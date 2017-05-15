@@ -70,6 +70,7 @@ class StarterSite extends TimberSite
         require_once('wp_functions_inc/custom_taxonomies.php');
     }
 
+    // variables you can send to the view template
     function add_to_context($context)
     {
         require_once('wp_functions_inc/context.php');
