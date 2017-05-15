@@ -1,13 +1,21 @@
 <?php
 
 if (!class_exists('Timber')) {
-    add_action('admin_notices', function () {
-        echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url(admin_url('plugins.php#timber')) . '">' . esc_url(admin_url('plugins.php')) . '</a></p></div>';
-    });
+    add_action(
+        'admin_notices',
+        function () {
+            echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="'.esc_url(
+                    admin_url('plugins.php#timber')
+                ).'">'.esc_url(admin_url('plugins.php')).'</a></p></div>';
+        }
+    );
 
-    add_filter('template_include', function ($template) {
-        return get_stylesheet_directory() . '/static/no-timber.html';
-    });
+    add_filter(
+        'template_include',
+        function ($template) {
+            return get_stylesheet_directory().'/static/no-timber.html';
+        }
+    );
 
     return;
 }
@@ -45,7 +53,7 @@ class StarterSite extends TimberSite
 
 
         // append path
-        $paths[] = get_stylesheet_directory() . './acf-json';
+        $paths[] = get_stylesheet_directory().'./acf-json';
 
 
         // return
@@ -56,7 +64,7 @@ class StarterSite extends TimberSite
     function acf_json_save_point($path)
     {
 
-        return get_stylesheet_directory() . '/acf-json';
+        return get_stylesheet_directory().'/acf-json';
 
     }
 
@@ -70,16 +78,22 @@ class StarterSite extends TimberSite
         require_once('wp_functions_inc/custom_taxonomies.php');
     }
 
-    // variables you can send to the view template
+    // Gobal variables you can send to the view template
     function add_to_context($context)
     {
-        require_once('wp_functions_inc/context.php');
+        $context['stuff'] = 'I am a value set in your functions.php file';
+        $context['notes'] = 'These values are available everytime you call Timber::get_context();';
+        $context['menu'] = new TimberMenu();
+        $context['site'] = $this;
+        $context['qux'] = 'heyyyyy';
+
         return $context;
     }
 
     function myfoo($text)
     {
         $text .= ' bar!';
+
         return $text;
     }
 
@@ -88,6 +102,7 @@ class StarterSite extends TimberSite
         /* this is where you can add your own functions to twig */
         $twig->addExtension(new Twig_Extension_StringLoader());
         $twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', array($this, 'myfoo')));
+
         return $twig;
     }
 
