@@ -3,6 +3,9 @@
 <!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
 <!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<![endif]-->
 <head>
     <meta charset="{{site.charset}}" />
         <title>   
@@ -13,7 +16,7 @@
             {% endif %}
         </title>
     <meta name="description" content="{{site.description}}">
-    <link rel="stylesheet" href="{{site.theme.link}}/dist/styles/main.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{site.theme.link}}/dist/styles/styles.min.css" type="text/css" media="screen" />
     <script src="{{site.theme.link}}/dist/scripts/bundle.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
