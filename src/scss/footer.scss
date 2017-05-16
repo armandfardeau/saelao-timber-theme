@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  background: $primaryBlue;
+  height: 40px;
+  margin-top: 290px;
+
+  ul {
+    display: flex;
+    text-transform: uppercase;
+    font-family: $font;
+    font-weight: lighter;
+    font-size: 0.9em;
+    margin-left: -1.6em;
+    color: $lightBlue;
+    list-style-type: none;
+
+    li {
+      margin-left: 1.975em;
+      margin-top: 10px;
+    }
+  }
+}
