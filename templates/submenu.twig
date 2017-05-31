@@ -1,0 +1,9 @@
+<h2>Ceci est un submenu: </h2>
+{% if post.children %}
+    <h4>Inside this section:</h4>
+    <ul>
+        {% for child in post.children %}
+            <li><a href="{{child.link}}">{{child.title}}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}

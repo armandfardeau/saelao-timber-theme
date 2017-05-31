@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    <h2>ceci est un bloc du contenu de la page 2 col</h2>
+    <div class="content-wrapper">
+        <section class="two-col-left">
+            <h3>Je suis un article de gauche</h3>
+            <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+                <section class="article-content">
+                    <h1 class="article-h1">{{ post.title }}</h1>
+                    <div class="article-body">
+                        {{ post.content }}
+                    </div>
+                </section>
+            </article>
+        </section>
+        <section class="two-col-right">
+            <h3>Je suis un article de droite</h3>
+            <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+                <section class="article-content">
+                    <h1 class="article-h1">{{ post.title }}</h1>
+                    <div class="article-body">
+                        {{ post.content }}
+                    </div>
+                </section>
+            </article>
+        </section>
+        </article>
+    </div><!-- /content-wrapper -->
+{% endblock %}
