@@ -11,10 +11,12 @@
     {% block header %}
         <div class='menu-navigation'>
             <div class='menu-navigation__logo'>
+
                 <a href="{{ site.url }}"><img src="{{ site.theme.link }}/dist/images/logo.png" alt=""></a>
             </div>
             <nav id="nav-main" class="class='menu-navigation__elements'" role="navigation">
-                {% include "menu.twig" with {'menu': menu.get_items} %}
+                {% include "header-menu.twig" %}
+
             </nav><!-- #nav -->
             <div class='menu-navigation__button'>
                 <a href="#" class='button-donate__text'>I WANT TO <span>DONATE</span></a>
@@ -30,7 +32,6 @@
         {% block content %}
             Sorry, no content
         {% endblock %}
-
     </div>
     {% if sidebar %}
         <aside class="layout-sidebar">
@@ -38,6 +39,7 @@
         </aside>
     {% endif %}
 </section>
+
 
 {% block footer %}
     <footer id="footer">
