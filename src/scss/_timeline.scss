@@ -29,6 +29,9 @@
     font-weight:lighter;
     line-height:1.5;
   }
+  img{
+    display:none;
+  }
 }
 .timeline-place{
   position:relative;
@@ -51,8 +54,16 @@
   position: relative;
 }
 
-@media only screen and (min-width: 1170px) {
+
+@media screen and (max-width: 625px)
+{
+  .project__box{
+    margin-top:-30px;
+  }
+
 }
+
+
 .timeline-img {
   background: #EFBB2B;
   position: absolute;
@@ -91,4 +102,32 @@
   height: 10px;
   top:100%;
   border-radius: 50%;
+}
+#myARROW,
+#myARROW2,
+#myARROW3
+{
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+
+
+
+@media screen and (max-width: 725px)
+{
+  .menu-navigation__button
+  {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 1055px)
+{
+  .project__text li:first-child
+  {
+    display:none;
+  }
 }

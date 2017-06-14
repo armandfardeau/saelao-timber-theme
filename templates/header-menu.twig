@@ -5,20 +5,19 @@
                 <a href="{{ item.get_link }}">{{ item.title }}</a>
                 {% if item.get_children %}
                     {% for child in item.get_children %}
-                        <ul>
                             <li class="{{ child.classes | join(' ') }}">
                                 <a href="{{ child.get_link }}">{{ child.title }}</a>
-                                {% if child.get_children %}
-                                    {% for childchild in child.get_children %}
-                                        <ul>
+                                 {% if child.get_children %}
+                                     {% for childchild in child.get_children %}
+                                          <ul class='submenu'>
                                             <li class="{{ childchild.classes | join(' ') }}">
                                                 <a href="{{ childchild.get_link }}">{{ childchild.title }}</a>
                                             </li>
-                                        </ul>
+                                              </ul>
                                     {% endfor %}
                                 {% endif %}
                             </li>
-                        </ul>
+
                     {% endfor %}
                 {% endif %}
             </li>

@@ -1,5 +1,5 @@
 {% block html_head_container %}
-
+<script src="{{ site.theme.link }}/src/scripts/app.js" charset="utf-8"></script>
     {% include 'html-header.twig' %}
     {% block head %}
     {% endblock %}
@@ -7,21 +7,26 @@
 {% endblock %}
 
 <body class="{{ body_class }}" data-template="base.twig">
-<header class="header">
+<header class="header" id='headertransi'>
     {% block header %}
         <div class='menu-navigation'>
+          <div class="menu-mobile">
+            <img onclick="openNav()" id='menu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/menu-mobile.png" alt="">
+          </div>
             <div class='menu-navigation__logo'>
-
                 <a href="{{ site.url }}"><img src="{{ site.theme.link }}/dist/images/logo.png" alt=""></a>
             </div>
-            <nav id="nav-main" class="class='menu-navigation__elements'" role="navigation">
+            <nav id="nav-main" class="menu-navigation__elements" role="navigation">
+              <div class='menu-navigation__elements'>
                 {% include "header-menu.twig" %}
 
             </nav><!-- #nav -->
             <div class='menu-navigation__button'>
-                <a href="#" class='button-donate__text'>I WANT TO <span>DONATE</span></a>
+              <a href="#" class='button-donate__text'>I WANT TO <span>DONATE</span></a>
             </div>
-        </div>
+            </div>
+              </div>
+
     {% endblock %}
 </header>
 
@@ -33,11 +38,6 @@
             Sorry, no content
         {% endblock %}
     </div>
-    {% if sidebar %}
-        <aside class="layout-sidebar">
-            {{ sidebar }}
-        </aside>
-    {% endif %}
 </section>
 
 
