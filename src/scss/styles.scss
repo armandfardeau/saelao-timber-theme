@@ -5,7 +5,11 @@
 @import "footer";
 
 
-
+.testage{
+  width:200px;
+  height:200px;
+  background:red;
+}
 ul li {
   white-space: nowrap;
   list-style-type: none;
@@ -165,6 +169,8 @@ body {
   }
 }
 .help{
+  display: inline-block;
+     vertical-align: middle;
   margin:auto;
   text-align:center;
   h2{
@@ -703,4 +709,86 @@ margin-left:-200px;
 }
 .footer-ctn{
   margin-left:120px;
+}
+
+
+
+
+
+
+.team-member {
+  position:relative;
+  margin-top:50px;
+  display: flex;
+align-items: center;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h2{
+        font-family:$font;
+        font-weight:500;
+        margin-top:-10px;
+    }
+    p{
+      font-family:$font;
+      font-weight:lighter;
+      color:#141414;
+      font-size:0.75em;
+      line-height:1.8;
+    }
+}
+.teamtext{
+  margin-top:-100px;
+  h2{
+    font-size:1.5em;
+  }
+}
+
+.helpus{
+  margin-top:100px;
+  -webkit-filter: opacity(.9);
+ filter: opacity(.9);
+  position:relative;
+  display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    background-position:center center;
+  width:100%;
+  background-image: url('../images/helpus.png');
+  background-size:cover;
+  height:270px;
+  h2{
+    font-size:2.2em;
+    color:$white;
+  }
+}
+.teampart{
+  position:relative;
+  margin:auto;
+  width:60%;
+}
+
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
 }
