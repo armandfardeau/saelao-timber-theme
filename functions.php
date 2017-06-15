@@ -8,6 +8,7 @@ if ( ! class_exists( 'Timber' ) ) {
 	add_filter( 'template_include', function ( $template ) {
 		return get_stylesheet_directory() . '/static/no-timber.html';
 	} );
+
 	return;
 }
 
@@ -69,12 +70,17 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
-		$context['foo'] = 'teub';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['headerMenu'] = new TimberMenu('header-menu');
-		$context['footerMenu'] = new TimberMenu('footer-menu');
-		$context['site'] = $this;
+		$context['foo']        = 'teub';
+		$context['stuff']      = 'I am a value set in your functions.php file';
+		$context['notes']      = 'These values are available everytime you call Timber::get_context();';
+		$context['headerMenu'] = new TimberMenu( 'header-menu' );
+		$context['footerMenu'] = new TimberMenu( 'footer-menu' );
+		$context['site']       = $this;
+		// WP_Query arguments
+		$args = array(
+			'post_type'              => array( 'projects' ),
+		);
+		$context['projects'] = Timber::get_posts( $args );
 
 		return $context;
 	}
