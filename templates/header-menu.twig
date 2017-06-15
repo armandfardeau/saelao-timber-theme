@@ -1,26 +1,37 @@
 {% if headerMenu %}
     <ul>
+
         {% for item in headerMenu.get_items %}
             <li class="{{ item.classes | join(' ') }}">
-                <a href="{{ item.get_link }}">{{ item.title }}</a>
-                {% if item.get_children %}
-                    {% for child in item.get_children %}
-                            <li class="{{ child.classes | join(' ') }}">
-                                <a href="{{ child.get_link }}">{{ child.title }}</a>
-                                 {% if child.get_children %}
-                                     {% for childchild in child.get_children %}
-                                          <ul class='submenu'>
-                                            <li class="{{ childchild.classes | join(' ') }}">
-                                                <a href="{{ childchild.get_link }}">{{ childchild.title }}</a>
-                                            </li>
-                                              </ul>
-                                    {% endfor %}
-                                {% endif %}
-                            </li>
+                <a href="{{ item.get_link }}">{{ item.title }}</a></li>
 
-                    {% endfor %}
-                {% endif %}
-            </li>
+            {# Loop trough post which are in custom post types projects and display them after Our projects link #}
+            {% if item.title=="Our Projects" %}
+                {% for item in projects %}
+                    <ul>
+                        <li class="{{ item.post_type | join(' ') }}">
+                            <a href="{{ item.guid }}">{{ item.post_title }}</a></li>
+                    </ul>
+                {% endfor %}
+            {% endif %}
+            {% if item.get_children %}
+                <ul>
+                {% for child in item.get_children %}
+                    <li class="{{ child.classes | join(' ') }}">
+                        <a href="{{ child.get_link }}">{{ child.title }}</a>
+                    </li>
+                    {% if child.get_children %}
+                        {% for childchild in child.get_children %}
+                            <ul class='submenu'>
+                                <li class="{{ childchild.classes | join(' ') }}">
+                                    <a href="{{ childchild.get_link }}">{{ childchild.title }}</a>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         {% endfor %}
     </ul>
 {% endif %}
