@@ -54,8 +54,8 @@
 
         {# This part is looped trough our projects acf fields #}
         <div class='project'>
-            <h2>Our projects</h2>
-            <p>We believe that helping other associations is one of the aim of EEFA.</p>
+            <h2>{{ home.get_field('our_projects_title') }}</h2>
+            <p>{{ home.get_field('our_projects_description') }}</p>
 
             <a href='#'>
                 <div class='project__box'>
