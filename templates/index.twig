@@ -144,27 +144,16 @@
         </div>
         <div class='partners'>
             <div class='part__text'>
-                <h2>our main partners</h2>
+                <h2>{{ home.partners_title }}</h2>
             </div>
-            <p>Have a quick overview of the projects leaded by EEFA.</p>
+            <p>{{ home.partners_description }}</p>
             <ul>
-
-                <li><img src="{{ site.theme.link }}/dist/images/UBELONG.png" alt="" id='imgpartner1'>
-
-                </li>
-                <li><img src="{{ site.theme.link }}/dist/images/SAE LAO PROJECT.png" alt="" id='imgpartner2'>
-
-                </li>
-                <li><img src="{{ site.theme.link }}/dist/images/ORGANIC FARM.png" alt="" id='imgpartner3'>
-
-                </li>
-                <li><img src="{{ site.theme.link }}/dist/images/LLL.png" alt="" id='imgpartner4'>
-
-                </li>
-                <li><img src="{{ site.theme.link }}/dist/images/LAOSpart.png" alt="" id='imgpartner5'>
-
-
-                </li>
+                {% for item in home.get_field('partners') %}
+                    <li>
+                        <img src="{{ item.partner_image }}" alt="{{ item.partner_name }}"
+                             id="{{ item.partner_name|sanitize }}">
+                    </li>
+                {% endfor %}
             </ul>
 
         </div>

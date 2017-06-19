@@ -522,9 +522,33 @@
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_5947c634ca9d4",
-                    "label": "partners name",
-                    "name": "partners_name",
+                    "key": "field_5947e3e098eea",
+                    "label": "Partner image",
+                    "name": "partner_image",
+                    "type": "image",
+                    "instructions": "Only 110 pixels x 110 pixels pictures",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 109,
+                    "min_height": 109,
+                    "min_size": "",
+                    "max_width": 111,
+                    "max_height": 111,
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5947e7b49e0e1",
+                    "label": "Partner name",
+                    "name": "partner_name",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -539,30 +563,6 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_5947c63eca9d5",
-                    "label": "partners image",
-                    "name": "partners_image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 }
             ]
         }
@@ -600,5 +600,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497883278
+    "modified": 1497884608
 }
