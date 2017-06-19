@@ -14,7 +14,7 @@ $post            = Timber::query_post();
 $context['post'] = $post;
 
 if ( in_category( 'project' ) ) {
-	Timber::render( 'single-category-page.twig', $context );
+	Timber::render( 'single-category-project.twig', $context );
 } else {
 	if ( post_password_required( $post->ID ) ) {
 		Timber::render( 'single-password.twig', $context );
