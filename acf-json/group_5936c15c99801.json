@@ -403,6 +403,33 @@
             "maxlength": ""
         },
         {
+            "key": "field_5947e02d6de0b",
+            "label": "donate button link type",
+            "name": "donate_button_link_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "URL": "URL",
+                "SHORTCODE": "SHORTCODE"
+            },
+            "default_value": [
+                "URL"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 1,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
             "key": "field_5947c5646ab7c",
             "label": "donate button link",
             "name": "donate_button_link",
@@ -573,5 +600,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497882041
+    "modified": 1497883278
 }
