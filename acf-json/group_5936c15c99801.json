@@ -128,8 +128,8 @@
                     },
                     "choices": {
                         "EDUCATION": "EDUCATION",
-                        "EMPLOYEMENT": "EMPLOYEMENT",
-                        "ENVIRONNEMENT": "ENVIRONNEMENT"
+                        "EMPLOYMENT": "EMPLOYMENT",
+                        "ECOLOGY": "ECOLOGY"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -573,5 +573,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497880766
+    "modified": 1497881036
 }
