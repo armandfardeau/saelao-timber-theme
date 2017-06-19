@@ -264,7 +264,7 @@
             },
             "collapsed": "",
             "min": "",
-            "max": 3,
+            "max": 4,
             "layout": "table",
             "button_label": "Add Row",
             "sub_fields": [
@@ -329,7 +329,7 @@
         {
             "key": "field_5947c4f3810b4",
             "label": "Want to help us title",
-            "name": "want_to_help_us-title",
+            "name": "want_to_help_us_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -573,5 +573,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497881036
+    "modified": 1497882041
 }
