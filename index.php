@@ -15,6 +15,8 @@
 
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts();
+$home_id = get_page_by_title('home');
+$context['home'] = new TimberPost( $home_id );
 $templates = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'home.twig' );

@@ -40,7 +40,7 @@
         {
             "key": "field_5947c27b2e725",
             "label": "Values",
-            "name": "",
+            "name": "values",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -573,5 +573,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497877196
+    "modified": 1497880413
 }

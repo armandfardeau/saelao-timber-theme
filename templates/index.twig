@@ -27,16 +27,16 @@
 
         {# This part is looped trough our values acf fields #}
         <div class='part__text'>
-            <h2>{{ our_values_main_title }}</h2>
+            <h2>{{ home.get_field('our_values_main_title') }}</h2>
         </div>
         <div class='timeline-place'>
             <section id="timeline">
                 <div class='timeline__border'></div>
 
-                {% for item in post.get_field('values') %}
+                {% for item in home.get_field('values') %}
                     <div class="timeline-block">
                         <div class="timeline-img">
-                            <img src="{{ site.theme.link }}/dist/images/{{ value_icon }}.png" alt="Picture">
+                            <img src="{{ site.theme.link }}/dist/images/{{ item.value_icon }}.png" alt="Picture">
 
                         </div> <!-- cd-timeline-img -->
                         <div class="timeline-content">
@@ -44,7 +44,7 @@
                                                             src="{{ site.theme.link }}/dist/images/arrowleft.png"
                                                             alt=""></h2>
                             <h3>{{ item.value_subtitle }}</h3>
-                            <p id='myDIV3'>{{ item.value_description }}</p>
+                            <p id='myDIV3'>{{ home.value_description }}</p>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
                 {% endfor %}
