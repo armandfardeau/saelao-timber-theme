@@ -1,9 +1,275 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h2>{{foo}}</h2>
-	<p>{{qux}}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
-{% endblock %}
+<div class='sidenav' id='mySidenav'>
+  <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png" alt="">
+  <div class="mobile-links">
+    {% include "header-menu.twig" %}
+  </div>
+</div>
+&nbsp;
+<div>
+  <h1 id='ctn-movable' class='home-presentation__text'>EEFA <span>equal education for all</span></h1>
+  <div id='ctn-donate' class="mobile-donation">
+    Donate
+  </div>
+</div>
+<div class='header__border'>
+</div>
+<div class='container-grid'>
+  <div class='presentation__text' >
+    <p>Equal Education For All (EEFA) is a non-profit effort begun in 2007 by Ward Reekmans, a volunteer from
+      Belgium, and Thanongsi Solangkoun, the owner of the Vang Vieng Organic Farm that provides educational
+      opportunities to local youth in Vang Vieng. EEFA achieved Association status (Association #0151) in
+      2011.</p>
+    </div>
+
+    <div class='part__text'>
+      <h2>what we believe in</h2>
+    </div>
+    <div class='timeline-place'>
+      <section id="timeline">
+        <div class='timeline__border'></div>
+
+        <div class="timeline-block">
+          <div class="timeline-img">
+            <img src="{{ site.theme.link }}/dist/images/EDUCATION.png" alt="Picture">
+
+          </div> <!-- cd-timeline-img -->
+          <div class="timeline-content">
+            <h2>education <img onclick="myFunction3()"  id='myARROW3' class='Arrow' src="{{ site.theme.link }}/dist/images/arrowleft.png" alt=""></h2>
+            <h3>Education accessible for all.</h3>
+            <p id='myDIV3'>One of the main goals of SAE LAO is to promote equal education for all with English classes
+              for children and adults plus several other educational programmes for the local community,
+              completely free of charge and run by the volunteers.
+              2016 saw more than 300 students register for the free English classes.</p>
+            </div> <!-- cd-timeline-content -->
+          </div> <!-- cd-timeline-block -->
+
+          <div class="timeline-block">
+            <div class="timeline-img">
+
+              <img src="{{ site.theme.link }}/dist/images/EMPLOYMENT.png" alt="Picture">
+
+            </div> <!-- cd-timeline-img -->
+            <div class="timeline-content">
+              <h2>EMPLOYMENT <img onclick="myFunction2()"  id='myARROW2' class='Arrow' src="{{ site.theme.link }}/dist/images/arrowleft.png" alt=""></h2>
+              <h3>Education accessible for all.</h3>
+              <p id='myDIV2'>One of the main goals of SAE LAO is to promote equal education for all with English classes
+                for children and adults plus several other educational programmes for the local community,
+                completely free of charge and run by the volunteers.
+                2016 saw more than 300 students register for the free English classes.</p>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+            <div class="timeline-block">
+              <div class="timeline-img">
+                <img src="{{ site.theme.link }}/dist/images/ECOLOGY.png" alt="Picture">
+              </div> <!-- cd-timeline-img -->
+              <div class="timeline-content">
+                <h2>environment <img  onclick="myFunction()" id='myARROW' class='Arrow' src="{{ site.theme.link }}/dist/images/arrowleft.png" alt=""></h2>
+                <h3>Education accessible for all.</h3>
+
+                <p id='myDIV'>One of the main goals of SAE LAO is to promote equal education for all with English classes
+                  for children and adults plus several other educational programmes for the local community,
+                  completely free of charge and run by the volunteers.
+                  2016 saw more than 300 students register for the free English classes.</p>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+              <div class='timeline-end__border'></div>
+            </section>
+          </div>
+          <div class='project'>
+            <h2>Our projects</h2>
+            <p>We believe that helping other associations is one of the aim of EEFA.</p>
+
+            <a href='#'>  <div class='project__box'>
+
+
+              <img src="{{ site.theme.link }}/dist/images/HOME_SAELAO.png" alt="">
+
+              <a href="#"><h2>Sae lao</h2></a>
+              <div class="project__text">
+                <ul>
+                  <li><p>Project description Project description Project description Project description Project
+                    descriptionProject descriptionProject descriptionProject description</p></li>
+
+                    <li><p>View the project</p></li>
+
+                  </ul>
+                </div>
+              </div></a>
+
+              <div class='project__box'>
+
+                <img src="{{ site.theme.link }}/dist/images/ORGANIC_RESTAURANT.png" alt="">
+
+                <a href="#"><h2>Sae lao</h2></a>
+                <div class="project__text">
+                  <ul>
+                    <li><p>Project description Project description Project description Project description Project
+                      descriptionProject descriptionProject descriptionProject description</p></li>
+
+                      <li><p>View the project</p></li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='stat__number'>
+              <div class='container-grid__last'>
+                <div class='stat-content'>
+                  <div class='part__text'>
+                    <h2>IN A FEW NUMBERS</h2>
+                    <p>Have a quick overview of the projects leaded by EEFA.</p>
+                  </div>
+
+                  <div class="stat__number-pos">
+                    <ul>
+                      <li><h2>150</h2></li>
+                      <li><h3>VOLUNTEERS</h3></li>
+                    </ul>
+                    <ul>
+                      <li><h2>1234</h2></li>
+                      <li><h3>STUDENTS HELPED</h3></li>
+                    </ul>
+                    <ul>
+                      <li><h2>1700</h2></li>
+                      <li><h3>CONTRIBUTORS</h3></li>
+                    </ul>
+                    <ul>
+                      <li><h2>250</h2></li>
+                      <li><h3>LOCALS HELPED</h3></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='live container-grid__live'>
+              <div class='part__text help'>
+                <h2>want to help us ?</h2>
+                <a href="#">
+                  <button type="button" name="button">join us</button>
+                </a>
+              </div>
+              <h2 class='live'>Live</h2>
+
+              <div class='live-collection'>
+                <div class="live-container container-grid__live">
+                  <ul>
+                    <li><img src="{{ site.theme.link }}/dist/images/1.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/2.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/3.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/4.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/5.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/6.png" alt=""/></li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+              <div class='partners'>
+                <div class='part__text'>
+                  <h2>our main partners</h2>
+                </div>
+                <p>Have a quick overview of the projects leaded by EEFA.</p>
+                <ul>
+
+                  <li><img src="{{ site.theme.link }}/dist/images/UBELONG.png" alt="" id='imgpartner1'>
+
+                  </li>
+                  <li><img src="{{ site.theme.link }}/dist/images/SAE LAO PROJECT.png" alt="" id='imgpartner2'>
+
+                  </li>
+                  <li><img src="{{ site.theme.link }}/dist/images/ORGANIC FARM.png" alt="" id='imgpartner3'>
+
+                  </li>
+                  <li><img src="{{ site.theme.link }}/dist/images/LLL.png" alt="" id='imgpartner4'>
+
+                  </li>
+                  <li><img src="{{ site.theme.link }}/dist/images/LAOSpart.png" alt="" id='imgpartner5'>
+
+
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+            <div class="partners__info">
+              <div class='container-grid__partners'>
+                <p class='partner_text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quibusdam exercitationem et est
+                  necessitatibus, eos, doloribus veniam eius fugit reprehenderit eveniet, similique quis dolor minima
+                  facilis libero doloremque voluptas aperiam. lorem.</p>
+
+                </div>
+              </div>
+              <div class='form'>
+                <h2>Any questions ?</h2>
+                <div class='contact__form'>
+                  <select>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                  <input type="text" name="" value="" placeholder=" E-mail adress">
+                  <ul>
+                    <li><input type="text" name="" value="" placeholder=" Name"></li>
+                    <li><input type="text" name="" value="" placeholder=" Surname"></li>
+                  </ul>
+                  <textarea name="name" rows="8" cols="80" placeholder="Your message..."></textarea>
+                  <button class='button-ques' type="submit" name="button">Send questions</button>
+                </div>
+              </div>
+              <div class='newsletter'>
+                <div class="newsletter__position">
+                  <ul>
+                    <li><h2>Subscribe to our newsletter</h2></li>
+                    <li><input type="text" name="" value="" placeholder=" Name"></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class='container-grid__last'>
+                <div class='contact'>
+                  <ul>
+                    <li>
+                      <div class='contactus'>
+                        <h2>Contact us </h2>
+                        <p>Organic Farm Vang Vieng<br>
+                          P.O. Box 253<br>
+                          Vang Vieng<br>
+                          Vientiane Province, LAO P.D.R.<br>
+                        </p>
+                        <p>+856-(0)20-2292 8630 <span>- EEFA office</span><br>
+                          +856-(0)20 9194 9923 <span>- Sengkeo Frichitthavong</span><br>
+                          <span>office@eefalaos.org</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class='map'><img src="{{ site.theme.link }}/dist/images/map.png" alt=""></div>
+
+                      </li>
+                      <li>
+                        <div class='social'>
+                          <h2>Follow us </h2>
+                          <ul>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/FACEBOOK.svg" alt=""></li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/TWITTER.svg" alt=""></li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/INSTAGRAM.svg" alt=""></li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/YOUTUBE.svg" alt=""></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                {#  {% for post in posts %}
+                {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+              {% endfor %}#}
+            {% endblock %}

@@ -1,44 +1,51 @@
 {% block html_head_container %}
-
-{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
-	</head>
+<script src="{{ site.theme.link }}/src/scripts/app.js" charset="utf-8"></script>
+    {% include 'html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+    </head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header" >
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
-			{% endblock %}
-		</header>
+<body class="{{ body_class }}" data-template="base.twig">
+<header class="header" id='headertransi'>
+    {% block header %}
+        <div class='menu-navigation'>
+          <div class="menu-mobile">
+            <img onclick="openNav()" id='menu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/menu.png" alt="">
+          </div>
+            <div class='menu-navigation__logo'>
+                <a href="{{ site.url }}"><img src="{{ site.theme.link }}/dist/images/logo.png" alt=""></a>
+            </div>
+            <nav id="nav-main" class="menu-navigation__elements" role="navigation">
+              <div class='menu-navigation__elements'>
+                {% include "header-menu.twig" %}
 
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</section>
+            </nav><!-- #nav -->
+            <div class='menu-navigation__button'>
+              <a href="#" class='button-donate__text'>I WANT TO <span>DONATE</span></a>
+            </div>
+            </div>
+              </div>
 
-		{% block footer %}
-			<footer id="footer">
-				{% include 'footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
-		{% endblock %}
-	</body>
+    {% endblock %}
+</header>
+
+<section id="content" role="main" class="content-wrapper">
+
+    {% if title %}<h1>{{ title }}</h1>{% endif %}
+    <div class="wrapper {{ sidebar_class }}">
+        {% block content %}
+            Sorry, no content
+        {% endblock %}
+    </div>
+</section>
+
+
+{% block footer %}
+    <footer id="footer">
+        {% include 'footer.twig' %}
+    </footer>
+    {{ function('wp_footer') }}
+{% endblock %}
+</body>
 </html>

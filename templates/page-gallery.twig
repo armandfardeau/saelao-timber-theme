@@ -1,0 +1,103 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+<div class='sidenav' id='mySidenav'>
+  <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png" alt="">
+  <div class="mobile-links">
+    {% include "header-menu.twig" %}
+  </div>
+</div>
+&nbsp;
+<div>
+  <h1 id='ctn-movable' class='home-presentation__text'>EEFA <span>equal education for all</span></h1>
+  <div id='ctn-donate' class="mobile-donation">
+    Donate
+  </div>
+</div>
+<div class='header__border'>
+</div>
+<div class='teampart'>
+  <div class='presentation__text'>
+    <div class='part__text teamtext'>
+      <h2>Gallery</h2>
+    </div>
+    <p>EEFA’s staff consist primarily of unpaid volunteers, with the exception of one member. The following people are the principal staff members at EEFA.</p>
+  </div>
+GALLERY PLUGIN HERE
+</div>
+              <div class='helpus'>
+                <div class='part__text help'>
+                  <h2>want to help us ?</h2>
+                  <a href="#">
+                    <button type="button" name="button">join us</button>
+                  </a>
+                </div>
+              </div>
+
+              <div class='form'>
+                <h2>Any questions ?</h2>
+                <div class='contact__form'>
+                  <select>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                  <input type="text" name="" value="" placeholder=" E-mail adress">
+                  <ul>
+                    <li><input type="text" name="" value="" placeholder=" Name"></li>
+                    <li><input type="text" name="" value="" placeholder=" Surname"></li>
+                  </ul>
+                  <textarea name="name" rows="8" cols="80" placeholder="Your message..."></textarea>
+                  <button class='button-ques' type="submit" name="button">Send questions</button>
+                </div>
+              </div>
+              <div class='newsletter'>
+                <div class="newsletter__position">
+                  <ul>
+                    <li><h2>Subscribe to our newsletter</h2></li>
+                    <li><input type="text" name="" value="" placeholder=" Name"></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class='container-grid__last'>
+                <div class='contact'>
+                  <ul>
+                    <li>
+                      <div class='contactus'>
+                        <h2>Contact us </h2>
+                        <p>Organic Farm Vang Vieng<br>
+                          P.O. Box 253<br>
+                          Vang Vieng<br>
+                          Vientiane Province, LAO P.D.R.<br>
+                        </p>
+                        <p>+856-(0)20-2292 8630 <span>- EEFA office</span><br>
+                          +856-(0)20 9194 9923 <span>- Sengkeo Frichitthavong</span><br>
+                          <span>office@eefalaos.org</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class='map'><img src="{{ site.theme.link }}/dist/images/map.png" alt=""></div>
+
+                      </li>
+                      <li>
+                        <div class='social'>
+                          <h2>Follow us </h2>
+                          <ul>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/FACEBOOK.svg" alt=""></li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/TWITTER.svg" alt=""></li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/INSTAGRAM.svg" alt=""></li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/YOUTUBE.svg" alt=""></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+{% endblock %}

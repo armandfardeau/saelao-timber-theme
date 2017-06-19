@@ -1,0 +1,11 @@
+<div class='footer-ctn'>
+{% if footerMenu %}
+    <ul>
+        {% for item in footerMenu.get_items %}
+            <li class="{{ item.classes | join(' ') }}">
+                <a href="{{ item.get_link }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</div>

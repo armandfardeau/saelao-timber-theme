@@ -1,0 +1,133 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.timeline-content{
+  padding:10px;
+  position:relative;
+  margin-left:3em;
+  margin-bottom:-20px;
+  h2{
+    margin-top:30px;
+    font-family:$font;
+    font-weight:550;
+    font-size:1.5em;
+    color:#0B0B0B;
+    text-transform:uppercase;
+  }
+  h3{
+    margin-top:-15px;
+    font-family:$font;
+    font-size:1em;
+    font-weight:400;
+  }
+  p{
+    font-family:$font;
+    font-size:0.9em;
+    font-weight:lighter;
+    line-height:1.5;
+  }
+  img{
+    display:none;
+  }
+}
+.timeline-place{
+  position:relative;
+}
+#timeline {
+  margin-top:50px;
+  position: relative;
+}
+#timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background: $primaryYellow;
+}
+
+.timeline-block {
+  margin-top:-4px;
+  position: relative;
+}
+
+
+@media screen and (max-width: 625px)
+{
+  .project__box{
+    margin-top:-30px;
+  }
+
+}
+
+
+.timeline-img {
+  background: #EFBB2B;
+  position: absolute;
+  margin-top:30px;
+  left:-35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.timeline-img img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+.timeline__border{
+  background: $primaryYellow;
+  position: absolute;
+  top: 0;
+  left:-4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.timeline-end__border{
+  background:$primaryYellow;
+  position: absolute;
+  top: 0;
+  left:-4px;
+  width: 10px;
+  height: 10px;
+  top:100%;
+  border-radius: 50%;
+}
+#myARROW,
+#myARROW2,
+#myARROW3
+{
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+
+
+
+@media screen and (max-width: 725px)
+{
+  .menu-navigation__button
+  {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 1055px)
+{
+  .project__text li:first-child
+  {
+    display:none;
+  }
+}
