@@ -52,7 +52,7 @@
             </section>
         </div>
 
-        {# This part is looped trough our projects acf fields #}
+        {# This part is from our projects acf fields #}
         <div class='project'>
             <h2>{{ home.get_field('our_projects_title') }}</h2>
             <p>{{ home.get_field('our_projects_description') }}</p>
@@ -95,32 +95,25 @@
         </div>
     </div>
 
+
+    {# This part is looped trough our values acf fields #}
     <div class='stat__number'>
         <div class='container-grid__last'>
             <div class='stat-content'>
                 <div class='part__text'>
-                    <h2>IN A FEW NUMBERS</h2>
-                    <p>Have a quick overview of the projects leaded by EEFA.</p>
+                    <h2>{{ home.get_field('few_number_title') }}</h2>
+                    <p>{{ home.get_field('few_numbers_description') }}</p>
                 </div>
 
+                {% for item in home.get_field('few_numbers') %}
                 <div class="stat__number-pos">
                     <ul>
-                        <li><h2>150</h2></li>
-                        <li><h3>VOLUNTEERS</h3></li>
+                        <li><h2>{{ item.number }}</h2></li>
+                        <li><h3>{{ item.number_description }}</h3></li>
                     </ul>
-                    <ul>
-                        <li><h2>1234</h2></li>
-                        <li><h3>STUDENTS HELPED</h3></li>
-                    </ul>
-                    <ul>
-                        <li><h2>1700</h2></li>
-                        <li><h3>CONTRIBUTORS</h3></li>
-                    </ul>
-                    <ul>
-                        <li><h2>250</h2></li>
-                        <li><h3>LOCALS HELPED</h3></li>
-                    </ul>
+
                 </div>
+                 {% endfor %}
             </div>
         </div>
     </div>
