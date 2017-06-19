@@ -27,7 +27,7 @@
                     <a href="{{ home.get_field('donate_button_link') }}"
                        class='button-donate__text'>{{ home.get_field('donate_button_message') }}</a>
                 {% elseif (home.get_field('donate_button_link_type') == 'SHORTCODE') %}
-                    <a href="#" class='button-donate__text'>{{ home.get_field('donate_button_link') |shortcodes}}</a>
+                    {{ home.get_field('donate_button_link') |shortcodes}}
                 {% endif %}
             </div>
         </div>
