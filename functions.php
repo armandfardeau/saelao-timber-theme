@@ -76,6 +76,8 @@ class StarterSite extends TimberSite {
 		$context['headerMenu'] = new TimberMenu( 'header-menu' );
 		$context['footerMenu'] = new TimberMenu( 'footer-menu' );
 		$context['site']       = $this;
+		$home_id = get_page_by_title('home');
+		$context['home'] = new TimberPost( $home_id );
 		// WP_Query arguments
 		$args = array(
 			'post_type'              => array( 'projects' ),
