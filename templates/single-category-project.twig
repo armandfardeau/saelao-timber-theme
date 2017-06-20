@@ -1,5 +1,55 @@
-{% extends "base.twig" %}
+{#{% extends "base.twig" %}#}
 
 {% block content %}
+    <div class="project_presentation>
+<h2>{{ post.get_field('project_title') }}</h2>
+    <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}">
+    <p>{{ post.get_field('presentation_project') }}</p>
+    </div>
 
+    <div class="project_award">
+        <h3>{{ post.get_field('title_award') }}</h3>
+        <img src="{{ post.get_field('image_award') }}" alt="{{ post.get_field('text_award') }}">
+        <p>{{ post.get_field('text_award') }}</p>
+    </div>
+    <div class="project_process">
+        <a href="{{ post.get_field('link_button') }}">
+            <button>{{ post.get_field('text_button') }}</button>
+        </a>
+    </div>
+    <div class="project_map">
+        <h3>{{ post.get_field('title_project_map') }}</h3>
+        <p>{{ post.get_field('plugin_project_map') }}</p>
+    </div>
+    <div>
+        <h3>{{ post.get_field('title_volunteer') }}</h3>
+        <a href="{{ post.get_field('button_volunteer_link') }}">
+            <button>{{ post.get_field('text_button_volunteer') }}</button>
+
+            <div class="project_volunteer">
+                {% for item in post.get_field('volunteer') %}
+                    <img class="picture_volunteer" src="{{ item.get_field('picture_volunteer') }}"
+                         alt="{{ item.get_field('name_volunteer') }}">
+                    <h4 class="name_volunteer">{{ item.get_field('name_volunteer') }}</h4>
+                    <p class="age_volunteer">{{ item.get_field('age_volunteer') }}</p>
+                    <p class="location_volunteer">{{ item.get_field('location_volunteer') }}</p>
+                    <p class="testimony_volunteer">{{ item.get_field('testimony_volunteer') }}</p>
+                {% endfor %}
+            </div>
+        </a>
+    </div>
+    <div class="project_extra">
+        <h3>{{ post.get_field('plugin_project_map') }}</h3>
+        <h4>{{ post.get_field('plugin_project_map') }}</h4>
+        <p>{{ post.get_field('plugin_project_map') }}</p>
+        <img src="{{ post.get_field('plugin_project_map') }}" alt="{{ post.get_field('plugin_project_map') }}">
+    </div>
+    <div class="project_contact">
+        <h3>{{ post.get_field('plugin_project_map') }}</h3>
+        <h4>{{ post.get_field('plugin_project_map') }}</h4>
+        <p>{{ post.get_field('plugin_project_map') }}</p>
+        <h4>{{ post.get_field('plugin_project_map') }}</h4>
+        <p>{{ post.get_field('plugin_project_map') }}</p>
+    </div>
+    <div class="project_partners"></div>
 {% endblock %}
