@@ -28,28 +28,56 @@
 
             <div class="project_volunteer">
                 {% for item in post.get_field('volunteer') %}
-                    <img class="picture_volunteer" src="{{ item.get_field('picture_volunteer') }}"
-                         alt="{{ item.get_field('name_volunteer') }}">
-                    <h4 class="name_volunteer">{{ item.get_field('name_volunteer') }}</h4>
-                    <p class="age_volunteer">{{ item.get_field('age_volunteer') }}</p>
-                    <p class="location_volunteer">{{ item.get_field('location_volunteer') }}</p>
-                    <p class="testimony_volunteer">{{ item.get_field('testimony_volunteer') }}</p>
+                    <div>
+                        <img class="picture_volunteer" src="{{ item.get_field('picture_volunteer') }}"
+                             alt="{{ item.get_field('name_volunteer') }}">
+                        <h4 class="name_volunteer">{{ item.get_field('name_volunteer') }}</h4>
+                        <p class="age_volunteer">{{ item.get_field('age_volunteer') }}</p>
+                        <p class="location_volunteer">{{ item.get_field('location_volunteer') }}</p>
+                        <p class="testimony_volunteer">{{ item.get_field('testimony_volunteer') }}</p>
+                    </div>
                 {% endfor %}
             </div>
         </a>
     </div>
     <div class="project_extra">
-        <h3>{{ post.get_field('plugin_project_map') }}</h3>
-        <h4>{{ post.get_field('plugin_project_map') }}</h4>
-        <p>{{ post.get_field('plugin_project_map') }}</p>
-        <img src="{{ post.get_field('plugin_project_map') }}" alt="{{ post.get_field('plugin_project_map') }}">
+        <h3>{{ post.get_field('extra_title') }}</h3>
+        <h4>{{ post.get_field('extra_subtitle') }}</h4>
+        <p>{{ post.get_field('extra_presentation') }}</p>
+        <img src="{{ post.get_field('extra_image') }}" alt="{{ post.get_field('extra_presentation') }}">
     </div>
     <div class="project_contact">
-        <h3>{{ post.get_field('plugin_project_map') }}</h3>
-        <h4>{{ post.get_field('plugin_project_map') }}</h4>
-        <p>{{ post.get_field('plugin_project_map') }}</p>
-        <h4>{{ post.get_field('plugin_project_map') }}</h4>
-        <p>{{ post.get_field('plugin_project_map') }}</p>
+        <h3>{{ post.get_field('title_contact') }}</h3>
+        <div>
+            <h4>{{ post.get_field('phone_title') }}</h4>
+            <p>{{ post.get_field('phone_content') }}</p>
+        </div>
+        <div>
+            <h4>{{ post.get_field('email_title') }}</h4>
+            <p>{{ post.get_field('email_content') }}</p>
+        </div>
+        <div>
+            <h4>{{ post.get_field('mail_title') }}</h4>
+            <p>{{ post.get_field('mail_content') }}</p>
+        </div>
+        <div>
+            <p>{{ post.get_field('location_content') }}</p>
+            <img src="{{ post.get_field('location_image') }}" alt="location_content"/>
+        </div>
     </div>
-    <div class="project_partners"></div>
+    <div class="project_partners">
+        <div>
+            <h3>{{ post.get_field('title_partners') }}</h3>
+            <p>{{ post.get_field('partners_description') }}</p>
+        </div>
+        <div>
+            {% for item in post.get_field('partners') %}
+                <div>
+                    <h4>{{ post.get_field('name_partner') }}</h4>
+                    <p>{{ post.get_field('presentation_partner') }}</p>
+                    <img src="{{ post.get_field('logo_partner') }}" alt="{{ post.get_field('presentation_partner') }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
