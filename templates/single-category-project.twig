@@ -23,10 +23,10 @@
         </div>
         {% for item in post.get_field('process') %}
             <div>
-                <img src="{{ item.get_field('pictogram_process') }}" alt="{{ item.get_field('title_process') }}">
-                <h4>{{ item.get_field('title_process') }}</h4>
-                <h5>{{ item.get_field('subtitle_process') }}</h5>
-                <p>{{ item.get_field('text_process') }}</p>
+                <img src="{{ item.pictogram_process }}" alt="{{ item.title_process }}">
+                <h4>{{ item.title_process }}</h4>
+                <h5>{{ item.subtitle_process }}</h5>
+                <p>{{ item.text_process }}</p>
             </div>
         {% endfor %}
 
@@ -45,12 +45,12 @@
         <div class="project_volunteer_repeater">
             {% for item in post.get_field('volunteer') %}
                 <div>
-                    <img class="picture_volunteer" src="{{ item.get_field('picture_volunteer') }}"
-                         alt="{{ item.get_field('name_volunteer') }}">
-                    <h4 class="name_volunteer">{{ item.get_field('name_volunteer') }}</h4>
-                    <p class="age_volunteer">{{ item.get_field('age_volunteer') }}</p>
-                    <p class="location_volunteer">{{ item.get_field('location_volunteer') }}</p>
-                    <p class="testimony_volunteer">{{ item.get_field('testimony_volunteer') }}</p>
+                    <img class="picture_volunteer" src="{{ item.picture_volunteer }}"
+                         alt="{{ item.name_volunteer }}">
+                    <h4 class="name_volunteer">{{ item.name_volunteer }}</h4>
+                    <p class="age_volunteer">{{ item.age_volunteer }}</p>
+                    <p class="location_volunteer">{{ item.location_volunteer }}</p>
+                    <p class="testimony_volunteer">{{ item.testimony_volunteer }}</p>
                 </div>
             {% endfor %}
         </div>
@@ -88,9 +88,9 @@
         <div class="project_partners_repeater">
             {% for item in post.get_field('partners') %}
                 <div>
-                    <h4>{{ item.get_field('name_partner') }}</h4>
-                    <p>{{ item.get_field('presentation_partner') }}</p>
-                    <img src="{{ item.get_field('logo_partner') }}" alt="{{ item.get_field('presentation_partner') }}">
+                    <h4>{{ item.partner_name }}</h4>
+                    <p>{{ item.partner_presentation }}</p>
+                    <img src="{{ item.partner_logo }}" alt="{{ item.partner_presentation }}">
                 </div>
             {% endfor %}
         </div>
