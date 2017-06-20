@@ -162,11 +162,11 @@
     </div>
     <div class="partners__info">
         <div class='container-grid__partners'>
-            <p class='partner_text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quibusdam
-                exercitationem et est
-                necessitatibus, eos, doloribus veniam eius fugit reprehenderit eveniet, similique quis dolor minima
-                facilis libero doloremque voluptas aperiam. lorem.</p>
-
+            {% for item in home.get_field('partners') %}
+                <p class='partner_text'>
+                    {{ item.partners_description }}
+                </p>
+            {% endfor %}
         </div>
     </div>
     <div class='form'>
