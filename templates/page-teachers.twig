@@ -2,5 +2,12 @@
 
 {% block content %}
     teachers!
+
+    {% for item in teachers.get_field('teachers_pdfs') %}
+
+        <li><a href="{{item.file}}">{{item.name}}</a></li>
+
+    {% endfor %}
+
 {% endblock %}
 
