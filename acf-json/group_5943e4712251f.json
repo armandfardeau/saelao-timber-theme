@@ -74,7 +74,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
@@ -944,8 +944,8 @@
             "sub_fields": [
                 {
                     "key": "field_5946e17688308",
-                    "label": "Name Partner",
-                    "name": "name_partner",
+                    "label": "Partner name",
+                    "name": "partner_name",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -963,8 +963,8 @@
                 },
                 {
                     "key": "field_5946e18488309",
-                    "label": "Presentation Partner",
-                    "name": "presentation_partner",
+                    "label": "Partner presentation",
+                    "name": "partner_presentation",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -982,8 +982,8 @@
                 },
                 {
                     "key": "field_5946e18b8830a",
-                    "label": "Logo Partner",
-                    "name": "logo_partner",
+                    "label": "Partner logo",
+                    "name": "partner_logo",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -1040,5 +1040,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497951482
+    "modified": 1497957099
 }

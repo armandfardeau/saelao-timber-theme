@@ -1,6 +1,9 @@
 {% extends "base.twig" %}
 
 {% block content %}
+    <div class="header_background_image">
+        <img src="{{ post.get_field('background_image_presentation') }}" alt="Background image presentation">
+    </div>
     <div class="project_presentation">
         <h2>{{ post.get_field('project_title') }}</h2>
         <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}">
@@ -40,6 +43,7 @@
             </a>
         </div>
         <div class="project_volunteer_repeater">
+            {{ dump(post.get_field('volunteer')) }}
             {% for item in post.get_field('volunteer') %}
                 <div>
                     <img class="picture_volunteer" src="{{ item.get_field('picture_volunteer') }}"
@@ -49,6 +53,7 @@
                     <p class="location_volunteer">{{ item.get_field('location_volunteer') }}</p>
                     <p class="testimony_volunteer">{{ item.get_field('testimony_volunteer') }}</p>
                 </div>
+                {{ dump( item.get_field('name_volunteer')) }}
             {% endfor %}
         </div>
     </div>
@@ -78,15 +83,17 @@
         </div>
     </div>
     <div class="project_partners">
-        <div class="project_partners_overview">>
+        <div class="project_partners_overview">
             <h3>{{ post.get_field('title_partners') }}</h3>
             <p>{{ post.get_field('partners_description') }}</p>
         </div>
         <div class="project_partners_repeater">
+            {{ dump(post.get_field('partners')) }}
             {% for item in post.get_field('partners') %}
                 <div>
                     <h4>{{ item.get_field('name_partner') }}</h4>
                     <p>{{ item.get_field('presentation_partner') }}</p>
+                    {{ dump( item.get_field('presentation_partner')) }}
                     <img src="{{ item.get_field('logo_partner') }}" alt="{{ item.get_field('presentation_partner') }}">
                 </div>
             {% endfor %}
