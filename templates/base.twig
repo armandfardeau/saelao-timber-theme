@@ -7,7 +7,9 @@
 {% endblock %}
 
 <body class="{{ body_class }}" data-template="base.twig">
-<header class="header" id='headertransi'>
+  <div id='headertransi'>
+      <img src="{{ home.get_field('header_background_image') }}" class='header'>
+
     {% block header %}
         <div class='menu-navigation'>
             <div class="menu-mobile">
@@ -17,12 +19,8 @@
             <div class='menu-navigation__logo'>
                 <img src="{{ home.get_field('header_logo') }}">
             </div>
-            <div class="">
-                <img src="{{ home.get_field('header_background_image') }}">
-            </div>
-            <div class="">
-                <img src="{{ home.get_field('header_background_cropper') }}">
-            </div>
+
+          
             <nav id="nav-main" class="menu-navigation__elements" role="navigation">
                 <div class='menu-navigation__elements'>
                     {% include "header-menu.twig" %}
@@ -40,7 +38,7 @@
         </div>
 
     {% endblock %}
-</header>
+  </div>
 
 <section id="content" role="main" class="content-wrapper">
 
