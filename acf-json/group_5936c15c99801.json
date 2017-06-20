@@ -651,6 +651,25 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5948d7c2c682d",
+                    "label": "Partners description",
+                    "name": "partners_description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         }
@@ -688,5 +707,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497890664
+    "modified": 1497946070
 }
