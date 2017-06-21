@@ -4,15 +4,22 @@
         {% for item in headerMenu.get_items %}
             {# Loop trough post which are in custom post types projects and display them after Our projects link #}
             {% if item.title == "Our Projects" %}
+            <div class="projecting"><li>
+
                 <li class="{{ item.classes | join(' ') }} menu-item-has-children">
                     {# if menu item is our projects disabled link since our projects is a dropdown elements #}
                     <a href="#">{{ item.title }}</a></li>
+
                 {% for item in projects %}
+<div class="tesg">
                     <ul>
                         <li class="{{ item.post_type | join(' ') }}">
                             <a href="{{ item.guid }}">{{ item.post_title }}</a></li>
                     </ul>
+                    </div>
+
                 {% endfor %}
+                 </li></div>
             {% else %}
                 <li class="{{ item.classes | join(' ') }} menu-item-has-children">
                     <a href="{{ item.get_link }}">{{ item.title }}</a></li>
@@ -36,5 +43,5 @@
                 {% endfor %}
             {% endif %}
         {% endfor %}
-    </ul>
+   </ul>
 {% endif %}
