@@ -24,10 +24,7 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-
-		//unload jQuery when not admin
-		add_filter( 'wp_default_scripts', array( $this, 'removejQuery' ) );
-
+		
 		//load and save custom field directly from json
 		add_filter( 'acf/settings/load_json', array( $this, 'acf_json_load_point' ) );
 		add_filter( 'acf/settings/save_json', array( $this, 'acf_json_save_point' ) );
@@ -95,14 +92,6 @@ class StarterSite extends TimberSite {
 
 		return $twig;
 	}
-
-
-	function removejQuery( &$scripts ) {
-		if ( ! is_admin() ) {
-			$scripts->remove( 'jquery' );
-		}
-	}
-
 }
 
 new StarterSite();
