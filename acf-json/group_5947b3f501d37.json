@@ -129,7 +129,11 @@
                         "class": "",
                         "id": ""
                     },
+<<<<<<< HEAD
                     "return_format": "array",
+=======
+                    "return_format": "url",
+>>>>>>> 56c7fec1146248fd281b5c9f2e37ab031337a9a9
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -150,6 +154,16 @@
                 "operator": "==",
                 "value": "25"
             }
+<<<<<<< HEAD
+=======
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "129"
+            }
+>>>>>>> 56c7fec1146248fd281b5c9f2e37ab031337a9a9
         ]
     ],
     "menu_order": 0,
@@ -157,8 +171,31 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
+<<<<<<< HEAD
     "hide_on_screen": "",
     "active": 1,
     "description": "",
     "modified": 1497887381
+=======
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1497985086
+>>>>>>> 56c7fec1146248fd281b5c9f2e37ab031337a9a9
 }
