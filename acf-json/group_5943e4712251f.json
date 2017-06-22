@@ -1034,11 +1034,18 @@
         "format",
         "page_attributes",
         "featured_image",
+<<<<<<< HEAD
+=======
         "categories",
+>>>>>>> 56c7fec1146248fd281b5c9f2e37ab031337a9a9
         "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
+<<<<<<< HEAD
+    "modified": 1498038471
+=======
     "modified": 1497957099
+>>>>>>> 56c7fec1146248fd281b5c9f2e37ab031337a9a9
 }
