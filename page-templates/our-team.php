@@ -1,7 +1,7 @@
 <?php
 /*
- * Template Name: 2 col
- * Description: A Page Template with a 2 col design.
+ * Template Name: Our team
+ * Description: Our team model
  */
 /**
  * Created by PhpStorm.
@@ -13,6 +13,4 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
-//On va chercher que le template twig avec 2 col, vaec un fallback sur le layout général
-Timber::render( array( 'layout-two-col.twig', 'page.twig' ), $context );
-
+Timber::render( array( 'page-our-team.twig', 'page.twig' ), $context );
