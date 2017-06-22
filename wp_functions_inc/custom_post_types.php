@@ -44,25 +44,25 @@ register_post_type('Projects', array(
 ));
 
 
-register_post_type('Programms', array(
+register_post_type('Programs', array(
 
-    'label' => __('Programms', 'text_domain'),
+    'label' => __('Programs', 'text_domain'),
     'description' => __('Post Type Description', 'text_domain'),
 
     'labels' => array(
-        'name' => _x('Programms', 'Post Type General Name', 'text_domain'),
-        'singular_name' => _x('Programm', 'Post Type Singular Name', 'text_domain'),
-        'menu_name' => __('Programms', 'text_domain'),
+        'name' => _x('Programs', 'Post Type General Name', 'text_domain'),
+        'singular_name' => _x('Program', 'Post Type Singular Name', 'text_domain'),
+        'menu_name' => __('Programs', 'text_domain'),
         'parent_item_colon' => __('Parent Item:', 'text_domain'),
-        'all_items' => __('All Programms', 'text_domain'),
-        'view_item' => __('View Programm', 'text_domain'),
-        'add_new_item' => __('Add New Programm', 'text_domain'),
-        'add_new' => __('Add New Programm', 'text_domain'),
-        'edit_item' => __('Edit Programm', 'text_domain'),
-        'update_item' => __('Update Programm', 'text_domain'),
-        'search_items' => __('Search Programm', 'text_domain'),
-        'not_found' => __('Programm Not found', 'text_domain'),
-        'not_found_in_trash' => __('Programm Not found in Trash', 'text_domain'),
+        'all_items' => __('All Programs', 'text_domain'),
+        'view_item' => __('View Program', 'text_domain'),
+        'add_new_item' => __('Add New Program', 'text_domain'),
+        'add_new' => __('Add New Program', 'text_domain'),
+        'edit_item' => __('Edit Program', 'text_domain'),
+        'update_item' => __('Update Program', 'text_domain'),
+        'search_items' => __('Search Program', 'text_domain'),
+        'not_found' => __('Program Not found', 'text_domain'),
+        'not_found_in_trash' => __('Program Not found in Trash', 'text_domain'),
     ),
     'supports' => array(),
     'taxonomies' => array('category', 'post_tag'),
