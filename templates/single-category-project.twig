@@ -5,7 +5,7 @@
         <img src="{{ post.get_field('background_image_presentation') }}" alt="Background image presentation">
     </div>
     <div class="project_presentation">
-        <h2>{{ post.get_field('project_title') }}</h2>
+        <h2>{{ post.get_field('project_title') }}<span>{{ post.get_field('project_subtitle') }}</span></h2>
         <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}">
         <p>{{ post.get_field('presentation_project') }}</p>
     </div>
