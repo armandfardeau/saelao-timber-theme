@@ -10,7 +10,7 @@
     </div>
 
     <div>
-        <h1 id='ctn-movable' class='home-presentation__text'>EEFA <span>equal education for all</span></h1>
+        <h1 id='ctn-movable' class='home-presentation__text'>{{ home.get_field('home_presentation_title') }} <span>{{ home.get_field('home_presentation_subtitle') }}</span></h1>
         <div id='ctn-donate' class="mobile-donation">
             Donate
         </div>
@@ -20,10 +20,7 @@
     </div>
     <div class='container-grid'>
         <div class='presentation__text'>
-            <p>Equal Education For All (EEFA) is a non-profit effort begun in 2007 by Ward Reekmans, a volunteer from
-                Belgium, and Thanongsi Solangkoun, the owner of the Vang Vieng Organic Farm that provides educational
-                opportunities to local youth in Vang Vieng. EEFA achieved Association status (Association #0151) in
-                2011.</p>
+            <p>{{ home.get_field('home_presentation_text') }}</p>
         </div>
 
         {# This part is looped trough our values acf fields #}

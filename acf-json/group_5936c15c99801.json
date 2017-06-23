@@ -19,6 +19,63 @@
             "endpoint": 0
         },
         {
+            "key": "field_594d17f1af3d0",
+            "label": "home presentation title",
+            "name": "home_presentation_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_594d180faf3d1",
+            "label": "home presentation subtitle",
+            "name": "home_presentation_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_594d1820af3d2",
+            "label": "home presentation text",
+            "name": "home_presentation_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5947fe330d81f",
             "label": "Header logo",
             "name": "header_logo",
@@ -707,5 +764,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1497946070
+    "modified": 1498224687
 }
