@@ -30,19 +30,20 @@
         <div class='timeline-place'>
             <section id="timeline">
                 <div class='timeline__border'></div>
-
+{% set i = 0 %}
                 {% for item in home.get_field('values') %}
+                {% set i = i + 1 %}
                     <div class="timeline-block">
                         <div class="timeline-img">
                             <img src="{{ site.theme.link }}/dist/images/{{ item.value_icon }}.png" alt="Picture">
 
                         </div> <!-- cd-timeline-img -->
                         <div class="timeline-content">
-                            <h2>{{ item.value_title }} <img onclick="myFunction3()" id='myARROW3' class='Arrow'
+                            <h2>{{ item.value_title }} <img onclick="myFunction{{i}}()" id='myARROW{{i}}' class='Arrow'
                                                             src="{{ site.theme.link }}/dist/images/arrowleft.png"
                                                             alt=""></h2>
                             <h3>{{ item.value_subtitle }}</h3>
-                            <p id='myDIV3'>{{ item.value_description }}</p>
+                            <p id='myDIV{{i}}'>{{ item.value_description }}</p>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
                 {% endfor %}
@@ -68,7 +69,7 @@
                                     Project
                                     descriptionProject descriptionProject descriptionProject description</p></li>
 
-                            <li><p>View the project</p></li>
+                            <li><p class='viewpro'>View the project</p></li>
 
                         </ul>
                     </div>
@@ -85,8 +86,7 @@
                         <li><p>Project description Project description Project description Project description Project
                                 descriptionProject descriptionProject descriptionProject description</p></li>
 
-                        <li><p>View the project</p></li>
-
+                        <li><p class='viewpro'>View the project</p></li>
                     </ul>
                 </div>
             </div>
@@ -159,8 +159,11 @@
     </div>
     <div class="partners__info">
         <div class='container-grid__partners'>
+
+          {% set t = 0 %}                      
             {% for item in home.get_field('partners') %}
-                <p class='partner_text'>
+            {% set t = t + 1 %}
+              <p class='partner_text{{t}}'>
                     {{ item.partners_description }}
                 </p>
             {% endfor %}
@@ -188,8 +191,13 @@
     <div class='newsletter'>
         <div class="newsletter__position">
             <ul>
+                <div class="subscribe">
                 <li><h2>Subscribe to our newsletter</h2></li>
+                </div>
+                <div class="subscribe-form">
                 <li><input type="text" name="" value="" placeholder=" Name"></li>
+                <li><button class='button-subs' type="submit" name="button">Subscribe</button></li>
+                </div>
             </ul>
         </div>
     </div>

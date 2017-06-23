@@ -39,7 +39,6 @@ body {
   }
 }
 .part__text{
-  margin-left:50px;
   h2{
     font-family:$font;
     font-weight:bold;
@@ -191,7 +190,6 @@ body {
   h2{
     font-family:$font;
     font-size:2em;
-
   }
 }
 
@@ -273,6 +271,7 @@ body {
   }
 }
 .partners{
+
   p{
     font-family:$font;
     font-weight:lighter;
@@ -346,6 +345,7 @@ body {
 .displaypartner{
   display:block;
 }
+
 .form{
   margin-top:100px;
   text-align:center;
@@ -361,7 +361,6 @@ body {
     width:600px;
     select{
       width:100%;
-      margin-top:10px;
       height:40px;
       border:1.5px solid #5C5C5C;
       background:$white;
@@ -370,7 +369,7 @@ body {
     input{
       padding:10px;
       width:100%;
-      margin-top:20px;
+      margin-top:10px;
       height:40px;
       border:1.5px solid #5C5C5C;
       border-radius: 0;
@@ -378,6 +377,8 @@ body {
     ul{
       display:flex;
       padding: 0;
+      margin-top:0px;
+      padding-bottom:0px;
 
       li{
         list-style-type:none;
@@ -390,15 +391,69 @@ body {
     textarea{
       padding:20px;
       width:100%;
-      margin-top:20px;
       height:100px;
       border:1.5px solid #5C5C5C;
       border-radius: 0;
     }
   }
 }
+@media screen and (max-width: 603px)
+{
+  .contact__form{
+    width:300px !important;
+  }
+}
+@media screen and (max-width: 788px)
+{
+  .newsletter{
+   li h2{
+    font-size:1em;
+    margin-top:30px;
+  }
+  input{
+    margin-top:10px;
+    height:30px !important;
+    width:150px !important;
+    margin-left:10px;
+  }
+  button{
+    margin-top:10px;
+    width:100px !important;
+    height:30px !important;
+  }
+  }
+}
+@media screen and (max-width: 580px)
+{
+  .newsletter{
+    height:120px !important;
+  li{
+    flex-flow: column;
+    display:flex;
+  }
+  .subscribe{
+    position:relative;
+
+  }
+  .subscribe-form{
+    position:absolute;
+    margin-top:50px;
+    margin-left:-17px;
+  }
+
+}
+}
+.button-subs{
+  background:$white;
+  color:$primaryBlue;
+  border:none;
+  height:40px;
+  width:100px;
+  margin:auto;
+  cursor:pointer;
+}
 .button-ques{
-  margin-top:40px;
+  margin-top:10px;
   width:100%;
   height:40px;
   border:none;
@@ -408,15 +463,23 @@ body {
 .newsletter{
   width:100%;
   height:70px;
-  margin-top:80px;
+  margin-top:40px;
   background:$primaryBlue;
   ul{
     display:flex;
     list-style-type:none;
   }
-  .newsletter__position ul li{
-    padding:0;
-    margin:auto;
+  .newsletter__position {
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .subscribe-form{
+    padding:16px;
+    li{
+      display:inline-block;
+      margin-left:-10px;
+    }
   }
   h2{
     font-family:$font;
@@ -498,6 +561,11 @@ body {
 }
 @media screen and (max-width: 970px)
 {
+  .live{
+    h2{
+      margin-left:40px;
+    }
+  }
   .container-grid__live
   {
     width:400px;
@@ -631,41 +699,6 @@ body {
   .partners{
     display: flex;
     flex-wrap: wrap;
-    ul {
-    }
-  }
-}
-
-@media screen and (max-width: 703px)
-{
-  .newsletter{
-    height:50px;
-  }
-  .newsletter__position ul li{
-    h2{
-      font-size:1em;
-    }
-    input{
-      height:30px;
-
-    }
-  }
-}
-@media screen and (max-width: 565px)
-{
-  .newsletter{
-    height:50px;
-  }
-  .newsletter__position ul li{
-    h2{
-      font-size:0.96em;
-      margin-left:-30px;
-    }
-    input{
-      height:24px;
-      width:120px;
-
-    }
   }
 }
 @media screen and (max-width: 930px)
@@ -734,9 +767,6 @@ margin-left:-200px;
   margin-left:120px;
 }
 
-
-
-
 @media screen and (max-width: 800px)
 {
 .team-member{
@@ -755,9 +785,9 @@ h2{
 
 
 }
-.projects{
 
-}
+
+
 .team-member {
   position:relative;
   margin-top:50px;
@@ -834,4 +864,28 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
+}
+
+
+@media screen and (max-width: 650px)
+{
+  .partners ul{
+flex-direction:column;
+margin:auto;
+ }
+
+  .partners__info{
+  margin-top:950px;
+  }
+}
+
+.partner_text{
+  position:absolute;
+  display:none;
+}
+.partners ul li{
+  background:violet;
+}
+.partners ul li:first-child{
+  background:blue;
 }

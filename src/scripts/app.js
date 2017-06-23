@@ -1,6 +1,6 @@
-function myFunction() {
-    var x = document.getElementById('myDIV');
-    var y = document.getElementById('myARROW');
+function myFunction1() {
+    var x = document.getElementById('myDIV1');
+    var y = document.getElementById('myARROW1');
     if (x.style.display === 'none') {
         x.style.display = 'block';
         y.style.transform ="rotate(90deg)";
@@ -11,7 +11,6 @@ function myFunction() {
         y.style.transform ="rotate(0deg)";
     }
 };
-
 
 function myFunction2() {
     var x = document.getElementById('myDIV2');
