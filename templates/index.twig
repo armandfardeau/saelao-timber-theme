@@ -10,7 +10,8 @@
     </div>
 
     <div>
-        <h1 id='ctn-movable' class='home-presentation__text'>{{ home.get_field('home_presentation_title') }} <span>{{ home.get_field('home_presentation_subtitle') }}</span></h1>
+        <h1 id='ctn-movable' class='home-presentation__text'>{{ home.get_field('home_presentation_title') }}
+            <span>{{ home.get_field('home_presentation_subtitle') }}</span></h1>
         <div id='ctn-donate' class="mobile-donation">
             Donate
         </div>
@@ -30,20 +31,21 @@
         <div class='timeline-place'>
             <section id="timeline">
                 <div class='timeline__border'></div>
-{% set i = 0 %}
+                {% set i = 0 %}
                 {% for item in home.get_field('values') %}
-                {% set i = i + 1 %}
+                    {% set i = i + 1 %}
                     <div class="timeline-block">
                         <div class="timeline-img">
-                            <img src="{{ site.theme.link }}/dist/images/{{ item.value_icon }}.png" alt="Picture">
+                            <img src="{{ item.value_icon }}" alt="{{ item.value_title }}">
 
                         </div> <!-- cd-timeline-img -->
                         <div class="timeline-content">
-                            <h2>{{ item.value_title }} <img onclick="myFunction{{i}}()" id='myARROW{{i}}' class='Arrow'
+                            <h2>{{ item.value_title }} <img onclick="myFunction{{ i }}()" id='myARROW{{ i }}'
+                                                            class='Arrow'
                                                             src="{{ site.theme.link }}/dist/images/arrowleft.png"
                                                             alt=""></h2>
                             <h3>{{ item.value_subtitle }}</h3>
-                            <p id='myDIV{{i}}'>{{ item.value_description }}</p>
+                            <p id='myDIV{{ i }}'>{{ item.value_description }}</p>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
                 {% endfor %}
@@ -160,10 +162,10 @@
     <div class="partners__info">
         <div class='container-grid__partners'>
 
-          {% set t = 0 %}                      
+            {% set t = 0 %}
             {% for item in home.get_field('partners') %}
-            {% set t = t + 1 %}
-              <p class='partner_text{{t}}'>
+                {% set t = t + 1 %}
+                <p class='partner_text{{ t }}'>
                     {{ item.partners_description }}
                 </p>
             {% endfor %}
@@ -192,11 +194,13 @@
         <div class="newsletter__position">
             <ul>
                 <div class="subscribe">
-                <li><h2>Subscribe to our newsletter</h2></li>
+                    <li><h2>Subscribe to our newsletter</h2></li>
                 </div>
                 <div class="subscribe-form">
-                <li><input type="text" name="" value="" placeholder=" Name"></li>
-                <li><button class='button-subs' type="submit" name="button">Subscribe</button></li>
+                    <li><input type="text" name="" value="" placeholder=" Name"></li>
+                    <li>
+                        <button class='button-subs' type="submit" name="button">Subscribe</button>
+                    </li>
                 </div>
             </ul>
         </div>
