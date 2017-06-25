@@ -14,19 +14,4 @@
         <h3>{{ item.category_name }}</h3>
         <img src="{{ item.category_icon }}" alt="{{ item.category_name }}">
         <p>{{ item.category_content }}</p>
-        {% for subitem in item.get_field('subcategory') %}
-            {% if (subitem.get_field('gallery')) %}
-                {% for gallery_item in subitem.get_field('subcategory') %}
-                    <img src="{{ gallery_item.member_picture }}" alt="{{ gallery_item.member_name }}">
-                    <h4>{{ gallery_item.member_name }}</h4>
-                    <p>{{ gallery_item.member_age }}</p>
-                    <p>{{ gallery_item.member_location }}</p>
-                    <p>{{ gallery_item.member_testimony }}</p>
-                {% endfor %}
-            {% else %}
-                <h4>{{ subitem.get_field('article_name')) }}</h4>
-                <p>{{ subitem.get_field('article_content')) }}</p>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
 {% endblock %}
