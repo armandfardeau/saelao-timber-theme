@@ -265,9 +265,9 @@
                         },
                         {
                             "key": "field_594e871488f0e",
-                            "label": "Article",
-                            "name": "article",
-                            "type": "repeater",
+                            "label": "Article name",
+                            "name": "article_name",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
@@ -291,51 +291,45 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": "",
-                            "max": "",
-                            "layout": "block",
-                            "button_label": "Add Row",
-                            "sub_fields": [
-                                {
-                                    "key": "field_594e956af508a",
-                                    "label": "Article name",
-                                    "name": "article_name",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_594e9572f508b",
-                                    "label": "Article content",
-                                    "name": "article_content",
-                                    "type": "textarea",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": "wpautop"
-                                }
-                            ]
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_594f96a2854cc",
+                            "label": "article content",
+                            "name": "article_content",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_594e86fc88f0d",
+                                        "operator": "==",
+                                        "value": "article"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_594e86fc88f0d",
+                                        "operator": "==",
+                                        "value": "article"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
                         },
                         {
                             "key": "field_594e876a88f0f",
@@ -504,5 +498,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1498322947
+    "modified": 1498388216
 }
