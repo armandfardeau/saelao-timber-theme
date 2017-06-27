@@ -80,6 +80,10 @@ class StarterSite extends TimberSite {
 			'post_type'              => array( 'projects' ),
 		);
 		$context['projects'] = Timber::get_posts( $args );
+		$args = array(
+			'post_type' => array( 'programs' ),
+		);
+		$context['programs'] = Timber::get_posts( $args );
 
 		return $context;
 	}
