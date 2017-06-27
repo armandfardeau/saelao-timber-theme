@@ -57,8 +57,6 @@
     <div class='project'>
         <h2>{{ home.get_field('our_projects_title') }}</h2>
         <p>{{ home.get_field('our_projects_description') }}</p>
-
-
         {% for item in home.get_field('our_project_banner') %}
             <a href='{{ item.project_button_link }}'>
                 <div class='project__box'>
