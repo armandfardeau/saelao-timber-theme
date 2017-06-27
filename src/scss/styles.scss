@@ -39,6 +39,7 @@ body {
   width:60%;
   height:1300px;
 }
+
 .container-grid__last{
   position:relative;
   margin:auto;
@@ -147,7 +148,7 @@ body {
   background:#F7F7F7;
 }
 .stat-content{
-  margin-top:-55px;
+  margin-top:-80px;
   position:absolute;
   p{
     margin-top:-15px;
@@ -895,17 +896,15 @@ margin:auto;
   }
 }
 
-.partner_text{
-  position:absolute;
-  display:none;
-}
+
+/*
 .partners ul li{
   background:violet;
 }
 .partners ul li:first-child{
   background:blue;
 }
-
+*/
 .img-project{
   margin:auto;
   display:block;

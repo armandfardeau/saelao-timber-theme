@@ -43,7 +43,7 @@
                         <h2>{{ item.value_title }} <img onclick="myFunction{{ i }}()" id='myARROW{{ i }}'
                                                         class='Arrow'
                                                         src="{{ site.theme.link }}/dist/images/arrowleft.png"
-                                                        alt=""></h2>
+                                                        alt="" style="transform: rotate(0deg);"></h2>
                         <h3>{{ item.value_subtitle }}</h3>
                         <p id='myDIV{{ i }}'>{{ item.value_description }}</p>
                     </div> <!-- cd-timeline-content -->
@@ -76,7 +76,8 @@
                 </div>
             </a>
         {% endfor %}
-
+</div>
+</div>
         {# This part is looped trough our values acf fields #}
         <div class='stat__number'>
             <div class='container-grid__last'>
@@ -138,18 +139,12 @@
                 </ul>
 
             </div>
-
         </div>
         <div class="partners__info">
             <div class='container-grid__partners'>
-
-                {% set t = 0 %}
-                {% for item in home.get_field('partners') %}
-                    {% set t = t + 1 %}
-                    <p class='partner_text{{ t }}'>
-                        {{ item.partners_description }}
-                    </p>
-                {% endfor %}
+                    <p class='partner_text'>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>      
             </div>
         </div>
         <div class='form'>
