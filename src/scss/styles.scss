@@ -15,7 +15,24 @@ body {
   overflow-x: hidden;
   padding:0;
 }
-
+.container-grid-project{
+  position:relative;
+  margin:auto;
+  width:60%;
+  height:1200px;
+}
+.grid-project{
+  position:relative;
+  margin:auto;
+  width:60%;
+  height:1200px;
+}
+.grid-project-repeater{
+  position:relative;
+  margin:auto;
+  width:60%;
+  height:400px;
+}
 .container-grid{
   position:relative;
   margin:auto;
@@ -267,7 +284,6 @@ body {
     background-position:center center;
     object-fit: cover;
     width:100%;
-    height:auto;
   }
 }
 .partners{
@@ -888,4 +904,468 @@ margin:auto;
 }
 .partners ul li:first-child{
   background:blue;
+}
+
+.img-project{
+  margin:auto;
+  display:block;
+}
+.project-info{
+  margin-top:30px;
+}
+
+.project_container{
+  margin-top:10px;
+  width:100%;
+  position: relative;
+  width: 100vw;
+    left: calc(-50vw + 50%);
+  background:#F7F7F7;
+  height:350px;
+}
+.project_award{
+  padding:10px;
+  position:relative;
+  margin:auto;
+  width:60%;
+}
+.project_award h3{
+  font-family:$font;
+  font-weight:bolder;
+  font-size:1.55em;
+  text-transform: uppercase;
+}
+.award_container {
+  justify-content:space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-flex;
+  -webkit-justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+}
+.flex-award{
+  margin-left:20px;
+  font-family:$font;
+  font-weight:lighter;
+  letter-spacing:1.2;
+  max-width:550px;
+}
+
+@media screen and (max-width: 1020px)
+{
+  .project_container{
+    height:500px;
+  }
+  .flex-award{
+    max-width:300px;
+  }
+}
+@media screen and (max-width: 760px)
+{
+  .project_container{
+    height:650px;
+  }
+  .award_container {
+    display:flex;
+  }
+  .flex-award{
+    max-width:100%;
+    font-size:0.8em;
+    letter-spacing:1.1;
+    max-height:600px;
+    overflow:hidden;
+  }
+  }
+.project_process_overview{
+  margin:auto;
+  a{
+    text-decoration:none;
+  }
+  button{
+    margin-top:30px;
+  background-color: #efbb2b;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    width: 220px;
+    text-decoration:none !important;
+    height: 50px;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "Din pro";
+    border-radius: 50px;
+    display: block;
+  margin: auto;
+      }
+}
+.project-process-items{
+  display:flex;
+  margin:auto;
+ align-items: stretch;
+  width: 120%;
+  margin-left:-10%;
+    height: auto;
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+}
+.project_process h3{
+  font-family:$font;
+  font-weight:bolder;
+  font-size:1.55em;
+  text-transform: uppercase;
+}
+.process-items{
+  align-items: stretch;
+  text-align:center;
+  margin-top:40px;
+
+  h4{
+    font-size:1.4em;
+    text-transform: uppercase;
+    font-family:$font;
+    font-weight:bold;
+  }
+  h5{
+    font-weight:lighter;
+    font-family:$font;
+    font-size:1em;
+    letter-spacing:1.4;
+  }
+  p{
+    font-size:1em;
+    font-weight:lighter;
+    font-family:$font;
+  }
+
+}
+.circle-process{
+  z-index:-1;
+  background:#EFBB2B;
+  width: 90px;
+  height:90px;
+  border-radius: 100px;
+  text-align: center;
+  margin-top:45px;
+  border-radius:50%;
+  display:inline-block;
+  padding:10px;
+}
+.circle-process img{
+margin-top:18px;
+}
+
+@media screen and (max-width: 733px)
+{
+  .project-process-items{
+    display:inline-block;
+    }
+
+}
+.project_plugin{
+  margin-top:100px;
+display:flex;
+
+align-items: center;
+}
+.imagemappro{
+width:500px;
+height:300px;
+background:tomato;
+}
+.project_map{
+  h3{
+    margin-left:120px;
+    font-family:$font;
+    font-weight:bolder;
+    font-size:1.55em;
+    text-transform: uppercase;
+  }
+}
+.imagemappro-ctn{
+  margin-left:100px;
+  h3{
+    font-family:$font;
+    font-weight:bolder;
+    font-size:1.2em;
+    text-transform: uppercase;
+  }
+p{
+
+  max-width:500px;
+  font-family:$font;
+  font-weight:lighter;;
+  font-size:0.9em;
+}
+}
+@media screen and (max-width: 1000px)
+{
+  .project_plugin{
+    display:block;
+  }
+
+}
+
+
+@media screen and (max-width: 1023px)
+{
+  .container-grid-project{
+    height:1700px;
+  }
+
+}
+@media screen and (max-width: 733px)
+{
+  .container-grid-project{
+    height:2400px;
+  }
+
+}
+.project_volunteer_overview{
+  margin-top:50px;
+  width:250px;
+  margin:auto;
+  text-align: center;
+  h3{
+
+    font-family:$font;
+    font-weight:bolder;
+    font-size:1.55em;
+    text-transform: uppercase;
+  }
+  button{
+    background-color:$primaryYellow;
+    color: white;
+    border:none;
+    text-transform: uppercase;
+    width:170px;
+    height:45px;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.05em;
+    font-weight:bold;
+    font-family:$font;
+    border-radius: 50px;
+    margin-top:2px;
+  }
+}
+
+
+
+
+.project_volunteer_repeater{
+  width:100%;
+  margin-top:80px;
+  height:320px;
+  background:#F7F7F7;
+  display:flex;
+  justify-content:space-between;
+}
+.volunteer-items{
+  margin-top:20px;
+  text-align:center;
+  h4{
+    font-family:$font;
+    font-weight:bold;
+    font-size:1em;
+  }
+  .volunteer-info{
+    font-family:$font;
+    font-weight:lighter;
+    font-size:0.85em;
+    letter-spacing:1.1;
+  }
+  .testimony_volunteer{
+    font-family:$font;
+    font-weight:lighter;
+    font-size:0.8em;
+    max-width:400px;
+    max-height:100px;
+    overflow:hidden;
+  }
+}
+.project_extra{
+  width:70%;
+  margin-top:100px !important;
+  margin:auto;
+  display: flex;
+  h3{
+    font-family:$font;
+    font-weight:bolder;
+    font-size:1.55em;
+    text-transform: uppercase;
+  }
+  img{
+    display:block;
+  }
+}
+
+
+
+.trip-info{
+  h4{
+    font-family:$font;
+    font-weight:bolder;
+    font-size:1em;
+  }
+  p{
+    font-family:$font;
+    font-weight:lighter;
+  }
+}
+
+.second-bloc{
+margin-left:20px;
+}
+@media screen and (max-width: 1000px)
+{
+  .project_extra{
+  display:block;
+  }
+  .second-bloc{
+  width:50%;
+  height:auto;
+  }
+  .project_extra{
+    img{
+      width: 150%;
+      height: auto;
+    }
+  }
+
+}
+.project_contact{
+  width:100%;
+  height:550px;
+  background:#F7F7F7;
+}
+.contact-project_title{
+  margin-top:70px;
+  padding: 50px;
+  font-family:$font;
+  font-weight:bolder;
+  font-size:1.55em;
+  text-transform: uppercase;
+}
+.phone-project{
+  h4{
+    font-family:$font;
+    font-weight:500;
+    font-size:1em;
+  }
+  p{
+    font-family:$font;
+    font-weight:lighter;
+    font-size:0.9em
+  }
+}
+.email-project{
+  h4{
+    font-family:$font;
+    font-weight:500;
+    font-size:1em;
+  }
+  p{
+    font-family:$font;
+    font-weight:lighter;
+    font-size:0.9em
+  }
+}
+.mail-project{
+  h4{
+    font-family:$font;
+    font-weight:500;
+    font-size:1em;
+  }
+  p{
+    font-family:$font;
+    font-weight:lighter;
+    font-size:0.9em;
+  }
+}
+.loc-info{
+    font-family:$font;
+    font-weight:lighter;
+    font-size:0.9em;
+}
+.project_contact-center{
+  margin:auto;
+  width:60%;
+}
+.project_tst{
+  width:100%;
+  margin-top:5px !important;
+  margin:auto;
+  display: flex;
+  justify-content:space-between;
+ }
+ .project_partners_overview{
+   margin:auto;
+   width:100%;
+   h3{
+     font-family:$font;
+     font-weight:bolder;
+     font-size:1.55em;
+     text-transform: uppercase;
+   }
+   p{
+     font-family:$font;
+     font-weight:lighter;
+     font-size:0.9em;
+   }
+ }
+.project_partners_repeater{
+  margin:auto;
+  text-align:center;
+  width:100%;
+  h4{
+    text-align:center;
+    font-family:$font;
+    font-weight:bolder;
+    font-size:1em;
+    text-transform: uppercase;
+  }
+  p{
+    text-align:center;
+    font-family:$font;
+    font-weight:lighter;
+    font-size:0.9em;
+  }
+}
+
+@media screen and (max-width:620px)
+{
+  .form-project{
+  margin-top:220px;
+  }
+
+}
+
+@media screen and (max-width:830px)
+{
+  .project_tst{
+    display:block
+  }
+  .project_contact{
+    height:760px;
+  }
+
+}
+@media screen and (max-width:560px)
+{
+
+  .project_contact{
+    height:830px;
+  }
+  .form-project{
+  margin-top:300px;
+  }
+
 }
