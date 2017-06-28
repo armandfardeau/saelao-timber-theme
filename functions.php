@@ -74,8 +74,8 @@ class StarterSite extends TimberSite {
 		$context['footerMenu'] = new TimberMenu( 'footer-menu' );
 		$context['site']       = $this;
 		$home_id = get_page_by_title('home');
-		$teachers_id = get_page_by_title('teachers');
 		$context['home'] = new TimberPost( $home_id );
+		$teachers_id = get_page_by_title('teachers');
 		$context['teachers'] = new TimberPost( $teachers_id );
 		// WP_Query arguments
 		$args = array(
@@ -86,7 +86,6 @@ class StarterSite extends TimberSite {
 			'post_type' => array( 'programs' ),
 		);
 		$context['programs'] = Timber::get_posts( $args );
-
 		return $context;
 	}
 

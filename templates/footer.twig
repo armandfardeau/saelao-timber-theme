@@ -1,5 +1,64 @@
 <div class='footer'>
+    <div class='form'>
+        <a name="contact"></a>
+        <h2>{{ home.get_field('title_any_question') }}</h2>
+        <div class='contact__form'>
+            {{ home.get_field('shortcode_contact')|shortcodes }}
+        </div>
+    </div>
+    <div class='newsletter'>
+        <div class="newsletter__position">
+            <ul>
+                <div class="subscribe">
+                    <li><h2>Subscribe to our newsletter</h2></li>
+                </div>
+                <div class="subscribe-form">
+                    <li><input type="text" name="" value="" placeholder=" Name"></li>
+                    <li>
+                        <button class='button-subs' type="submit" name="button">Subscribe</button>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
     <div class='container-grid__last'>
-    {% include 'footer-menu.twig' %}
+        <div class='contact'>
+            <ul>
+                <li>
+                    <div class='contactus'>
+                        <h2>Contact us </h2>
+                        <p>Organic Farm Vang Vieng<br>
+                            P.O. Box 253<br>
+                            Vang Vieng<br>
+                            Vientiane Province, LAO P.D.R.<br>
+                        </p>
+                        <p>+856-(0)20-2292 8630 <span>- EEFA office</span><br>
+                            +856-(0)20 9194 9923 <span>- Sengkeo Frichitthavong</span><br>
+                            <span>office@eefalaos.org</span></p>
+                    </div>
+                </li>
+                <li>
+                    <div class='map'><img src="{{ site.theme.link }}/dist/images/map.png" alt=""></div>
+
+                </li>
+                <li>
+                    <div class='social'>
+                        <h2>Follow us </h2>
+                        <ul>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/FACEBOOK.svg" alt="">
+                            </li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/TWITTER.svg" alt=""></li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/INSTAGRAM.svg" alt="">
+                            </li>
+                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/YOUTUBE.svg" alt=""></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class='container-grid__last'>
+        {% include 'footer-menu.twig' %}
     </div>
 </div>
