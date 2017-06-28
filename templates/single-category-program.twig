@@ -10,7 +10,8 @@
     </div>
 
     <div>
-      <h2 id='ctn-movable' class='home-presentation__text'>{{ post.get_field('project_title') }}<span>{{ post.get_field('project_subtitle') }}</span></h2>
+        <h2 id='ctn-movable' class='home-presentation__text'>{{ post.get_field('project_title') }}
+            <span>{{ post.get_field('project_subtitle') }}</span></h2>
 
         <div id='ctn-donate' class="mobile-donation">
             Donate
@@ -30,6 +31,7 @@
                 <img src="{{ item.category_icon }}" alt="{{ item.category_name }}">
                 <p>{{ item.category_content }}</p>
             {% endfor %}
-  </div>
+        </div>g
+    </div>
 
 {% endblock %}

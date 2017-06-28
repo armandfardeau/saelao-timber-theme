@@ -1,0 +1,46 @@
+{% extends "basetwo.twig" %}
+
+{% block content %}
+    <div class='sidenav' id='mySidenav'>
+        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
+             alt="">
+        <div class="mobile-links">
+            {% include "header-menu.twig" %}
+        </div>
+    </div>
+
+    <div>
+    <h2 id='ctn-movable' class='home-presentation__text'>{{ post.get_field('team_title') }}
+        <span>{{ post.get_field('team_subtitle') }}</span></h2>
+
+    <div id='ctn-donate' class="mobile-donation">
+        Donate
+    </div>
+
+    <div class="header__border-project">
+        <img src="{{ home.get_field('header_background_cropper') }}">
+    </div>
+    <div class='container-grid-project'>
+        <div class='presentation__text'>
+            <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}"
+                 class='img-project'>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+            <section class="article-content">
+                <div class="article-body">
+                    {{ post.content }}
+                </div>
+            </section>
+        </article>
+    </div><!-- /content-wrapper -->
+    {% for item in post.get_field('team_members') %}
+        <div class="team-members">
+            <img src="{{ item.member_picture }}" alt="">
+            <h3>{{ item.member_name }}</h3>
+            <p>{{ item.member_description }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
