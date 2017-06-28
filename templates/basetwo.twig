@@ -8,7 +8,7 @@
 
 <body class="{{ body_class }}" data-template="base.twig">
 <div id='headertransi'>
-    <img src="{{ home.get_field('header_background_image') }}" class='header'>
+    <img src="{{ post.get_field('background_image_presentation') }}" alt="Background image presentation" class='header'>
 
     {% block header %}
     <div class='menu-navigation'>
@@ -17,7 +17,7 @@
                  alt="">
         </div>
         <div class='menu-navigation__logo'>
-            <a href="{{ site.url }}">
+            <a href="{{ home.get_field('home') }}">
                 <img src="{{ home.get_field('header_logo') }}">
             </a>
         </div>
@@ -27,7 +27,6 @@
             <div class='menu-navigation__elements'>
                 {% include "menu.twig" with {'headerMenu': headerMenu.get_items} %}
             </div>
-
         </nav><!-- #nav -->
         <div class='menu-navigation__button'>
             {% if(home.get_field('donate_button_link_type') == 'URL') %}
