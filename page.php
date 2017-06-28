@@ -35,7 +35,7 @@ $args            = array(
 	'meta_key'         => '',
 	'meta_value'       => '',
 	'post_type'        => 'post',
-	'post_status'      => 'draft, publish, future, pending, private',
+	'post_status'      => 'publish',
 	'suppress_filters' => true
 );
 $context['news'] = Timber::get_posts( $args );

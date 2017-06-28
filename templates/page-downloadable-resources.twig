@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+            <section class="article-content">
+                <h1 class="article-h1">{{ post.title }}</h1>
+                <div class="article-body">
+                    {{ post.content }}
+                </div>
+            </section>
+        </article>
+    </div><!-- /content-wrapper -->
+    {% for item in post.get_field('downloadable_resources') %}
+        <div class="downloadable">
+
+            <h3>{{ item.downloadable_document_name }}</h3>
+            <p>{{ item.downloadable_document_presentation }}</p>
+            <p>{{ item.downloadable_document_date|date }}</p>
+            <img src="{{ item.downloadable_document_image }}" alt="{{ item.downloadable_document_name }}">
+            <a href="{{ item.downloadable_document_file }}" download>
+                <button>{{ post.get_field('button_link_title') }}</button>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

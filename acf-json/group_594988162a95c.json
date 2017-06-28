@@ -3,9 +3,28 @@
     "title": "Downloadable Resources",
     "fields": [
         {
-            "key": "field_59498836051f5",
-            "label": "Teachers PDFs",
-            "name": "teachers_pdfs",
+            "key": "field_595424917950a",
+            "label": "Button link title",
+            "name": "button_link_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5953cad55dfc4",
+            "label": "Downloadable Resources",
+            "name": "downloadable_resources",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -22,12 +41,12 @@
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_59498979051f7",
-                    "label": "Name",
-                    "name": "name",
+                    "key": "field_5953cade5dfc5",
+                    "label": "Downloadable Document Name",
+                    "name": "downloadable_document_name",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -41,12 +60,55 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_594988d1051f6",
-                    "label": "File",
-                    "name": "file",
+                    "key": "field_5953caf65dfc6",
+                    "label": "Downloadable Document Presentation",
+                    "name": "downloadable_document_presentation",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5953cb005dfc7",
+                    "label": "Downloadable Document Image",
+                    "name": "downloadable_document_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5953cb085dfc8",
+                    "label": "Downloadable Document file",
+                    "name": "downloadable_document_file",
                     "type": "file",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -57,7 +119,24 @@
                     "library": "all",
                     "min_size": "",
                     "max_size": "",
-                    "mime_types": "pdf"
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5953cb125dfc9",
+                    "label": "Downloadable Document Date",
+                    "name": "downloadable_document_date",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "m\/d\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
                 }
             ]
         }
@@ -65,9 +144,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "11"
+                "value": "page-templates\/downloadable-resources.php"
             }
         ]
     ],
@@ -76,24 +155,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "permalink",
-        "the_content",
-        "excerpt",
-        "custom_fields",
-        "discussion",
-        "comments",
-        "revisions",
-        "slug",
-        "author",
-        "format",
-        "page_attributes",
-        "featured_image",
-        "categories",
-        "tags",
-        "send-trackbacks"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498037513
+    "modified": 1498686790
 }
