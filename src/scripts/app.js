@@ -59,3 +59,38 @@ function closeNav() {
     document.getElementById("ctn-donate").style.marginTop = "-60px";
     document.getElementById("ctn-movable").style.marginLeft = "50";
 };
+
+jQuery(document).ready(function($) {
+    // $('.subcategories dd').hide(); // Hide all DDs inside .faqs
+    // $('.subcategories dt').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}).click(function(){
+    //     // Add class "hover" on dt when hover
+    //     $(this).next().slideToggle(150); // Toggle dd when the respective dt is clicked
+    // });
+
+    $('.programs_single:not(:first)').hide();
+    $('.programs_faq_content').hide();
+
+    $('.programs_nav_item:first').addClass('selected');
+
+    $('.programs_nav_item').on('click', function (e) {
+        e.preventDefault();
+
+        var $this = $(this);
+        var index = $this.data('tab');
+
+        $('.programs_nav_item').removeClass('selected');
+        $this.addClass('selected');
+
+        $('.programs_single').hide();
+        $('.programs_single-' + index).show();
+    });
+
+    $('.programs_faq_title').on('click', function (e) {
+        var wasSelected = $(this).hasClass('selected');
+        $('.programs_faq_content').hide();
+        $('.programs_faq_title').removeClass('selected');
+        if (!wasSelected) {
+            $(this).addClass('selected').parent().find('.programs_faq_content').show();
+        }
+    });
+});
