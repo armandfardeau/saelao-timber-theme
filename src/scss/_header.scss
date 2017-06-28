@@ -245,8 +245,9 @@ margin-left:20px;
   display:block;
 }
 .active  {
-   transform: rotate(90deg);
-   -webkit-transform: rotate(90deg);
+  transition: 0.5s;
+   transform: rotate(0deg);
+   -webkit-transform: rotate(0deg);
    -ms-transform: rotate(90deg);
 }
 @media screen and (max-width: 565px)

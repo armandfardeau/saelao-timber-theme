@@ -66,7 +66,9 @@
             <div class="project_map">
                 <h3>{{ post.get_field('title_project_map') }}</h3>
                 <div class="imagemappro">
-
+                {% filter shortcodes %}
+                  [imp1]
+                {% endfilter %}
                 </div>
             </div>
             <div class="imagemappro-ctn">
@@ -119,15 +121,18 @@
         </div>
         <div class="latest_news">
             <h3>{{ post.get_field('latest_news_category_name') }}</h3>
+            <div class="news-feed">
             {% for item in post.get_field('news') %}
                 <a href="{{ item.news_link }}">
-                    <div>
-                        <p>{{ item.news_date | date("M Y") }}</p>
+                    <div class='news-img'>
+                        <p class='news-info1'>{{ item.news_date | date("M Y") }}</p>
+                        <p class='news-info2'>{{ item.news_description }}</p>
                         <img src="{{ item.news_background_image }}" alt="{{ item.news_date }}">
-                        <p>{{ item.news_description }}</p>
+
                     </div>
                 </a>
             {% endfor %}
+            </div>
         </div>
 
         <div class="project_contact">

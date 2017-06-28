@@ -10,6 +10,8 @@
         <p>{{ post.get_field('presentation_project') }}</p>
     </div>
 
+      
+
     {% for item in post.get_field('program_category') %}
         <h3>{{ item.category_name }}</h3>
         <img src="{{ item.category_icon }}" alt="{{ item.category_name }}">
