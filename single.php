@@ -9,25 +9,10 @@
  * @since    Timber 0.1
  */
 
-$context         = Timber::get_context();
-$post            = Timber::query_post();
-$context['post'] = $post;
-$args            = array(
-	'numberposts'      => 30,
-	'offset'           => 0,
-	'category'         => 0,
-	'orderby'          => 'post_date',
-	'order'            => 'DESC',
-	'include'          => '',
-	'exclude'          => '',
-	'meta_key'         => '',
-	'meta_value'       => '',
-	'post_type'        => 'post',
-	'post_status'      => 'draft, publish, future, pending, private',
-	'suppress_filters' => true
-);
+$context          = Timber::get_context();
+$post             = Timber::query_post();
+$context['post']  = $post;
 
-$context['news'] = wp_get_recent_posts( $args );
 
 if ( in_category( 'project' ) ) {
 	Timber::render( 'single-category-project.twig', $context );

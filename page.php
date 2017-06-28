@@ -21,9 +21,25 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::get_context();
-$post = new TimberPost();
+$context         = Timber::get_context();
+$post            = new TimberPost();
 $context['post'] = $post;
+$args            = array(
+	'numberposts'      => 30,
+	'offset'           => 0,
+	'category'         => 0,
+	'orderby'          => 'post_date',
+	'order'            => 'DESC',
+	'include'          => '',
+	'exclude'          => '',
+	'meta_key'         => '',
+	'meta_value'       => '',
+	'post_type'        => 'post',
+	'post_status'      => 'draft, publish, future, pending, private',
+	'suppress_filters' => true
+);
+$context['news'] = Timber::get_posts( $args );
+
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
 
 
