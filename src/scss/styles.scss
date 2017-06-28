@@ -424,6 +424,7 @@ body {
     margin-top:30px;
   }
   input{
+        margin-left: 20px;
     margin-top:10px;
     height:30px !important;
     width:150px !important;
@@ -892,9 +893,7 @@ margin:auto;
   }
 }
 
-.imp-wrap{
 
-}
 /*
 .partners ul li{
   background:violet;
@@ -912,7 +911,7 @@ margin:auto;
 }
 
 .project_container{
-  margin-top:10px;
+  margin-top:40px;
   width:100%;
   position: relative;
   width: 100vw;
@@ -950,8 +949,9 @@ margin:auto;
   margin-left:20px;
   font-family:$font;
   font-weight:lighter;
-  letter-spacing:1.2;
   max-width:550px;
+  font-size:0.95em;
+  text-align: justify;
 }
 
 @media screen and (max-width: 1020px)
@@ -974,7 +974,6 @@ margin:auto;
   .flex-award{
     max-width:100%;
     font-size:0.8em;
-    letter-spacing:1.1;
     max-height:600px;
     overflow:hidden;
   }
@@ -985,7 +984,6 @@ margin:auto;
     text-decoration:none;
   }
   button{
-    margin-top:30px;
   background-color: #efbb2b;
     color: #fff;
     border: none;
@@ -998,7 +996,8 @@ margin:auto;
     font-family: "Din pro";
     border-radius: 50px;
     display: block;
-  margin: auto;
+    margin: auto;
+    margin-top: 50px;
       }
 }
 .project-process-items{
@@ -1014,15 +1013,16 @@ margin:auto;
     justify-content: space-around;
 }
 .project_process h3{
+  margin-top: 70px;
   font-family:$font;
   font-weight:bolder;
   font-size:1.55em;
   text-transform: uppercase;
 }
 .process-items{
+  width:250px;
   align-items: stretch;
   text-align:center;
-  margin-top:40px;
 
   h4{
     font-size:1.4em;
@@ -1034,7 +1034,6 @@ margin:auto;
     font-weight:lighter;
     font-family:$font;
     font-size:1em;
-    letter-spacing:1.4;
   }
   p{
     font-size:1em;
@@ -1056,7 +1055,7 @@ margin:auto;
   padding:10px;
 }
 .circle-process img{
-margin-top:18px;
+margin-top:16px;
 }
 
 @media screen and (max-width: 733px)
@@ -1067,62 +1066,38 @@ margin-top:18px;
 
 }
 .project_plugin{
-  margin-top:100px;
-display:flex;
-
-align-items: center;
+  margin-top:80px;
 }
 .imagemappro{
-width:500px;
-height:300px;
+width:940px;
+margin:auto;
+margin-top: 50px;
 }
 .project_map{
+  margin-top:160px;
   h3{
-    margin-left:120px;
+    margin:auto;
+    width:180px;
     font-family:$font;
     font-weight:bolder;
     font-size:1.55em;
     text-transform: uppercase;
   }
 }
-.imagemappro-ctn{
-  margin-left:100px;
-  h3{
-    font-family:$font;
-    font-weight:bolder;
-    font-size:1.2em;
-    text-transform: uppercase;
-  }
-p{
+.img-wrap{
+  margin-top:50px !important;
+}
 
-  max-width:500px;
-  font-family:$font;
-  font-weight:lighter;;
-  font-size:0.9em;
-}
-}
 @media screen and (max-width: 1000px)
 {
   .project_plugin{
     display:block;
-  }
-  .imagemappro-ctn{
-    margin-top:120px;
   }
 }
 @media screen and (max-width: 519px)
 {
   .project-process-items{
     margin-top:-100px;
-  }
-  .imagemappro{
-    width:300px !important;
-    height:auto !important;
-    margin-top:50px;
-  }
-  .imagemappro-ctn{
-    margin-top:-10px;
-    width:200px;
   }
 }
 
@@ -1141,7 +1116,7 @@ p{
 
 }
 .project_volunteer_overview{
-  margin-top:210px !important;
+  margin-top:110px !important;
   width:250px;
   margin:auto;
   text-align: center;
@@ -1183,6 +1158,7 @@ p{
 .volunteer-items{
   margin-top:20px;
   text-align:center;
+  width: 300px;
   h4{
     font-family:$font;
     font-weight:bold;
@@ -1191,20 +1167,24 @@ p{
   .volunteer-info{
     font-family:$font;
     font-weight:lighter;
-    font-size:0.85em;
-    letter-spacing:1.1;
+    font-size:0.92em;
   }
   .testimony_volunteer{
     font-family:$font;
     font-weight:lighter;
-    font-size:0.8em;
+    font-size:0.98em;
     max-width:400px;
     max-height:100px;
     overflow:hidden;
+    text-align: justify;
   }
 }
+.location-project{
+  margin-top:-30px;
+}
 .project_extra{
-  width:70%;
+  width: 980px;
+  justify-content: space-between;
   margin-top:100px !important;
   margin:auto;
   display: flex;
@@ -1222,6 +1202,7 @@ p{
 
 
 .trip-info{
+  width:300px;
   h4{
     font-family:$font;
     font-weight:bolder;
@@ -1254,13 +1235,13 @@ margin-left:20px;
 
 }
 .project_contact{
+  margin-top:70px;
   width:100%;
-  height:550px;
+  height:450px;
   background:#F7F7F7;
 }
 .contact-project_title{
-  margin-top:70px;
-  padding: 50px;
+  padding:40 0;
   font-family:$font;
   font-weight:bolder;
   font-size:1.55em;
@@ -1273,6 +1254,7 @@ margin-left:20px;
     font-size:1em;
   }
   p{
+    margin-top:-20px;
     font-family:$font;
     font-weight:lighter;
     font-size:0.9em
@@ -1285,6 +1267,7 @@ margin-left:20px;
     font-size:1em;
   }
   p{
+    margin-top:-20px;
     font-family:$font;
     font-weight:lighter;
     font-size:0.9em
@@ -1297,15 +1280,19 @@ margin-left:20px;
     font-size:1em;
   }
   p{
+    margin-top:-20px;
     font-family:$font;
     font-weight:lighter;
     font-size:0.9em;
   }
 }
 .loc-info{
+  width: 500px;
+overflow: hidden;
     font-family:$font;
     font-weight:lighter;
     font-size:0.9em;
+    margin-top: -20px;
 }
 .project_contact-center{
   margin:auto;
@@ -1415,6 +1402,7 @@ display:block !important;
     font-family:$font;
     font-weight:bolder;
     font-size:1.55em;
+    margin-left:40px;
     text-transform: uppercase;
   }
 }
@@ -1440,6 +1428,7 @@ display:block !important;
   text-transform:uppercase;
   text-decoration:none;
 }
+
 .news-info1{
 margin-left:20px;
 max-width:50px;
@@ -1448,4 +1437,7 @@ max-width:50px;
   margin-top:98px;
   margin-left: 20px;
   max-width: 300px;
+}
+.first-bloc{
+  margin-top: -35px;
 }
