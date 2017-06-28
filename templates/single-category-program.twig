@@ -1,20 +1,35 @@
-{% extends "base.twig" %}
+{% extends "basetwo.twig" %}
 
 {% block content %}
-    <div class="header_background_image">
-        <img src="{{ post.get_field('background_image_presentation') }}" alt="Background image presentation">
-    </div>
-    <div class="project_presentation">
-        <h2>{{ post.get_field('project_title') }}<span>{{ post.get_field('project_subtitle') }}</span></h2>
-        <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}">
-        <p>{{ post.get_field('presentation_project') }}</p>
+    <div class='sidenav' id='mySidenav'>
+        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
+             alt="">
+        <div class="mobile-links">
+            {% include "header-menu.twig" %}
+        </div>
     </div>
 
-      
+    <div>
+      <h2 id='ctn-movable' class='home-presentation__text'>{{ post.get_field('project_title') }}<span>{{ post.get_field('project_subtitle') }}</span></h2>
 
-    {% for item in post.get_field('program_category') %}
-        <h3>{{ item.category_name }}</h3>
-        <img src="{{ item.category_icon }}" alt="{{ item.category_name }}">
-        <p>{{ item.category_content }}</p>
-    {% endfor %}
+        <div id='ctn-donate' class="mobile-donation">
+            Donate
+        </div>
+
+        <div class="header__border-project">
+            <img src="{{ home.get_field('header_background_cropper') }}">
+        </div>
+        <div class='container-grid-project'>
+            <div class='presentation__text'>
+                <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}"
+                     class='img-project'>
+                <p class='project-info'>{{ post.get_field('presentation_project') }}</p>
+            </div>
+            {% for item in post.get_field('program_category') %}
+                <h3>{{ item.category_name }}</h3>
+                <img src="{{ item.category_icon }}" alt="{{ item.category_name }}">
+                <p>{{ item.category_content }}</p>
+            {% endfor %}
+  </div>
+
 {% endblock %}
