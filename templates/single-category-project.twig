@@ -16,7 +16,7 @@
             Donate
         </div>
 
-        <div class="header__border">
+        <div class="header__border-project">
             <img src="{{ home.get_field('header_background_cropper') }}">
         </div>
         <div class='container-grid-project'>
@@ -71,15 +71,6 @@
                 {% endfilter %}
                 </div>
             </div>
-            <div class="imagemappro-ctn">
-                <h3>Our natural buildings</h3>
-                <p>{{ post.get_field('plugin_project_map') }}Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-
         </div>
 
 
@@ -180,7 +171,7 @@
                 <div>
                     <img src="{{ item.partner_logo }}" alt="{{ item.partner_presentation }}">
                     <h4>{{ item.partner_name }}</h4>
-                    <p>{{ item.partner_presentation }}</p>
+                    <p class='partner-bloc'>{{ item.partner_presentation }}</p>
 
                 </div>
             {% endfor %}
