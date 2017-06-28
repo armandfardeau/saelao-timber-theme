@@ -25,8 +25,9 @@
     </div>
 
     {# This part is looped trough our values acf fields #}
+    <a name="whoweare"></a>
     <div class='part__text'>
-        <h2>{{ home.get_field('our_values_main_title') }}</h2>
+        <h2 >{{ home.get_field('our_values_main_title') }}</h2>
     </div>
     <div class='timeline-place'>
         <section id="timeline">
@@ -107,7 +108,10 @@
                     <button type="button" name="button">{{ home.get_field('want_to_help_us_button_message') }}</button>
                 </a>
             </div>
-            <h2 class='live'>Live</h2>
+
+            <div class='part__text'>
+                <h2>Live</h2>
+            </div>
 
             <div class='live-collection'>
                 <div class="live-container container-grid__live">
@@ -125,6 +129,7 @@
 
             </div>
             <div class='partners'>
+                <a name="partners"></a>
                 <div class='part__text'>
                     <h2>{{ home.partners_title }}</h2>
                 </div>
@@ -148,6 +153,7 @@
             </div>
         </div>
         <div class='form'>
+            <a name="contact"></a>
             <h2>Any questions ?</h2>
             <div class='contact__form'>
                 <select>

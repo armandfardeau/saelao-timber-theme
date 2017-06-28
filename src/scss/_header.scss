@@ -82,7 +82,8 @@ margin-left:20px;
 }
 .menu-navigation__button {
   margin-top:10px;
-  position:absolute;
+  position:fixed;
+  z-index: 1000;
   margin-left:80%;
   text-transform: uppercase;
   text-decoration: none;
