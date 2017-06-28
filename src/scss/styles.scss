@@ -115,8 +115,13 @@ body {
     cursor:pointer;
   }
 }
+.viewpro{
+  color:$white !important;
+  text-decoration: underline !important;
+}
 .project__text {
   margin:auto;
+  color:#fff;
   ul{
     font-size:0.8em;
     color:$white;
@@ -127,6 +132,7 @@ body {
     justify-content:space-between;
   }
   p{
+    color:#fff;
     max-width:450px;
     min-width:20px;
     word-break: break-all;
@@ -171,9 +177,11 @@ body {
     margin-top:-15px;
   }
   .stat__number-pos{
+    justify-content:space-around;
     margin-left:-40px;
   }
   h2{
+
     font-family:$font;
     font-size:1.6em;
     text-transform:uppercase;
@@ -416,6 +424,12 @@ body {
     width:300px !important;
   }
 }
+.award_container{
+  img{
+    width:260px;
+    height:auto;
+  }
+}
 @media screen and (max-width: 788px)
 {
   .newsletter{
@@ -424,7 +438,6 @@ body {
     margin-top:30px;
   }
   input{
-        margin-left: 20px;
     margin-top:10px;
     height:30px !important;
     width:150px !important;
@@ -479,6 +492,9 @@ body {
   height:70px;
   margin-top:40px;
   background:$primaryBlue;
+  input{
+    margin-left:20px;
+  }
   ul{
     display:flex;
     list-style-type:none;
@@ -946,7 +962,7 @@ margin:auto;
   -webkit-flex-flow: row wrap;
 }
 .flex-award{
-  margin-left:20px;
+  margin-left: 61px;
   font-family:$font;
   font-weight:lighter;
   max-width:550px;
@@ -988,9 +1004,9 @@ margin:auto;
     color: #fff;
     border: none;
     text-transform: uppercase;
-    width: 220px;
+    width: 300px;
     text-decoration:none !important;
-    height: 50px;
+    height: 63px;
     font-size: 1em;
     font-weight: 700;
     font-family: "Din pro";
@@ -1077,7 +1093,7 @@ margin-top: 50px;
   margin-top:160px;
   h3{
     margin:auto;
-    width:180px;
+    width: 175px;
     font-family:$font;
     font-weight:bolder;
     font-size:1.55em;
