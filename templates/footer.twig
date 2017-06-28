@@ -10,13 +10,10 @@
         <div class="newsletter__position">
             <ul>
                 <div class="subscribe">
-                    <li><h2>Subscribe to our newsletter</h2></li>
+                    <li><h2>{{ home.get_field('newsletter_title') }}</h2></li>
                 </div>
                 <div class="subscribe-form">
-                    <li><input type="text" name="" value="" placeholder=" Name"></li>
-                    <li>
-                        <button class='button-subs' type="submit" name="button">Subscribe</button>
-                    </li>
+                    {{ home.get_field('newsletter_content') }}
                 </div>
             </ul>
         </div>
@@ -27,34 +24,35 @@
             <ul>
                 <li>
                     <div class='contactus'>
-                        <h2>Contact us </h2>
-                        <p>Organic Farm Vang Vieng<br>
-                            P.O. Box 253<br>
-                            Vang Vieng<br>
-                            Vientiane Province, LAO P.D.R.<br>
-                        </p>
-                        <p>+856-(0)20-2292 8630 <span>- EEFA office</span><br>
-                            +856-(0)20 9194 9923 <span>- Sengkeo Frichitthavong</span><br>
-                            <span>office@eefalaos.org</span></p>
+                        <h2>{{ home.get_field('title_contact_footer') }}</h2>
+                        <p>{{ home.get_field('adress_contact_footer') }}</p>
                     </div>
                 </li>
-                <li>
-                    <div class='map'><img src="{{ site.theme.link }}/dist/images/map.png" alt=""></div>
+                {% if (home.get_field('image_location_footer')) %}
+                    <li>
+                        <div class='map'>
+                            <img src="{{ home.get_field('image_location_footer') }}"
+                                 alt="{{ home.get_field('adress_contact_footer') }}">
+                        </div>
+                    </li>
+                {% endif %}
+                {% if (home.get_field('social_media')) %}
+                    <li>
+                        <div class='social'>
+                            <h2>Follow us </h2>
+                            <ul>
+                                {% for item in home.get_field('social_media') %}
+                                    <li class='circle'>
+                                        <a href="{{ item.social_media_link }}">
+                                            <img src="{{ item.social_media_icon }}" alt="">
+                                        </a>
+                                    </li>
 
-                </li>
-                <li>
-                    <div class='social'>
-                        <h2>Follow us </h2>
-                        <ul>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/FACEBOOK.svg" alt="">
-                            </li>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/TWITTER.svg" alt=""></li>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/INSTAGRAM.svg" alt="">
-                            </li>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/YOUTUBE.svg" alt=""></li>
-                        </ul>
-                    </div>
-                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>
