@@ -131,10 +131,12 @@
                 <h3 class='contact-project_title'>{{ post.get_field('title_contact') }}</h3>
                 <div class="project_tst">
 
-
+                    <a href="{{ post.get_field('view_the_team_link') }}">
+                        <button>
+                            {{ post.get_field('view_the_team_title') }}
+                        </button>
+                    </a>
                     <div class='first-bloc'>
-
-
                         <div class='phone-project'>
                             <h4>{{ post.get_field('phone_title') }}</h4>
                             <p>{{ post.get_field('phone_content') }}</p>
