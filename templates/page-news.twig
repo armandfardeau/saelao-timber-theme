@@ -1,7 +1,6 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    {{ dump(home) }}
     {% for post in news %}
         {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
     {% endfor %}
