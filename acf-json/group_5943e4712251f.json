@@ -848,6 +848,44 @@
             "endpoint": 0
         },
         {
+            "key": "field_59542cc90fcad",
+            "label": "View the team title",
+            "name": "view_the_team_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59542cdf0fcae",
+            "label": "View the team link",
+            "name": "view_the_team_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5946e0a6882fc",
             "label": "Title Contact",
             "name": "title_contact",
@@ -865,6 +903,41 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5953bc95dba20",
+            "label": "Title Button Team",
+            "name": "title_button_team",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5953bca7dba21",
+            "label": "Link Button Team",
+            "name": "link_button_team",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_5946e0b5882fd",
@@ -1180,7 +1253,6 @@
         "the_content",
         "excerpt",
         "custom_fields",
-        "discussion",
         "comments",
         "revisions",
         "slug",
@@ -1193,5 +1265,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1498567522
+    "modified": 1498688758
 }

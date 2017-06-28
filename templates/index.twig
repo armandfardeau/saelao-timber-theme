@@ -147,13 +147,21 @@
     </div>
     <div class="partners__info">
         <div class='container-grid__partners'>
-            <p class='partner_text'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
+            {% for item in home.get_field('partners') %}
+                <p class='partner_text'>
+                    {{ item.partners_description }}
+                </p>
+            {% endfor %}
         </div>
     </div>
+    {% if(home.get_field('transparency_title')) %}
+        <div class="transparency">
+            <img src="{{ home.get_field('transparency_background') }}" alt="{{ home.get_field('transparency_title') }}">
+            <img src="{{ home.get_field('transparency_logo') }}" alt="transparency logo">
+            <h3>{{ home.get_field('transparency_title') }}</h3>
+            <a href="{{ home.get_field('transparency_button_link') }}">
+                <button>{{ home.get_field('transparency_button_text') }}</button>
+            </a>
+        </div>
+    {% endif %}
 {% endblock %}
