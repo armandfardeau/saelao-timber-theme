@@ -136,7 +136,7 @@
             <p>{{ home.partners_description }}</p>
             <ul>
                 {% for item in home.get_field('partners') %}
-                    <li>
+                    <li class="partners_logo partners_logo_{{ loop.index }}" data-tab="{{ loop.index }}">
                         <img src="{{ item.partner_image }}" alt="{{ item.partner_name }}"
                              id="{{ item.partner_name|sanitize }}">
                     </li>
@@ -148,7 +148,7 @@
     <div class="partners__info">
         <div class='container-grid__partners'>
             {% for item in home.get_field('partners') %}
-                <p class='partner_text'>
+                <p class='partner_text partner_text_{{ loop.index }}'>
                     {{ item.partners_description }}
                 </p>
             {% endfor %}

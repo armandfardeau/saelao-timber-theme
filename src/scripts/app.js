@@ -93,4 +93,24 @@ jQuery(document).ready(function($) {
             $(this).addClass('selected').parent().find('.programs_faq_content').show();
         }
     });
+
+    //
+
+    $('.partner_text:not(:first)').hide();
+
+    $('.partners_logo:first').addClass('selected');
+
+    $('.partners_logo').on('hover', function (e) {
+        e.preventDefault();
+
+        var $this = $(this);
+        var index = $this.data('tab');
+
+        $('.partners_logo').removeClass('selected');
+        $this.addClass('selected');
+
+        $('.partner_text').hide();
+        $('.partner_text_' + index).show();
+    });
+
 });
