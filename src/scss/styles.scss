@@ -19,7 +19,7 @@ body {
   position:relative;
   margin:auto;
   width:60%;
-  height:1200px;
+  /*height:1200px;*/
 }
 .grid-project{
   position:relative;
@@ -1443,6 +1443,14 @@ max-width:50px;
 }
 
 
+.container-grey {
+  background: #F7F7F7;
+  margin-top: 30px;
+  padding: 15px 0;
+  font-family: $font;
+  position: relative;
+}
+
 .programs_container {
   font-family: $font;
   margin-top: 50px;
@@ -1450,6 +1458,7 @@ max-width:50px;
 
 .programs_title {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .programs_navigation {
@@ -1506,17 +1515,13 @@ max-width:50px;
   margin-top: 50px;
 }
 
-.programs_single {
-
+.container-grey .programs_content {
+  margin-top: 15px;
 }
 
 .programs_desc {
   padding: 0 80px;
   margin-bottom: 50px;
-}
-
-.programs_faq {
-
 }
 
 .programs_faq_single {
@@ -1529,6 +1534,7 @@ max-width:50px;
   margin-bottom: 5px;
   font-size: 20px;
   border-bottom: 1px solid #EEE;
+  text-transform: uppercase;
   
   &::after {
     content: ' ';
@@ -1542,7 +1548,7 @@ max-width:50px;
 
   &.selected::after {
     border: 5px solid transparent;
-    border-right: 8px solid #AAA;
+    border-bottom: 8px solid #AAA;
   }
 }
 
