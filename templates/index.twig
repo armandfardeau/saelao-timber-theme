@@ -154,14 +154,19 @@
             {% endfor %}
         </div>
     </div>
+
     {% if(home.get_field('transparency_title')) %}
-        <div class="transparency">
-            <img src="{{ home.get_field('transparency_background') }}" alt="{{ home.get_field('transparency_title') }}">
-            <img src="{{ home.get_field('transparency_logo') }}" alt="transparency logo">
+    <div class='helpustwo'>
+        <div class='part__text help'>
+          <img src="{{ home.get_field('transparency_logo') }}" alt="transparency logo" class='transparency-laos'>
             <h3>{{ home.get_field('transparency_title') }}</h3>
             <a href="{{ home.get_field('transparency_button_link') }}">
                 <button>{{ home.get_field('transparency_button_text') }}</button>
             </a>
+        </div>
+    </div>
+
+
         </div>
     {% endif %}
 {% endblock %}

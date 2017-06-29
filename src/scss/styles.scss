@@ -189,6 +189,7 @@ body {
   }
 }
 .help{
+  margin-top:50px !important;
   margin:auto;
   text-align:center;
   h2{
@@ -292,7 +293,6 @@ body {
   }
 }
 .partners{
-
   p{
     font-family:$font;
     font-weight:lighter;
@@ -311,7 +311,7 @@ body {
   justify-content: space-between;
 }
 .partners__info{
-  margin-top:540px;
+  margin-top:590px;
   width:100%;
   height:170px;
   background:$primaryBlue;
@@ -368,7 +368,7 @@ body {
 }
 
 .form{
-  margin-top:100px;
+margin-top: -260px;
   text-align:center;
   h2{
     font-family:$font;
@@ -795,6 +795,7 @@ margin-left:-200px;
 }
 .footer-ctn{
   margin-left:120px;
+  display:none;
 }
 
 @media screen and (max-width: 800px)
@@ -849,7 +850,29 @@ align-items: center;
     font-size:1.5em;
   }
 }
-
+.helpustwo{
+  -webkit-filter: opacity(.9);
+ filter: opacity(.9);
+  position:relative;
+  display: inline-block;
+  vertical-align: middle;
+    text-align: center;
+    background-position:center center;
+  width:100%;
+  background-image: url('../images/helpus.png');
+  background-size:cover;
+  height:270px;
+  h3{
+    font-family:$font;
+    font-size:2em;
+    text-transform:uppercase;
+    font-weight:bolder;
+    color:$white;
+  }
+}
+.last-footer{
+  margin-top:80px;
+}
 .helpus{
   margin-top:100px;
   -webkit-filter: opacity(.9);
@@ -860,7 +883,7 @@ align-items: center;
     text-align: center;
     background-position:center center;
   width:100%;
-  background-image: url('../images/helpus.png');
+  background-image: url('../images/transparentful.jpg');
   background-size:cover;
   height:270px;
   h2{
@@ -1551,7 +1574,7 @@ max-width:50px;
   font-size: 20px;
   border-bottom: 1px solid #EEE;
   text-transform: uppercase;
-  
+
   &::after {
     content: ' ';
     position: absolute;
@@ -1567,7 +1590,10 @@ max-width:50px;
     border-bottom: 8px solid #AAA;
   }
 }
-
+.selected{
+  opacity:.7;
+  transition:all 0.1s;
+}
 .programs_faq_content {
 
 }
@@ -1621,3 +1647,25 @@ dl, dt, dd {
   cursor: pointer;
 }
 */
+.transparency{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+.transparency-img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+.transparency-laos{
+  width:100px;
+  height:50px;
+}
+.transparency-laos-ctn{
+
+  position:absolute;
+  margin-top:-304px;
+  background-color:red;
+  width:500px;
+  height:300px;
+}
