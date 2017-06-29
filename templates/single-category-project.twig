@@ -77,8 +77,8 @@
         <div class="project_volunteer">
             <div class="project_volunteer_overview">
                 <h3>{{ post.get_field('title_volunteer') }}</h3>
-                <a href="{{ post.get_field('button_volunteer_link') }}">
-                    <button>{{ post.get_field('text_button_volunteer') }}</button>
+                <a href="{{ post.get_field('link_button_team') }}">
+                    <button>{{ post.get_field('title_button_team') }}</button>
                 </a>
             </div>
 
@@ -131,10 +131,12 @@
                 <h3 class='contact-project_title'>{{ post.get_field('title_contact') }}</h3>
                 <div class="project_tst">
 
-
+                    <a href="{{ post.get_field('view_the_team_link') }}">
+                        <button>
+                            {{ post.get_field('view_the_team_title') }}
+                        </button>
+                    </a>
                     <div class='first-bloc'>
-
-
                         <div class='phone-project'>
                             <h4>{{ post.get_field('phone_title') }}</h4>
                             <p>{{ post.get_field('phone_content') }}</p>

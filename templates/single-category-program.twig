@@ -10,7 +10,8 @@
     </div>
 
     <div>
-      <h2 id='ctn-movable' class='home-presentation__text'>{{ post.get_field('project_title') }}<span>{{ post.get_field('project_subtitle') }}</span></h2>
+        <h2 id='ctn-movable' class='home-presentation__text'>{{ post.get_field('project_title') }}
+            <span>{{ post.get_field('project_subtitle') }}</span></h2>
 
         <div id='ctn-donate' class="mobile-donation">
             Donate
@@ -32,8 +33,10 @@
                 <div class="programs_navigation">
                     {% for item in post.get_field('program_category') %}
                         <a class="programs_nav_item" href="#program-{{ loop.index }}" data-tab="{{ loop.index }}">
-                            <img src="{{ item.category_icon_alt }}" alt="{{ item.category_name }}" class="programs_nav_icon programs_nav_icon_default">
-                            <img src="{{ item.category_icon }}" alt="{{ item.category_name }}" class="programs_nav_icon programs_nav_icon_selected">
+                            <img src="{{ item.category_icon_alt }}" alt="{{ item.category_name }}"
+                                 class="programs_nav_icon programs_nav_icon_default">
+                            <img src="{{ item.category_icon }}" alt="{{ item.category_name }}"
+                                 class="programs_nav_icon programs_nav_icon_selected">
                             <h6 class="programs_nav_label">{{ item.category_name }}</h6>
                         </a>
                     {% endfor %}
