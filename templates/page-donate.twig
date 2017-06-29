@@ -23,7 +23,7 @@
 
 
         <div class="programs_container">
-            <h2 class="programs_title">{{ post.title }}</h2>
+            <h2 class="programs_title">I Want To Help</h2>
 
             <div class="programs_navigation">
                 <a class="programs_nav_item" href="#program-1" data-tab="1">
@@ -57,13 +57,7 @@
                 </div>
                 <div class="programs_single programs_single-2">
                     <h2>Apply now!</h2>
-
-                    <div>
-                        {% filter shortcodes %}
-                            [contact-form-7 id="745" title="Apply volunteer"]
-                        {% endfilter %}
-                    </div>
-
+                    <a name="volunteer-anchor"></a>
                     <h2>Going further</h2>
 
                     <div class="programs_faq">
@@ -103,6 +97,12 @@
                                 </p>
                             </div>
                         </div>
+                    </div>
+
+                    <div>
+                        {% filter shortcodes %}
+                            [contact-form-7 id="745" title="Apply volunteer"]
+                        {% endfilter %}
                     </div>
                 </div>
                 <div class="programs_single programs_single-3">
