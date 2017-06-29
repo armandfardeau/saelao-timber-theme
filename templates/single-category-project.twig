@@ -66,9 +66,9 @@
             <div class="project_map">
                 <h3>{{ post.get_field('title_project_map') }}</h3>
                 <div class="imagemappro">
-                {% filter shortcodes %}
-                  [imp1]
-                {% endfilter %}
+                    {% filter shortcodes %}
+                        [imp1]
+                    {% endfilter %}
                 </div>
             </div>
         </div>
@@ -77,8 +77,8 @@
         <div class="project_volunteer">
             <div class="project_volunteer_overview">
                 <h3>{{ post.get_field('title_volunteer') }}</h3>
-                <a href="{{ post.get_field('button_volunteer_link') }}">
-                    <button>{{ post.get_field('text_button_volunteer') }}</button>
+                <a href="{{ post.get_field('link_button_team') }}">
+                    <button>{{ post.get_field('title_button_team') }}</button>
                 </a>
             </div>
 
@@ -113,16 +113,16 @@
         <div class="latest_news">
             <h3>{{ post.get_field('latest_news_category_name') }}</h3>
             <div class="news-feed">
-            {% for item in post.get_field('news') %}
-                <a href="{{ item.news_link }}">
-                    <div class='news-img'>
-                        <p class='news-info1'>{{ item.news_date | date("M Y") }}</p>
-                        <p class='news-info2'>{{ item.news_description }}</p>
-                        <img src="{{ item.news_background_image }}" alt="{{ item.news_date }}">
+                {% for item in post.get_field('news') %}
+                    <a href="{{ item.news_link }}">
+                        <div class='news-img'>
+                            <p class='news-info1'>{{ item.news_date | date("M Y") }}</p>
+                            <p class='news-info2'>{{ item.news_description }}</p>
+                            <img src="{{ item.news_background_image }}" alt="{{ item.news_date }}">
 
-                    </div>
-                </a>
-            {% endfor %}
+                        </div>
+                    </a>
+                {% endfor %}
             </div>
         </div>
 
@@ -131,10 +131,12 @@
                 <h3 class='contact-project_title'>{{ post.get_field('title_contact') }}</h3>
                 <div class="project_tst">
 
-
+                    <a href="{{ post.get_field('view_the_team_link') }}">
+                        <button>
+                            {{ post.get_field('view_the_team_title') }}
+                        </button>
+                    </a>
                     <div class='first-bloc'>
-
-
                         <div class='phone-project'>
                             <h4>{{ post.get_field('phone_title') }}</h4>
                             <p>{{ post.get_field('phone_content') }}</p>
@@ -177,74 +179,4 @@
             {% endfor %}
         </div>
     </div>
-    <div class='form form-project'>
-        <h2>Any questions ?</h2>
-        <div class='contact__form'>
-            <select>
-                <option value="" disabled selected>Select your option</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-            <input type="text" name="" value="" placeholder=" E-mail adress">
-            <ul>
-                <li><input type="text" name="" value="" placeholder=" Name"></li>
-                <li><input type="text" name="" value="" placeholder=" Surname"></li>
-            </ul>
-            <textarea name="name" rows="8" cols="80" placeholder="Your message..."></textarea>
-            <button class='button-ques' type="submit" name="button">Send questions</button>
-        </div>
-    </div>
-    <div class='newsletter'>
-        <div class="newsletter__position">
-            <ul>
-                <div class="subscribe">
-                    <li><h2>Subscribe to our newsletter</h2></li>
-                </div>
-                <div class="subscribe-form">
-                    <li><input type="text" name="" value="" placeholder=" Name"></li>
-                    <li>
-                        <button class='button-subs' type="submit" name="button">Subscribe</button>
-                    </li>
-                </div>
-            </ul>
-        </div>
-    </div>
-
-    <div class='container-grid__last'>
-        <div class='contact'>
-            <ul>
-                <li>
-                    <div class='contactus'>
-                        <h2>Contact us </h2>
-                        <p>Organic Farm Vang Vieng<br>
-                            P.O. Box 253<br>
-                            Vang Vieng<br>
-                            Vientiane Province, LAO P.D.R.<br>
-                        </p>
-                        <p>+856-(0)20-2292 8630 <span>- EEFA office</span><br>
-                            +856-(0)20 9194 9923 <span>- Sengkeo Frichitthavong</span><br>
-                            <span>office@eefalaos.org</span></p>
-                    </div>
-                </li>
-                <li>
-                    <div class='map'><img src="{{ site.theme.link }}/dist/images/map.png" alt=""></div>
-
-                </li>
-                <li>
-                    <div class='social'>
-                        <h2>Follow us </h2>
-                        <ul>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/FACEBOOK.svg" alt=""></li>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/TWITTER.svg" alt=""></li>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/INSTAGRAM.svg" alt=""></li>
-                            <li class='circle'><img src="{{ site.theme.link }}/dist/images/YOUTUBE.svg" alt=""></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
 {% endblock %}

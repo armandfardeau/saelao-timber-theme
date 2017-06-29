@@ -24,12 +24,13 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-		
+
 		//load and save custom field directly from json
 		add_filter( 'acf/settings/load_json', array( $this, 'acf_json_load_point' ) );
 		add_filter( 'acf/settings/save_json', array( $this, 'acf_json_save_point' ) );
 		add_action( 'after_setup_theme', array( $this, 'register_my_menu' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
+		add_filter( 'upload_mimes', array( $this, 'wpc_mime_types' ) );
 
 		parent::__construct();
 	}
@@ -73,16 +74,16 @@ class StarterSite extends TimberSite {
 		$context['headerMenu'] = new TimberMenu( 'header-menu' );
 		$context['footerMenu'] = new TimberMenu( 'footer-menu' );
 		$context['site']       = $this;
-		$home_id = get_page_by_title('home');
-		$teachers_id = get_page_by_title('teachers');
-		$context['home'] = new TimberPost( $home_id );
-		$context['teachers'] = new TimberPost( $teachers_id );
+		$home_id               = get_page_by_title( 'home' );
+		$context['home']       = new TimberPost( $home_id );
+		$teachers_id           = get_page_by_title( 'teachers' );
+		$context['teachers']   = new TimberPost( $teachers_id );
 		// WP_Query arguments
-		$args = array(
-			'post_type'              => array( 'projects' ),
+		$args                = array(
+			'post_type' => array( 'projects' ),
 		);
 		$context['projects'] = Timber::get_posts( $args );
-		$args = array(
+		$args                = array(
 			'post_type' => array( 'programs' ),
 		);
 		$context['programs'] = Timber::get_posts( $args );
@@ -97,6 +98,13 @@ class StarterSite extends TimberSite {
 		$twig->addFilter( 'myfoo', new Twig_SimpleFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
 		return $twig;
+	}
+
+	/* Autoriser les fichiers SVG */
+	function wpc_mime_types( $mimes ) {
+		$mimes['svg'] = 'image/svg+xml';
+
+		return $mimes;
 	}
 }
 

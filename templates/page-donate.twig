@@ -1,14 +1,174 @@
-{% extends "base.twig" %}
+{% extends "basetwo.twig" %}
 
 {% block content %}
-    <div class="content-wrapper">
-        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-            <section class="article-content">
-                <h1 class="article-h1">{{post.title}}</h1>
-                <div class="article-body">
-                    {{post.content}}
+    <div class='sidenav' id='mySidenav'>
+        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
+             alt="">
+        <div class="mobile-links">
+            {% include "header-menu.twig" %}
+        </div>
+    </div>
+
+    <div>
+    <h2 id='ctn-movable' class='home-presentation__text'>{{ post.get_field('project_title') }}<span>{{ post.get_field('project_subtitle') }}</span></h2>
+
+    <div id='ctn-donate' class="mobile-donation">
+        Donate
+    </div>
+
+    <div class="header__border-project">
+        <img src="{{ home.get_field('header_background_cropper') }}">
+    </div>
+    <div class="container-grid-project">
+
+
+        <div class="programs_container">
+            <h2 class="programs_title">I Want To Help</h2>
+
+            <div class="programs_navigation">
+                <a class="programs_nav_item" href="#program-1" data-tab="1">
+                    <h6 class="programs_nav_label">DONATE</h6>
+                </a>
+                <a class="programs_nav_item" href="#program-2" data-tab="2">
+                    <h6 class="programs_nav_label">VOLUNTEER</h6>
+                </a>
+                <a class="programs_nav_item" href="#program-3" data-tab="3">
+                    <h6 class="programs_nav_label">LONG TERM VOLUNTEER</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-grey">
+        <div class="container-grid-project">
+
+            <div class="programs_content">
+                <div class="programs_single programs_single-1">
+                    <h2>Why donate to our association?</h2>
+
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse posuere orci quis neque auctor eleifend. Fusce a iaculis risus, ut pharetra nunc.
+                    </div>
+
+                    {% filter shortcodes %}
+                        [give_form id="283"]
+                    {% endfilter %}
                 </div>
-            </section>
-        </article>
-    </div><!-- /content-wrapper -->
+                <div class="programs_single programs_single-2">
+                    <h2>Apply now!</h2>
+                    <a name="volunteer-anchor"></a>
+                    <h2>Going further</h2>
+
+                    <div class="programs_faq">
+                        <div class="programs_faq_single">
+                            <div class="programs_faq_title">
+                                WHAT IS THE IDEA OF VOLUNTEERS
+                            </div>
+                            <div class="programs_faq_content">
+                                <p>
+                                    We ask that you stay a minimum two weeks and contribute at least 5 hours work each
+                                    day, although this depends on the season and the number of volunteers on site.
+                                    If there is a lot of work to do, most volunteers are willing to do a little more.
+                                    We are part of a community and all of us contribute to the daily upkeep of the site.
+                                </p>
+                                <p>
+                                    Most volunteers are asked to assist with teaching; this is the main afternoon
+                                    activity. If you do not wish to assist with teaching, please let us know,
+                                    as we rely on volunteers to keep our English classes going.
+                                </p>
+                                <p>
+                                    The rest of the time is free for you to explore the nearby villages and
+                                    stunning natural surroundings or just to relax in our beautiful restaurant,
+                                    reading a book in one of the hammocks or sitting with our kitchen staff
+                                    as they shell peanuts.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="programs_faq_single">
+                            <div class="programs_faq_title">
+                                WHAT I WILL BE INVOLVED WITH
+                            </div>
+                            <div class="programs_faq_content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse posuere orci quis neque auctor eleifend.
+                                    Fusce a iaculis risus, ut pharetra nunc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        {% filter shortcodes %}
+                            [contact-form-7 id="745" title="Apply volunteer"]
+                        {% endfilter %}
+                    </div>
+                </div>
+                <div class="programs_single programs_single-3">
+                    <h2>LONG TERM VOLUNTEER</h2>
+
+                    <div class="programs_faq">
+                        <div class="programs_faq_single">
+                            <div class="programs_faq_title">
+                                WHAT WE ARE CURRENTLY LOOKING FOR
+                            </div>
+                            <div class="programs_faq_content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse posuere orci quis neque auctor eleifend.
+                                    Fusce a iaculis risus, ut pharetra nunc.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="programs_faq_single">
+                            <div class="programs_faq_title">
+                                Why are we looking for Long-term volunteers?
+                            </div>
+                            <div class="programs_faq_content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse posuere orci quis neque auctor eleifend.
+                                    Fusce a iaculis risus, ut pharetra nunc.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="programs_faq_single">
+                            <div class="programs_faq_title">
+                                Doesn’t this place have enough volunteers?
+                            </div>
+                            <div class="programs_faq_content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse posuere orci quis neque auctor eleifend.
+                                    Fusce a iaculis risus, ut pharetra nunc.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="programs_faq_single">
+                            <div class="programs_faq_title">
+                                There are 2 full time positions that are currently available.
+                            </div>
+                            <div class="programs_faq_content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse posuere orci quis neque auctor eleifend.
+                                    Fusce a iaculis risus, ut pharetra nunc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        {% filter shortcodes %}
+                            [contact-form-7 id="747" title="Apply volunteer_copy"]
+                        {% endfilter %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    macron
+    {% for post in news %}
+        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+    {% endfor %}
 {% endblock %}
-

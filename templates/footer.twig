@@ -1,5 +1,62 @@
 <div class='footer'>
+    <div class='form'>
+        <a name="contact"></a>
+        <h2>{{ home.get_field('title_any_question') }}</h2>
+        <div class='contact__form'>
+            {{ home.get_field('shortcode_contact')|shortcodes }}
+        </div>
+    </div>
+    <div class='newsletter'>
+        <div class="newsletter__position">
+            <ul>
+                <div class="subscribe">
+                    <li><h2>{{ home.get_field('newsletter_title') }}</h2></li>
+                </div>
+                <div class="subscribe-form">
+                    {{ home.get_field('newsletter_content') }}
+                </div>
+            </ul>
+        </div>
+    </div>
+
     <div class='container-grid__last'>
-    {% include 'footer-menu.twig' %}
+        <div class='contact'>
+            <ul>
+                <li>
+                    <div class='contactus'>
+                        <h2>{{ home.get_field('title_contact_footer') }}</h2>
+                        <p>{{ home.get_field('adress_contact_footer') }}</p>
+                    </div>
+                </li>
+                {% if (home.get_field('image_location_footer')) %}
+                    <li>
+                        <div class='map'>
+                            <img src="{{ home.get_field('image_location_footer') }}"
+                                 alt="{{ home.get_field('adress_contact_footer') }}">
+                        </div>
+                    </li>
+                {% endif %}
+                {% if (home.get_field('social_media')) %}
+                    <li>
+                        <div class='social'>
+                            <h2>Follow us </h2>
+                            <ul>
+                                {% for item in home.get_field('social_media') %}
+                                    <li class='circle'>
+                                        <a href="{{ item.social_media_link }}">
+                                            <img src="{{ item.social_media_icon }}" alt="">
+                                        </a>
+                                    </li>
+
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class='container-grid__last'>
+        {% include 'footer-menu.twig' %}
     </div>
 </div>

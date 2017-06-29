@@ -19,7 +19,7 @@ body {
   position:relative;
   margin:auto;
   width:60%;
-  height:1200px;
+  /*height:1200px;*/
 }
 .grid-project{
   position:relative;
@@ -1457,3 +1457,167 @@ max-width:50px;
 .first-bloc{
   margin-top: -35px;
 }
+
+
+.container-grey {
+  background: #F7F7F7;
+  margin-top: 30px;
+  padding: 15px 0;
+  font-family: $font;
+  position: relative;
+}
+
+.programs_container {
+  font-family: $font;
+  margin-top: 50px;
+}
+
+.programs_title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.programs_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.programs_nav_item {
+  display: flex;
+  border: 3px solid #3F81C4;
+  border-radius: 30px;
+  margin: 0 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: #3F81C4;
+}
+
+.programs_nav_icon {
+  height: 18px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.programs_nav_icon_default {
+  display: block;
+}
+
+.programs_nav_icon_selected {
+  display: none;
+}
+
+.programs_nav_item.selected {
+  background: #3F81C4;
+  color: white;
+}
+
+.programs_nav_item.selected .programs_nav_icon_default {
+  display: none;
+}
+
+.programs_nav_item.selected .programs_nav_icon_selected {
+  display: block;
+}
+
+.programs_nav_label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.programs_content {
+  margin-top: 50px;
+}
+
+.container-grey .programs_content {
+  margin-top: 15px;
+}
+
+.programs_desc {
+  padding: 0 80px;
+  margin-bottom: 50px;
+}
+
+.programs_faq_single {
+  margin-bottom: 15px;
+}
+
+.programs_faq_title {
+  position: relative;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  font-size: 20px;
+  border-bottom: 1px solid #EEE;
+  text-transform: uppercase;
+  
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 5px;
+    border: 5px solid transparent;
+    border-top: 8px solid #AAA;
+  }
+
+  &.selected::after {
+    border: 5px solid transparent;
+    border-bottom: 8px solid #AAA;
+  }
+}
+
+.programs_faq_content {
+
+}
+
+/*
+.category_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.programs_category {
+  background-color: blue;
+  align-items: center;
+  width: 25%;
+  height: 40px;
+}
+
+.sub-wrapper {
+  margin: 25px 0;
+}
+
+dl {
+  line-height: 170%;
+  margin-bottom: 20px;
+}
+
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+.subcategories dt {
+  font-weight: 700;
+  background: #f1f1f1;
+  position: relative;
+  padding: 6px 14px;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+.subcategories dd {
+  display: none;
+}
+
+.subcategories dd {
+  padding: 0 0 15px 7px;
+}
+
+.subcategories .hover {
+  cursor: pointer;
+}
+*/

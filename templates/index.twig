@@ -1,34 +1,25 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class='sidenav' id='mySidenav'>
-    <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
-         alt="">
-    <div class="mobile-links">
-        {% include "header-menu.twig" %}
-    </div>
-</div>
-
-<div>
-    <h1 id='ctn-movable' class='home-presentation__text'>{{ home.get_field('home_presentation_title') }}
-        <span>{{ home.get_field('home_presentation_subtitle') }}</span></h1>
-    <div id='ctn-donate' class="mobile-donation">
-        Donate
-    </div>
-</div>
-<div class="header__border">
-    <img src="{{ home.get_field('header_background_cropper') }}">
-</div>
-<div class='container-grid'>
-    <div class='presentation__text'>
-        <p>{{ home.get_field('home_presentation_text') }}</p>
+    <div class='sidenav' id='mySidenav'>
+        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
+             alt="">
+        <div class="mobile-links">
+            {% include "header-menu.twig" %}
+        </div>
     </div>
 
-    {# This part is looped trough our values acf fields #}
-    <a name="whoweare"></a>
-    <div class='part__text'>
-        <h2 >{{ home.get_field('our_values_main_title') }}</h2>
+    <div>
+        <h1 id='ctn-movable' class='home-presentation__text'>{{ home.get_field('home_presentation_title') }}
+            <span>{{ home.get_field('home_presentation_subtitle') }}</span></h1>
+        <div id='ctn-donate' class="mobile-donation">
+            Donate
+        </div>
     </div>
+    <div class="header__border">
+        <img src="{{ home.get_field('header_background_cropper') }}">
+    </div>
+
     <div class='timeline-place'>
         <section id="timeline">
             <div class='timeline__border'></div>
@@ -72,14 +63,9 @@
                               <a href='{{ item.project_button_link }}'>  <p class='viewpro'>{{ item.project_button_name }}</p>  </a>
                             </li>
 
-                        </ul>
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
-</div>
-</div>
+
         {# This part is looped trough our values acf fields #}
+
         <div class='stat__number'>
             <div class='container-grid'>
                 <div class='stat-content'>
@@ -89,142 +75,144 @@
                     </div>
 
 
-                    <div class="stat__number-pos">
-                        {% for item in home.get_field('few_numbers') %}
-                            <ul>
-                                <li><h2>{{ item.number }}</h2></li>
-                                <li><h3>{{ item.number_description }}</h3></li>
-                            </ul>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
+        <a name="whoweare"></a>
+        <div class='part__text'>
+            <h2>{{ home.get_field('our_values_main_title') }}</h2>
+        </div>
+        <div class='timeline-place'>
+            <section id="timeline">
+                <div class='timeline__border'></div>
+                {% set i = 0 %}
+                {% for item in home.get_field('values') %}
+                    {% set i = i + 1 %}
+                    <div class="timeline-block">
+                        <div class="timeline-img">
+                            <img src="{{ item.value_icon }}" alt="{{ item.value_title }}">
+
+                        </div> <!-- cd-timeline-img -->
+                        <div class="timeline-content">
+                            <h2>{{ item.value_title }} <img onclick="myFunction{{ i }}()" id='myARROW{{ i }}'
+                                                            class='Arrow'
+                                                            src="{{ site.theme.link }}/dist/images/arrowleft.png"
+                                                            alt="" style="transform: rotate(0deg);"></h2>
+                            <h3>{{ item.value_subtitle }}</h3>
+                            <p id='myDIV{{ i }}'>{{ item.value_description }}</p>
+                        </div> <!-- cd-timeline-content -->
+                    </div> <!-- cd-timeline-block -->
+                {% endfor %}
+                <div class='timeline-end__border'></div>
+            </section>
         </div>
 
-        <div class='live container-grid__live'>
-            <div class='part__text help'>
-                <h2>{{ home.get_field('want_to_help_us_title') }}</h2>
-                <a href="{{ home.get_field('want_to_help_us_button_link') }}">
-                    <button type="button" name="button">{{ home.get_field('want_to_help_us_button_message') }}</button>
+
+        {# This part is from our projects acf fields #}
+        <div class='project'>
+            <h2>{{ home.get_field('our_projects_title') }}</h2>
+            <p>{{ home.get_field('our_projects_description') }}</p>
+            {% for item in home.get_field('our_project_banner') %}
+                <a href='{{ item.project_button_link }}'>
+                    <div class='project__box'>
+                        <img src="{{ item.project_banner_background }}" alt="">
+                        <h2>{{ item.project_name }}</h2>
+                        <div class="project__text">
+                            <ul>
+                                <li>
+                                    <p>{{ item.project_description }}</p>
+                                </li>
+                                <li>
+                                    <p class='viewpro'>{{ item.project_button_name }}</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </a>
-            </div>
-
-            <div class='part__text'>
-                <h2>Live</h2>
-            </div>
-
-            <div class='live-collection'>
-                <div class="live-container container-grid__live">
-                    <ul>
-                        <li><img src="{{ site.theme.link }}/dist/images/1.png" alt=""/></li>
-                        <li><img src="{{ site.theme.link }}/dist/images/2.png" alt=""/></li>
-                        <li><img src="{{ site.theme.link }}/dist/images/3.png" alt=""/></li>
-                        <li><img src="{{ site.theme.link }}/dist/images/4.png" alt=""/></li>
-                        <li><img src="{{ site.theme.link }}/dist/images/5.png" alt=""/></li>
-                        <li><img src="{{ site.theme.link }}/dist/images/6.png" alt=""/></li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-            <div class='partners'>
-                <a name="partners"></a>
-                <div class='part__text'>
-                    <h2>{{ home.partners_title }}</h2>
-                </div>
-                <p>{{ home.partners_description }}</p>
-                <ul>
-                    {% for item in home.get_field('partners') %}
-                        <li>
-                            <img src="{{ item.partner_image }}" alt="{{ item.partner_name }}"
-                                 id="{{ item.partner_name|sanitize }}">
-                        </li>
-                    {% endfor %}
-                </ul>
-
-            </div>
+            {% endfor %}
         </div>
-        <div class="partners__info">
-            <div class='container-grid__partners'>
-                    <p class='partner_text'>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-            </div>
-        </div>
-        <div class='form'>
-            <a name="contact"></a>
-            <h2>Any questions ?</h2>
-            <div class='contact__form'>
-                <select>
-                    <option value="" disabled selected>Select your option</option>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-                <input type="text" name="" value="" placeholder=" E-mail adress">
-                <ul>
-                    <li><input type="text" name="" value="" placeholder=" Name"></li>
-                    <li><input type="text" name="" value="" placeholder=" Surname"></li>
-                </ul>
-                <textarea name="name" rows="8" cols="80" placeholder="Your message..."></textarea>
-                <button class='button-ques' type="submit" name="button">Send questions</button>
-            </div>
-        </div>
-        <div class='newsletter'>
-            <div class="newsletter__position">
-                <ul>
-                    <div class="subscribe">
-                        <li><h2>Subscribe to our newsletter</h2></li>
-                    </div>
-                    <div class="subscribe-form">
-                        <li><input type="text" name="" value="" placeholder=" Name"></li>
-                        <li>
-                            <button class='button-subs' type="submit" name="button">Subscribe</button>
-                        </li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-
+    </div>
+    {# This part is looped trough our values acf fields #}
+    <div class='stat__number'>
         <div class='container-grid__last'>
-            <div class='contact'>
-                <ul>
-                    <li>
-                        <div class='contactus'>
-                            <h2>Contact us </h2>
-                            <p>Organic Farm Vang Vieng<br>
-                                P.O. Box 253<br>
-                                Vang Vieng<br>
-                                Vientiane Province, LAO P.D.R.<br>
-                            </p>
-                            <p>+856-(0)20-2292 8630 <span>- EEFA office</span><br>
-                                +856-(0)20 9194 9923 <span>- Sengkeo Frichitthavong</span><br>
-                                <span>office@eefalaos.org</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class='map'><img src="{{ site.theme.link }}/dist/images/map.png" alt=""></div>
+            <div class='stat-content'>
+                <div class='part__text'>
+                    <h2>{{ home.get_field('few_number_title') }}</h2>
+                    <p>{{ home.get_field('few_numbers_description') }}</p>
+                </div>
 
-                    </li>
-                    <li>
-                        <div class='social'>
-                            <h2>Follow us </h2>
-                            <ul>
-                                <li class='circle'><img src="{{ site.theme.link }}/dist/images/FACEBOOK.svg" alt="">
-                                </li>
-                                <li class='circle'><img src="{{ site.theme.link }}/dist/images/TWITTER.svg" alt=""></li>
-                                <li class='circle'><img src="{{ site.theme.link }}/dist/images/INSTAGRAM.svg" alt="">
-                                </li>
-                                <li class='circle'><img src="{{ site.theme.link }}/dist/images/YOUTUBE.svg" alt=""></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="stat__number-pos">
+                    {% for item in home.get_field('few_numbers') %}
+                        <ul>
+                            <li><h2>{{ item.number }}</h2></li>
+                            <li><h3>{{ item.number_description }}</h3></li>
+                        </ul>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-        {#  {% for post in posts %}
-        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-      {% endfor %}#}
-        {% endblock %}
+    </div>
+
+    <div class='live container-grid__live'>
+        <div class='part__text help'>
+            <h2>{{ home.get_field('want_to_help_us_title') }}</h2>
+            <a href="{{ home.get_field('want_to_help_us_button_link') }}">
+                <button type="button" name="button">{{ home.get_field('want_to_help_us_button_message') }}</button>
+            </a>
+        </div>
+
+        <div class='part__text'>
+            <h2>Live</h2>
+        </div>
+
+        <div class='live-collection'>
+            <div class="live-container container-grid__live">
+                <ul>
+                    <li><img src="{{ site.theme.link }}/dist/images/1.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/2.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/3.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/4.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/5.png" alt=""/></li>
+                    <li><img src="{{ site.theme.link }}/dist/images/6.png" alt=""/></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div class='partners'>
+            <a name="partners"></a>
+            <div class='part__text'>
+                <h2>{{ home.partners_title }}</h2>
+            </div>
+            <p>{{ home.partners_description }}</p>
+            <ul>
+                {% for item in home.get_field('partners') %}
+                    <li class="partners_logo partners_logo_{{ loop.index }}" data-tab="{{ loop.index }}">
+                        <img src="{{ item.partner_image }}" alt="{{ item.partner_name }}"
+                             id="{{ item.partner_name|sanitize }}">
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+    <div class="partners__info">
+        <div class='container-grid__partners'>
+            {% for item in home.get_field('partners') %}
+                <p class='partner_text partner_text_{{ loop.index }}'>
+                    {{ item.partners_description }}
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+    {% if(home.get_field('transparency_title')) %}
+        <div class="transparency">
+            <img src="{{ home.get_field('transparency_background') }}" alt="{{ home.get_field('transparency_title') }}">
+            <img src="{{ home.get_field('transparency_logo') }}" alt="transparency logo">
+            <h3>{{ home.get_field('transparency_title') }}</h3>
+            <a href="{{ home.get_field('transparency_button_link') }}">
+                <button>{{ home.get_field('transparency_button_text') }}</button>
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}
