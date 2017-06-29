@@ -19,62 +19,12 @@
     <div class="header__border">
         <img src="{{ home.get_field('header_background_cropper') }}">
     </div>
-
-    <div class='timeline-place'>
-        <section id="timeline">
-            <div class='timeline__border'></div>
-            {% set i = 0 %}
-            {% for item in home.get_field('values') %}
-                {% set i = i + 1 %}
-                <div class="timeline-block">
-                    <div class="timeline-img">
-                        <img src="{{ item.value_icon }}" alt="{{ item.value_title }}">
-
-                    </div> <!-- cd-timeline-img -->
-                    <div class="timeline-content">
-                        <h2>{{ item.value_title }} <img onclick="myFunction{{ i }}()" id='myARROW{{ i }}'
-                                                        class='Arrow'
-                                                        src="{{ site.theme.link }}/dist/images/arrowleft.png"
-                                                        alt="" style="transform: rotate(0deg);"></h2>
-                        <h3>{{ item.value_subtitle }}</h3>
-                        <p id='myDIV{{ i }}'>{{ item.value_description }}</p>
-                    </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
-            {% endfor %}
-            <div class='timeline-end__border'></div>
-        </section>
-    </div>
-
-    {# This part is from our projects acf fields #}
-    <div class='project'>
-        <h2>{{ home.get_field('our_projects_title') }}</h2>
-        <p>{{ home.get_field('our_projects_description') }}</p>
-        {% for item in home.get_field('our_project_banner') %}
-
-                <div class='project__box'>
-                    <img src="{{ item.project_banner_background }}" alt="">
-                    <h2>{{ item.project_name }}</h2>
-                    <div class="project__text">
-                        <ul>
-                            <li>
-                                <p>{{ item.project_description }}</p>
-                            </li>
-                            <li>
-                              <a href='{{ item.project_button_link }}'>  <p class='viewpro'>{{ item.project_button_name }}</p>  </a>
-                            </li>
-
+    <div class='container-grid'>
+        <div class='presentation__text'>
+            <p>{{ home.get_field('home_presentation_text') }}</p>
+        </div>
 
         {# This part is looped trough our values acf fields #}
-
-        <div class='stat__number'>
-            <div class='container-grid'>
-                <div class='stat-content'>
-                    <div class='part__text'>
-                        <h2>{{ home.get_field('few_number_title') }}</h2>
-                        <p>{{ home.get_field('few_numbers_description') }}</p>
-                    </div>
-
-
         <a name="whoweare"></a>
         <div class='part__text'>
             <h2>{{ home.get_field('our_values_main_title') }}</h2>
@@ -103,7 +53,6 @@
                 <div class='timeline-end__border'></div>
             </section>
         </div>
-
 
         {# This part is from our projects acf fields #}
         <div class='project'>
@@ -187,7 +136,7 @@
             <p>{{ home.partners_description }}</p>
             <ul>
                 {% for item in home.get_field('partners') %}
-                    <li class="partners_logo partners_logo_{{ loop.index }}" data-tab="{{ loop.index }}">
+                    <li>
                         <img src="{{ item.partner_image }}" alt="{{ item.partner_name }}"
                              id="{{ item.partner_name|sanitize }}">
                     </li>
@@ -199,7 +148,7 @@
     <div class="partners__info">
         <div class='container-grid__partners'>
             {% for item in home.get_field('partners') %}
-                <p class='partner_text partner_text_{{ loop.index }}'>
+                <p class='partner_text'>
                     {{ item.partners_description }}
                 </p>
             {% endfor %}
