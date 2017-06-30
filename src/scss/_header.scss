@@ -45,6 +45,7 @@ margin-left:-20px;
 
     li {
 margin-left:20px;
+
     }
     a{
       color:$white;
@@ -194,54 +195,6 @@ margin-top:-30px;
     }
 }
 
-@media screen and (min-width: 1000px) {
-  .projects{
-  opacity:0;
-  }
-  .projecting:hover .projects{
-  opacity: 1;
-  transition: 0.5s;
-  transition-timing-function: ease-in-out;
-  }
-}
-
-@media screen and (max-width:1000px)
-{
-
-  .projects{
-  margin-left:-25px;
-  }
-      .menu-navigation__button
-    {
-        display:none;
-    }
-    .mobile-donation{
-      margin-top:-60px;
-      display:block;
-    }
-    .menu-navigation__logo {
-    margin:auto;
-    }
-    .menu-navigation__elements{
-      display:none;
-    }
-    .home-presentation__text{
-      font-size:2em;
-       margin-left:50px;
-       span{
-         font-size:0.9em;
-       }
-    }
-    .header__border{
-      margin-top:30px;
-    }
-    .menu-mobile{
-      z-index:100;
-      display:block;
-      cursor:pointer;
-    }
-}
-
 .display-part{
   display:block;
 }
@@ -312,14 +265,15 @@ margin-top:-30px;
   margin-left:80%;
   margin-top:-34px;
 }
-
+.childsens a{
+  color:red;
+}
 .sidenav a {
   font-family:$font;
   text-transform: uppercase;
   font-weight:normal;
   margin: 25px -20px 0px -50px;
-  text-align:center;
-
+  text-align:left;
     text-decoration: none;
     font-size:1em;
     color:$white;
@@ -337,8 +291,8 @@ margin-top:-30px;
   padding: 20px;
 }
 #ctn-donate{
-  transition: margin-left .5s;
-  transition: 0.5s;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
 }
 
 
