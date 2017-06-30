@@ -1,4 +1,7 @@
 <div class='footer'>
+
+    {% if contact_form is not defined or contact_form != false %}
+
     <div class='form'>
         <a name="contact"></a>
         <h2>{{ home.get_field('title_any_question') }}</h2>
@@ -6,6 +9,9 @@
             {{ home.get_field('shortcode_contact')|shortcodes }}
         </div>
     </div>
+
+    {% endif %}
+
     <div class='newsletter'>
         <div class="newsletter__position">
             <ul>
