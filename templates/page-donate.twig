@@ -1,6 +1,9 @@
+{% set contact_form = false %}
+
 {% extends "basetwo.twig" %}
 
 {% block content %}
+
     <div class='sidenav' id='mySidenav'>
         <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
              alt="">
@@ -38,7 +41,9 @@
                     {% for item in post.get_field('donate-volunteer_category') %}
 
                         <div class="programs_single programs_single-{{ loop.index }}">
-                            <h2> {{ post.get_field('subtitle_help_us') }}</h2>
+
+                            <h2 class="programs_title programs_title_left">{{ item.subtitle_help_us }}</h2>
+
                             <div class="programs_faq">
                                 {% for subcategory in item.subcategory_help_us %}
                                     <div class="programs_faq_single">
@@ -51,6 +56,8 @@
                                     </div>
                                 {% endfor %}
                             </div>
+
+                            <h2 class="programs_title programs_title_small">{{ item.faq_title }}</h2>
 
                             {% filter shortcodes %}
                                 {{ item.form_help_us_shortcode }}
