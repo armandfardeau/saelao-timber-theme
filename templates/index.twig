@@ -111,21 +111,18 @@
         </div>
 
         <div class='part__text'>
-            <h2>Live</h2>
+            {% if(home.get_field('activate') == 'true') %}
+                <h2>{{ home.get_field('live_title') }}</h2>
+            {% endif %}
         </div>
 
         <div class='live-collection'>
             <div class="live-container container-grid__live">
-                <ul>
-                    <li><img src="{{ site.theme.link }}/dist/images/1.png" alt=""/></li>
-                    <li><img src="{{ site.theme.link }}/dist/images/2.png" alt=""/></li>
-                    <li><img src="{{ site.theme.link }}/dist/images/3.png" alt=""/></li>
-                    <li><img src="{{ site.theme.link }}/dist/images/4.png" alt=""/></li>
-                    <li><img src="{{ site.theme.link }}/dist/images/5.png" alt=""/></li>
-                    <li><img src="{{ site.theme.link }}/dist/images/6.png" alt=""/></li>
-
-                </ul>
-
+                {% if(home.get_field('activate') == 'true') %}
+                    {% filter shortcodes %}
+                        {{ home.get_field('live_shortcode') }}
+                    {% endfilter %}
+                {% endif %}
             </div>
 
         </div>
@@ -157,15 +154,15 @@
     </div>
 
     {% if(home.get_field('transparency_title')) %}
-    <div class='helpustwo'>
-        <div class='part__text help'>
-          <img src="{{ home.get_field('transparency_logo') }}" alt="transparency logo" class='transparency-laos'>
-            <h3>{{ home.get_field('transparency_title') }}</h3>
-            <a href="{{ home.get_field('transparency_button_link') }}">
-                <button>{{ home.get_field('transparency_button_text') }}</button>
-            </a>
+        <div class='helpustwo'>
+            <div class='part__text help'>
+                <img src="{{ home.get_field('transparency_logo') }}" alt="transparency logo" class='transparency-laos'>
+                <h3>{{ home.get_field('transparency_title') }}</h3>
+                <a href="{{ home.get_field('transparency_button_link') }}">
+                    <button>{{ home.get_field('transparency_button_text') }}</button>
+                </a>
+            </div>
         </div>
-    </div>
 
 
         </div>
