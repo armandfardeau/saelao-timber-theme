@@ -4,8 +4,8 @@
     <div class="content-wrapper">
         <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
             <section class="article-content">
-                <h2 class="article-h2">{{ post.title }}</h2>
-                <p class="article-body">
+                <h2 class="article-h2 part__text">{{ post.title }}</h2>
+                <p class="article-body .presentation__text">
                     {{ post.content }}
                 </p>
             </section>
@@ -16,8 +16,8 @@
                     <a href="{{ item.resources_link }}">
                         <div class="resources_item-inside">
                             <img src="{{ item.resources_background_image }}" alt="{{ item.resources_name }}">
-                            <h2>{{ item.resources_name }}</h2>
-                            <p>{{ item.resource_button_text }}</p>
+                            <h2 class="part__text">{{ item.resources_name }}</h2>
+                            <p class="viewpro">{{ item.resource_button_text }}</p>
                         </div>
                     </a>
                 </div>
