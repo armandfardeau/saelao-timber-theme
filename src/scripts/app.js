@@ -46,7 +46,7 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("headertransi").style.marginLeft = "250px";
     document.getElementById("ctn-movable").style.marginLeft = "250px";
-    document.getElementById("ctn-donate").style.marginLeft = "500px";
+    document.getElementById("ctn-donate").style.marginLeft = "700px";
 
 };
 
@@ -57,7 +57,7 @@ function closeNav() {
     document.getElementById("headertransi").style.marginLeft = "0";
     document.getElementById("ctn-donate").style.margin = "auto";
     document.getElementById("ctn-donate").style.marginTop = "-60px";
-    document.getElementById("ctn-movable").style.marginLeft = "50";
+    document.getElementById("ctn-movable").style.marginLeft = "50px";
 };
 
 jQuery(document).ready(function($) {
