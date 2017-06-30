@@ -887,9 +887,10 @@ align-items: center;
   background-size:cover;
   height:270px;
   h2{
-    font-size:2.2em;
-    color:$white;
-  }
+       font-size:2.2em;
+       color:$white;
+      text-shadow: 1px 1px #c2c2c2;
+     }
 }
 .teampart{
   position:relative;
@@ -1155,12 +1156,7 @@ margin-top: 50px;
   margin-top:50px !important;
 }
 
-@media screen and (max-width: 1000px)
-{
-  .project_plugin{
-    display:block;
-  }
-}
+
 @media screen and (max-width: 519px)
 {
   .project-process-items{
@@ -1292,23 +1288,7 @@ margin-top: 50px;
 .second-bloc{
 margin-left:20px;
 }
-@media screen and (max-width: 1000px)
-{
-  .project_extra{
-  display:block;
-  }
-  .second-bloc{
-  width:50%;
-  height:auto;
-  }
-  .project_extra{
-    img{
-      width: 150%;
-      height: auto;
-    }
-  }
 
-}
 .project_contact{
   margin-top:70px;
   width:100%;
@@ -1704,4 +1684,71 @@ dl, dt, dd {
   background-color:red;
   width:500px;
   height:300px;
+}
+
+
+@media screen and (max-width: 1565px)
+{
+  .menu-item-has-children a{
+    margin-left::-10px !important;
+  }
+}
+
+@media screen and (min-width: 1565px) {
+  .menu-item-has-children ul li a{
+      margin-left:-36px;
+      opacity:0;
+  }
+  .menu-item-has-children:hover ul li a{
+      opacity:1;
+      transition: 0.5s;
+      transition-timing-function: ease-in-out;
+  }
+  .menu-item-has-children:hover ul li a{
+      opacity:1;
+      transition: 0.5s;
+      transition-timing-function: ease-in-out;
+  }
+
+
+}
+.mobile-links ul li a{
+
+}
+
+@media screen and (max-width:1565px)
+{
+
+  .projects{
+  margin-left:-25px;
+  }
+      .menu-navigation__button
+    {
+        display:none;
+    }
+    .mobile-donation{
+      margin-top:-60px;
+      display:block;
+    }
+    .menu-navigation__logo {
+    margin:auto;
+    }
+    .menu-navigation__elements{
+      display:none;
+    }
+    .home-presentation__text{
+      font-size:2em;
+       margin-left:50px;
+       span{
+         font-size:0.9em;
+       }
+    }
+    .header__border{
+      margin-top:30px;
+    }
+    .menu-mobile{
+      z-index:100;
+      display:block;
+      cursor:pointer;
+    }
 }
