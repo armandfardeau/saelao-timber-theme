@@ -1,24 +1,37 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="content-wrapper">
-        <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-            <section class="article-content">
-                <h2 class="article-h2 part__text">{{ post.title }}</h2>
-                <p class="article-body .presentation__text">
-                    {{ post.content }}
-                </p>
-            </section>
-        </article>
+    <div class='sidenav' id='mySidenav'>
+        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
+             alt="">
+        <div class="mobile-links">
+            {% include "header-menu.twig" %}
+        </div>
+    </div>
+    &nbsp;
+    <div>
+        <h1 id='ctn-movable' class='home-presentation__text'>Educational resources</h1>
+        <div id='ctn-donate' class="mobile-donation">
+            Donate
+        </div>
+    </div>
+    <div class="header__bordertwo">
+        <img src="{{ home.get_field('header_background_cropper') }}">
+    </div>
+    <div class='teampart'>
+        <div class='presentation__text'>
+            <div class='part__text teamtext'>
+                <h2>{{ post.get_field('title_team') }}</h2>
+            </div>
+            <p>{{ post.content }}</p>
+        </div>
         <div class="resources_section">
             {% for item in post.get_field('resources') %}
                 <div class="resources_item">
-                    <a href="{{ item.resources_link }}">
-                        <div class="resources_item-inside">
-                            <img src="{{ item.resources_background_image }}" alt="{{ item.resources_name }}">
-                            <h2 class="part__text">{{ item.resources_name }}</h2>
-                            <p class="viewpro">{{ item.resource_button_text }}</p>
-                        </div>
+                    <a href="{{ item.resources_link }}" class="resources_item-inside">
+                        <img src="{{ item.resources_background_image }}" alt="{{ item.resources_name }}">
+                        <h2 class="part__text">{{ item.resources_name }}</h2>
+                        <p class="viewpro">{{ item.resource_button_text }}</p>
                     </a>
                 </div>
             {% endfor %}

@@ -1,26 +1,46 @@
+{% set contact_form = false %}
+
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="content-wrapper">
-        <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-            <section class="article-content">
-                <h1 class="article-h1">{{ post.title }}</h1>
-                <div class="article-body">
-                    {{ post.content }}
-                </div>
-            </section>
-        </article>
-    </div><!-- /content-wrapper -->
-    {% for item in post.get_field('downloadable_resources') %}
-        <div class="downloadable">
-
-            <h3>{{ item.downloadable_document_name }}</h3>
-            <p>{{ item.downloadable_document_presentation }}</p>
-            <p>{{ item.downloadable_document_date|date }}</p>
-            <img src="{{ item.downloadable_document_image }}" alt="{{ item.downloadable_document_name }}">
-            <a href="{{ item.downloadable_document_file }}" download>
-                <button>{{ post.get_field('button_link_title') }}</button>
-            </a>
+    <div class='sidenav' id='mySidenav'>
+        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
+             alt="">
+        <div class="mobile-links">
+            {% include "header-menu.twig" %}
         </div>
-    {% endfor %}
+    </div>
+    &nbsp;
+    <div>
+        <h1 id='ctn-movable' class='home-presentation__text'>Resources</h1>
+        <div id='ctn-donate' class="mobile-donation">
+            Donate
+        </div>
+    </div>
+    <div class="header__bordertwo">
+        <img src="{{ home.get_field('header_background_cropper') }}">
+    </div>
+    <div class='teampart'>
+        <div class='presentation__text'>
+            <div class='part__text teamtext'>
+                <h2>{{ post.title }}</h2>
+            </div>
+            <p>{{ post.content }}</p>
+        </div>
+        {% for item in post.get_field('downloadable_resources') %}
+            <div class="resource_item">
+                <div class="resource_thumbnail">
+                    <img class="resource_img" src="{{ item.downloadable_document_image }}" alt="{{ item.downloadable_document_name }}">
+                </div>
+                <div class="resource_infos">
+                    <h2 class="resource_title">{{ item.downloadable_document_name }}</h2>
+                    <p class="resource_date">{{ item.downloadable_document_date|date }}</p>
+                    <p class="resource_desc">{{ item.downloadable_document_presentation }}</p>
+                    <a class="resource_button" href="{{ item.downloadable_document_file }}" download>
+                        {{ post.get_field('button_link_title') }}
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
