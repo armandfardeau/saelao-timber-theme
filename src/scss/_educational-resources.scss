@@ -1,0 +1,24 @@
+.resources_section {
+  padding: 5em 0 10em 0;
+  display: flex;
+  justify-content: space-around;
+  border: 1px yellow solid;
+
+  .resources_item {
+    border: 1px green solid;
+
+    .resources_item-inside {
+      h2 {
+        position: relative;
+        top: -12em;
+        left: 1em;
+      }
+      p {
+        position: relative;
+        top: -7em;
+        left: 14em;
+      }
+    }
+  }
+
+}
