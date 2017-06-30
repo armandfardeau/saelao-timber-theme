@@ -1608,12 +1608,22 @@ max-width:50px;
     border-bottom: 8px solid #AAA;
   }
 }
-.selected{
+.selected {
   opacity:.7;
   transition:all 0.1s;
 }
 .programs_faq_content {
 
+}
+
+.wpcf7-submit {
+  background: #3f81c4;
+  color: #fff;
+  border: 2px solid #3f81c4;
+  border-radius: 30px;
+  margin: 0 10px;
+  padding: 10px;
+  width: 100px;
 }
 
 /*
