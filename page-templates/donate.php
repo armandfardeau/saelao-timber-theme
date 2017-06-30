@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: donate team
+ * Template Name: donate template
  * Description: donate model
  */
 /**
