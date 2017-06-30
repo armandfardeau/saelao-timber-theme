@@ -61,12 +61,6 @@ function closeNav() {
 };
 
 jQuery(document).ready(function($) {
-    // $('.subcategories dd').hide(); // Hide all DDs inside .faqs
-    // $('.subcategories dt').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}).click(function(){
-    //     // Add class "hover" on dt when hover
-    //     $(this).next().slideToggle(150); // Toggle dd when the respective dt is clicked
-    // });
-
     $('.programs_single:not(:first)').hide();
     $('.programs_faq_content').hide();
 
