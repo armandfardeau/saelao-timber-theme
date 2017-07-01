@@ -10,7 +10,7 @@
     </div>
     &nbsp;
     <div>
-        <h1 id='ctn-movable' class='home-presentation__text'>Resources</h1>
+        <h1 id='ctn-movable' class='home-presentation__text'>{{ post.title }}</h1>
         <div id='ctn-donate' class="mobile-donation">
             Donate
         </div>
@@ -20,12 +20,10 @@
     </div>
     <div class='teampart'>
         <div class='presentation__text'>
+            <div class='part__text teamtext'>
+                <h2>{{ post.title }}</h2>
+            </div>
             <p>{{ post.content }}</p>
-        </div>
-        <div class="post-list">
-            {% for post in news %}
-                {% include 'tease-post.twig' %}
-            {% endfor %}
         </div>
     </div>
 {% endblock %}

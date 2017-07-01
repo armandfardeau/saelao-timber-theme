@@ -30,7 +30,7 @@
 
                 <div class="programs_navigation">
                     {% for item in post.get_field('donate-volunteer_category') %}
-                        <a class="programs_nav_item" href="#program-{{ loop.index }}" data-tab="{{ loop.index }}">
+                        <a class="programs_nav_item" href="#tab-{{ loop.index }}" data-tab="{{ loop.index }}">
                             <h6 class="programs_nav_label">{{ item.category_help_us_name }}</h6>
                         </a>
                     {% endfor %}

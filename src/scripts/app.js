@@ -79,6 +79,16 @@ jQuery(document).ready(function($) {
         $('.programs_single-' + index).show();
     });
 
+
+    if (window.location.hash) {
+        $('.programs_nav_item').each(function (key, item) {
+            if ($(item).attr('href') === window.location.hash) {
+                $(item).click();
+            }
+        })
+    }
+
+
     $('.programs_faq_title').on('click', function (e) {
         var wasSelected = $(this).hasClass('selected');
         $('.programs_faq_content').hide();

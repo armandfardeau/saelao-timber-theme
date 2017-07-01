@@ -7,7 +7,12 @@
 
 <body class="{{ body_class }}" data-template="base.twig">
 <div id='headertransi'>
-    <img src="{{ home.get_field('header_background_image') }}" class='header'>
+
+    {% if header_background is defined %}
+        <img src="{{ header_background }}" class='header'>
+    {% else %}
+        <img src="{{ home.get_field('header_background_image') }}" class='header'>
+    {% endif %}
 
     {% block header %}
     <div class='menu-navigation'>

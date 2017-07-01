@@ -1,9 +1,26 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.get_preview(25)}}</p>
-		{% if post.thumbnail.src %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
+
+	<div class="resource_item">
+        {% if post.thumbnail.src %}
+            <div class="resource_thumbnail">
+                <img class="resource_img" src="{{post.thumbnail.src}}" alt="{{post.title}}">
+            </div>
+        {% else %}
+            <div class="resource_thumbnail">
+                <div class="resource_img resource_placeholder"></div>
+            </div>
+        {% endif %}
+		<div class="resource_infos">
+			<h2 class="resource_title">{{post.title}}</h2>
+			<p class="resource_desc">{{post.get_preview(25)}}</p>
+            <p>
+                <a class="resource_button" href="{{post.link}}">
+                    {{ post.get_field('button_link_title') }}
+                </a>
+            </p>
+		</div>
+	</div>
+
 {% endblock %}
