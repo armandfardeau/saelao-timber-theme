@@ -1,13 +1,14 @@
-<div class='footer-ctn'>
-  <div class="container-grid__last">
 {% if footerMenu %}
-    <ul>
-        {% for item in footerMenu.get_items %}
-            <li class="{{ item.classes | join(' ') }}">
-                <a href="{{ item.get_link }}">{{ item.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+
+    <div class="footer-bottom">
+        <div class="teampart">
+            <div class="footer-menu">
+                {% for item in footerMenu.get_items %}
+                    <div class="footer-menu-item {{ item.classes | join(' ') }}">
+                        <a href="{{ item.get_link }}" class="footer-link">{{ item.title }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endif %}
-</div>
-</div>
