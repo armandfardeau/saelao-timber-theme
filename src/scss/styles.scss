@@ -296,8 +296,13 @@
 }
 
 .programs_desc {
-  padding: 0 80px;
+  padding: 0 8%;
   margin-bottom: 50px;
+
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .programs_faq_single {
