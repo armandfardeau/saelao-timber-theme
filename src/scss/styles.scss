@@ -488,22 +488,21 @@ margin-top: -260px;
   background:$primaryBlue;
   color:$white;
 }
+.subscribe-form{
+  display:flex;
+}
 .newsletter{
   width:100%;
   height:70px;
   margin-top:40px;
   background:$primaryBlue;
-  input{
-    margin-left:20px;
-  }
   ul{
     display:flex;
     list-style-type:none;
   }
   .newsletter__position {
     width:800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
   }
   .subscribe-form{
     padding:16px;
@@ -794,10 +793,7 @@ margin-left:-200px;
   font-weight:lighter;
   font-size:0.95em;
 }
-.footer-ctn{
-  margin-left:120px;
-  display:none;
-}
+
 
 @media screen and (max-width: 800px)
 {
@@ -870,9 +866,6 @@ align-items: center;
     font-weight:bolder;
     color:$white;
   }
-}
-.last-footer{
-  margin-top:80px;
 }
 .helpus{
   margin-top:100px;
@@ -1802,3 +1795,10 @@ dl, dt, dd {
       cursor:pointer;
     }
 }
+
+
+
+.clear input{
+background:$white;
+color:$primaryBlue;
+width:120px;}
