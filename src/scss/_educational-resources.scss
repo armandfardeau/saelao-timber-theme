@@ -87,17 +87,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-shrink: 0;
   }
 
   .resource_img {
-    max-width: 300px;
+    max-width: 250px;
     width: 100%;
     height: auto;
 
     &.resource_placeholder {
       background: #CCC;
       padding-bottom: 55%;
-      width: 200px;
+      width: 250px;
     }
   }
 

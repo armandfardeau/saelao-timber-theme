@@ -171,20 +171,31 @@
         </div>
 
     </div>
-    <div class="project_partners grid-project-repeater">
-        <div class="project_partners_overview">
-            <h3>{{ post.get_field('title_partners') }}</h3>
-            <p>{{ post.get_field('partners_description') }}</p>
-        </div>
-        <div class="project_partners_repeater">
-            {% for item in post.get_field('partners') %}
-                <div>
-                    <img src="{{ item.partner_logo }}" alt="{{ item.partner_presentation }}">
-                    <h4>{{ item.partner_name }}</h4>
-                    <p class='partner-bloc'>{{ item.partner_presentation }}</p>
 
-                </div>
+    <div class="project_partners">
+        <div class="partners">
+            <div class='part__text'>
+                <h2>{{ post.get_field('title_partners') }}</h2>
+                <p>{{ post.get_field('partners_description') }}</p>
+            </div>
+
+        <ul>
+            {% for item in post.get_field('partners') %}
+                <li class="partners_logo partners_logo_{{ loop.index }}" data-tab="{{ loop.index }}">
+                    <img src="{{ item.partner_logo }}" alt="{{ item.partner_presentation }}">
+                </li>
             {% endfor %}
+        </ul>
+
+        <div class="partners__info">
+            <div class="project_partners_repeater container-grid__partners">
+                {% for item in post.get_field('partners') %}
+                        <p class='partner_text partner_text_{{ loop.index }}'>
+                            {{ item.partner_presentation }}
+                        </p>
+                {% endfor %}
+            </div>
         </div>
+
     </div>
 {% endblock %}

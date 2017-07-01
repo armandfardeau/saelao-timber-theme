@@ -370,7 +370,6 @@ body {
 }
 
 .form{
-margin-top: -260px;
   text-align:center;
   h2{
     font-family:$font;
@@ -770,11 +769,12 @@ margin-left:-200px;
   }
 }
 
-@media screen and (max-width: 930px){
+/*@media screen and (max-width: 930px){
   .footer{
     margin-top:680px;
   }
-}
+}*/
+
 @media screen and (max-width: 725px){
   .footer ul{
     margin-left:-90px;
