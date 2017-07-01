@@ -30,14 +30,15 @@
         {% for item in post.get_field('downloadable_resources') %}
             <div class="resource_item">
                 <div class="resource_thumbnail">
-                    <img class="resource_img" src="{{ item.downloadable_document_image }}" alt="{{ item.downloadable_document_name }}">
+                    <img class="resource_img" src="{{ item.downloadable_document_image }}"
+                         alt="{{ item.downloadable_document_name }}">
                 </div>
                 <div class="resource_infos">
                     <h2 class="resource_title">{{ item.downloadable_document_name }}</h2>
                     <p class="resource_date">{{ item.downloadable_document_date|date }}</p>
                     <p class="resource_desc">{{ item.downloadable_document_presentation }}</p>
                     <a class="resource_button" href="{{ item.downloadable_document_file }}" download>
-                        {{ post.get_field('button_link_title') }}
+                        <button class="download--button">{{ post.get_field('button_link_title') }}</button>
                     </a>
                 </div>
             </div>
