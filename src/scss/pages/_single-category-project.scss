@@ -82,6 +82,15 @@
   margin-top: 30px;
 }
 
+.project_process {
+  @media screen and (max-width: 733px) {
+    padding-left: 8vw;
+  }
+  @media screen and (max-width: 450px) {
+    padding-left: 0;
+  }
+}
+
 .project_process_overview {
   margin: auto;
   a {
@@ -116,6 +125,18 @@
   -webkit-justify-content: space-around; /* Safari 6.1+ */
   display: flex;
   justify-content: space-around;
+  @media screen and (max-width: 733px) {
+    display: inline-block;
+  }
+  @media screen and (max-width: 519px) {
+    margin-top: -5vh;
+  }
+  @media screen and (max-width: 320px) {
+    margin-left: -8vw;
+  }
+  @media screen and (max-width: 280px) {
+    margin-left: -14vw;
+  }
 }
 
 .project_process h3 {
@@ -123,6 +144,9 @@
   font-weight: bolder;
   font-size: 1.55em;
   text-transform: uppercase;
+  @media screen and (max-width: 355px) {
+    margin-left: 12vw;
+  }
 }
 
 .process-items {
@@ -161,12 +185,6 @@
 
 .circle-process img {
   margin-top: 16px;
-}
-
-@media screen and (max-width: 733px) {
-  .project-process-items {
-    display: inline-block;
-  }
 }
 
 .project_plugin {
@@ -253,12 +271,6 @@
     font-weight: bolder;
     font-size: 1.55em;
     text-transform: uppercase;
-  }
-}
-
-@media screen and (max-width: 519px) {
-  .project-process-items {
-    margin-top: -100px;
   }
 }
 
