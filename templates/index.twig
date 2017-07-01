@@ -60,8 +60,8 @@
             <h2>{{ home.get_field('our_projects_title') }}</h2>
             <p>{{ home.get_field('our_projects_description') }}</p>
             {% for item in home.get_field('our_project_banner') %}
-                <a href='{{ item.project_button_link }}'>
-                    <div class='project__box'>
+                <div class='project__box'>
+                    <a href='{{ item.project_button_link }}'>
                         <img src="{{ item.project_banner_background }}" alt="">
                         <h2>{{ item.project_name }}</h2>
                         <div class="project__text">
@@ -75,29 +75,25 @@
 
                             </ul>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </div>
     {# This part is looped trough our values acf fields #}
-    <div class='stat__number'>
-        <div class='container-grid__last'>
-            <div class='stat-content'>
-                <div class='part__text'>
-                    <h2>{{ home.get_field('few_number_title') }}</h2>
-                    <p>{{ home.get_field('few_numbers_description') }}</p>
-                </div>
-
-
-                <div class="stat__number-pos">
-                    {% for item in home.get_field('few_numbers') %}
-                        <ul>
-                            <li><h2>{{ item.number }}</h2></li>
-                            <li><h3>{{ item.number_description }}</h3></li>
-                        </ul>
-                    {% endfor %}
-                </div>
+    <div class='stats-container'>
+        <div class='teampart'>
+            <div class='stats-infos'>
+                <h2 class="stats-title">{{ home.get_field('few_number_title') }}</h2>
+                <p class="stats-desc">{{ home.get_field('few_numbers_description') }}</p>
+            </div>
+            <div class="stats-list">
+                {% for item in home.get_field('few_numbers') %}
+                    <div class="stat-item">
+                        <h2 class="stat-value">{{ item.number }}</h2>
+                        <h3 class="stat-label">{{ item.number_description }}</h3>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

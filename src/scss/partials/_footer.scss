@@ -79,6 +79,27 @@
           &:hover, &:focus, &:active {
             background: $primaryBlue;
           }
+
+          /* DO NOT GROUP THESE RULES */
+          &::placeholder {
+            color: #e2f0ff;
+            font-family: $font;
+          }
+
+          &::-moz-placeholder {
+            color: #e2f0ff;
+            font-family: $font;
+          }
+
+          &::-webkit-input-placeholder {
+            color: #e2f0ff;
+            font-family: $font;
+          }
+
+          &:-ms-input-placeholder {
+            color: #e2f0ff;
+            font-family: $font;
+          }
         }
       }
 

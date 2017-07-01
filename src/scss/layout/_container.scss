@@ -1,0 +1,48 @@
+
+.teampart {
+  position: relative;
+  margin: auto;
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .teampart {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.container-grid-project {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  /*height:1200px;*/
+}
+
+.grid-project {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  /*height: 1200px;*/
+}
+
+.grid-project-repeater {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  /*height: 400px;*/
+}
+
+.container-grid {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  /*height: 1300px;*/
+}
+
+.container-grid__partners {
+  position: relative;
+  margin: auto;
+  width: 940px;
+  height: 57px;
+}

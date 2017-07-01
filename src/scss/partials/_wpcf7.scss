@@ -1,0 +1,34 @@
+
+.wpcf7-form {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.wpcf7-form-control {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 2px solid #EAEAEA;
+  border-radius: 5px;
+
+  &.wpcf7-textarea {
+    height: auto;
+    resize: vertical;
+  }
+
+  &.wpcf7-submit {
+    background: #3f81c4;
+    color: #fff;
+    border-radius: 30px;
+    margin-left: auto;
+    padding: 10px 26px;
+    width: auto;
+    border: none;
+  }
+}
