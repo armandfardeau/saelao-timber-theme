@@ -2,10 +2,8 @@
 @import "base/variables";
 @import "base/fonts";
 @import "base/default";
-
 /* LAYOUT */
 @import "layout/container";
-
 /* PAGES */
 @import "pages/home";
 @import "pages/resources";
@@ -13,7 +11,6 @@
 @import "pages/single-category-project";
 @import "pages/our-team";
 @import "pages/404";
-
 /* PARTIALS */
 @import "partials/header";
 @import "partials/footer";
@@ -252,6 +249,18 @@
   padding: 10px;
   text-decoration: none;
   color: #3F81C4;
+  @media screen and (max-width: 520px) {
+    padding: 10px 40px 10px 44px;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 10px 30px 10px 36px;
+  }
+  @media screen and (max-width: 340px) {
+    padding: 10px 22px 10px 28px;
+  }
+  @media screen and (max-width: 300px) {
+    padding: 10px 15px 10px 19px;
+  }
 }
 
 .programs_nav_icon {
@@ -285,6 +294,10 @@
   margin: 0;
   font-size: 16px;
   font-weight: 300;
+
+  @media screen and (max-width: 520px) {
+    display: none;
+  }
 }
 
 .programs_content {
@@ -298,7 +311,6 @@
 .programs_desc {
   padding: 0 8%;
   margin-bottom: 50px;
-
 
   @media screen and (max-width: 768px) {
     padding: 0;
