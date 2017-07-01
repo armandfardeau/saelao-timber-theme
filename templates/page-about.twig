@@ -1,24 +1,7 @@
-{% extends "base.twig" %}
+{% extends "base-with-header.twig" %}
 
 {% block content %}
-    <div class='sidenav' id='mySidenav'>
-        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
-             alt="">
-        <div class="mobile-links">
-            {% include "header-menu.twig" %}
-        </div>
-    </div>
-    &nbsp;
-    <div>
-        <h1 id='ctn-movable' class='home-presentation__text'>{{ post.title }}</h1>
-        <div id='ctn-donate' class="mobile-donation">
-            Donate
-        </div>
-    </div>
-    <div class="header__bordertwo">
-        <img src="{{ home.get_field('header_background_cropper') }}">
-    </div>
-    <div class='teampart'>
+    <div class='container-grid'>
         <div class='presentation__text'>
             <div class='part__text teamtext'>
                 <h2>{{ post.title }}</h2>

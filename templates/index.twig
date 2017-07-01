@@ -1,24 +1,6 @@
-{% extends "base.twig" %}
+{% extends "base-with-header.twig" %}
 
 {% block content %}
-    <div class='sidenav' id='mySidenav'>
-        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
-             alt="">
-        <div class="mobile-links">
-            {% include "header-menu.twig" %}
-        </div>
-    </div>
-
-    <div>
-        <h1 id='ctn-movable' class='home-presentation__text'>{{ home.get_field('home_presentation_title') }}
-            <span>{{ home.get_field('home_presentation_subtitle') }}</span></h1>
-        <div id='ctn-donate' class="mobile-donation">
-            Donate
-        </div>
-    </div>
-    <div class="header__border">
-        <img src="{{ home.get_field('header_background_cropper') }}">
-    </div>
     <div class='container-grid'>
         <div class='presentation__text'>
             <p>{{ home.get_field('home_presentation_text') }}</p>
@@ -82,7 +64,7 @@
     </div>
     {# This part is looped trough our values acf fields #}
     <div class='stats-container'>
-        <div class='teampart'>
+        <div class='container-grid'>
             <div class='stats-infos'>
                 <h2 class="stats-title">{{ home.get_field('few_number_title') }}</h2>
                 <p class="stats-desc">{{ home.get_field('few_numbers_description') }}</p>
