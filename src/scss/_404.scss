@@ -1,0 +1,33 @@
+@import "default";
+
+.notFound {
+  @media screen and (min-width: 931px) {
+    padding-top:10vh;
+    padding-bottom: 30vh;
+  }
+  text-align: center;
+  font-family: $font;
+  color: #ffffff;
+  h2 {
+    font-size: 2em;
+  }
+  button {
+    background-color: $primaryYellow;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    width: auto;
+    min-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: bold;
+    font-family: $font;
+    border-radius: 50px;
+    margin-top: 2px;
+    cursor:pointer
+  }
+  p {
+    font-size: 1.5em;
+  }
+}

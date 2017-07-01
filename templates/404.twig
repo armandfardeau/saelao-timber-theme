@@ -1,5 +1,10 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
+    <div class="notFound">
+        <h2>{{ home.get_field('not_found_message') }}</h2>
+        <a href="{{ home.get_field('not_found_link') }}">
+            <button>{{ home.get_field('not_found_button_message') }}</button>
+        </a>
+    </div>
 {% endblock %}
