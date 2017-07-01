@@ -1,8 +1,6 @@
 .footer {
   width: 100%;
-  background: $primaryBlue;
-  height: 40px;
-  margin-top: 290px;
+  margin-top: 340px;
 
   ul {
     display: flex;
@@ -19,4 +17,26 @@
       margin-top: 10px;
     }
   }
+}
+.footer-ctn{
+  width: 100vw;/* <-- children as wide as the browser window (viewport) */
+  margin-left: calc(-1 * ((100vw - 100%) / 2));/* align left edge to the left edge of the viewport */
+  padding:5px;
+  height:50px;
+  color:$white;
+  font-weight:lighter;
+  font-family:$font;
+  text-transform:uppercase;
+  background:$primaryBlue;
+  ul{
+    margin:auto;
+  }
+}
+#mc_embed_signup_scroll{
+  display:flex;
+  align-items:center;
+align-items: flex-end;
+display: -webkit-flex;
+margin-top: -10px;
+display: flex;
 }
