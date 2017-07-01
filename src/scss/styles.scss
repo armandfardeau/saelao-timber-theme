@@ -97,6 +97,13 @@
     padding: 30px;
     font-size: 1.1em;
   }
+
+  /**
+  hide partners text for resolution below 650px
+  **/
+  @media screen and (max-width: 650px) {
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 900px) {
