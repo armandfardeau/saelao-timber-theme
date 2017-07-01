@@ -249,7 +249,6 @@
   }
 }
 
-
 @media screen and (max-width: 950px) {
   .container-grid__live {
     width: 500px;
@@ -257,7 +256,6 @@
   }
 
 }
-
 
 @media screen and (max-width: 970px) {
   .live {
@@ -369,4 +367,14 @@
   font-size: 18px;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+/** CONTACT FORM **/
+.wpcf7-mail-sent-ok {
+  border: 2px solid $primaryBlue !important;
+  border-radius: 5px;
+}
+
+.wpcf7-validation-errors{
+  border-radius: 5px;
 }
