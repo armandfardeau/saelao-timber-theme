@@ -49,6 +49,9 @@
   max-width: 550px;
   font-size: 0.95em;
   text-align: justify;
+  @media screen and (max-width: 734px) {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 1020px) {
