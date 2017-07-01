@@ -14,9 +14,9 @@
 
                 <h2 class="programs_title">{{ post.get_field('title_donate') }}</h2>
 
-                <div class="programs_navigation">
+                <div class="programs_navigation program_navigation_resize">
                     {% for item in post.get_field('donate-volunteer_category') %}
-                        <a class="programs_nav_item" href="#tab-{{ loop.index }}" data-tab="{{ loop.index }}">
+                        <a class="programs_nav_item program_nav_item_responsive" href="#tab-{{ loop.index }}" data-tab="{{ loop.index }}">
                             <h6 class="programs_nav_label">{{ item.category_help_us_name }}</h6>
                         </a>
                     {% endfor %}

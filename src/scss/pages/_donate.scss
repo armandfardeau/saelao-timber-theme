@@ -1,0 +1,38 @@
+.program_navigation_resize {
+  @media screen and (max-width: 771px) {
+    :nth-child(1), :nth-child(2) {
+      padding: 18px 40px !important;
+    }
+  }
+  @media screen and (max-width: 725px) {
+    :nth-child(1), :nth-child(2) {
+      padding: 8px 15px !important;
+    }
+    :nth-child(3) {
+      padding: 0 10px !important;
+    }
+  }
+  @media screen and (max-width: 470px) {
+    flex-direction: column;
+    a {
+      text-align: center;
+    }
+    :nth-child(1), :nth-child(2) {
+      padding: 10px 28px !important;
+      margin-bottom: 5px !important;
+    }
+    :nth-child(3) {
+      padding: 10px 10px !important;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    :nth-child(1), :nth-child(2) {
+      padding: 6px 20px !important;
+    }
+    :nth-child(3) {
+      padding: 0 0 !important;
+    }
+  }
+
+}
