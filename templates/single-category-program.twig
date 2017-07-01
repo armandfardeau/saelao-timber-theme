@@ -18,13 +18,13 @@
 
             <div class="programs_navigation">
                 {% for item in post.get_field('program_category') %}
-                    <a class="programs_nav_item h6_hide program_nav_item_resize" href="#tab-{{ loop.index }}"
+                    <a class="programs_nav_item program_nav_item_resize" href="#tab-{{ loop.index }}"
                        data-tab="{{ loop.index }}">
                         <img src="{{ item.category_icon_alt }}" alt="{{ item.category_name }}"
                              class="programs_nav_icon programs_nav_icon_default">
                         <img src="{{ item.category_icon }}" alt="{{ item.category_name }}"
                              class="programs_nav_icon programs_nav_icon_selected">
-                        <h6 class="programs_nav_label">{{ item.category_name }}</h6>
+                        <h6 class="programs_nav_label h6_hide">{{ item.category_name }}</h6>
                     </a>
                 {% endfor %}
             </div>
