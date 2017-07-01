@@ -1,0 +1,17 @@
+@import "default";
+
+.download--button {
+  background-color: $primaryBlue;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  height: 63px;
+  width: 300px;
+  text-decoration: none !important;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: $font;
+  border-radius: 50px;
+  display: block;
+  margin: 3vh auto auto auto;
+}
