@@ -179,8 +179,8 @@
                 </ul>
             </div>
 
-            <div class="partners__info">
-                <div class="project_partners_repeater container-grid">
+            <div class="partners__info project_partners_repeater">
+                <div class="container-grid">
                     {% for item in post.get_field('partners') %}
                         <p class='partner_text partner_text_{{ loop.index }}'>
                             {{ item.partner_presentation }}

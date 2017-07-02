@@ -55,7 +55,7 @@
 
 .resource_item {
 
-  margin-top: 30px;
+  margin: 30px 0;
   font-family: $font;
   display: flex;
   flex-direction: row;
@@ -109,6 +109,7 @@
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none;
   }
 
   @media screen and (max-width: 768px) {
@@ -124,18 +125,13 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      text-align: center;
+      margin-top: 15px;
     }
 
     .resource_img {
       max-width: 100%;
     }
-  }
-}
-
-.resource_item {
-  margin-bottom: 8vh;
-  .resource_button {
-    text-decoration: none;
   }
 }
 
@@ -150,21 +146,11 @@
   font-family: $font;
   border-radius: 50px;
   display: block;
-  margin: 3vh auto auto auto;
+  margin-top: 10px;
 
-  @media screen and (min-width: 725px) {
-    height: 63px;
-    width: 300px;
-  }
-  @media screen and (max-width: 725px) {
-    height: 7vh;
-    width: 25vw;
-  }
-  @media screen and (max-width: 500px) {
-    height: 8vh;
-    width: 30vw;
-  }
-  @media screen and (max-width: 440px) {
-    width: 50vw;
+  padding: 12px 32px;
+
+  @media screen and (max-width: 768px) {
+    margin: 10px auto auto;
   }
 }

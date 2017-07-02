@@ -70,7 +70,7 @@
     font-weight: lighter;
   }
   ul {
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
     list-style-type: none;
     padding-left: 0;
@@ -78,6 +78,7 @@
 
     li {
       flex-shrink: 1;
+      margin: 0 10px;
     }
 
     img {
