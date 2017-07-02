@@ -6,71 +6,70 @@
 {% endblock %}
 
 {% block content %}
-    <div class='container-grid-project'>
-        <div class='presentation__text'>
-            <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}"
-                 class='img-project'>
-            <p class='project-info'>{{ post.get_field('presentation_project') }}</p>
-        </div>
+<div class='container-grid-project'>
+    <div class='presentation__text'>
+        <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}"
+             class='img-project'>
+        <p class='project-info'>{{ post.get_field('presentation_project') }}</p>
+    </div>
 
 
-        <div class="project_container">
-            <div class="project_award">
-                <h3>{{ post.get_field('title_award') }}</h3>
-                <div class="award_container">
-                    <img src="{{ post.get_field('image_award') }}" alt="{{ post.get_field('text_award') }}"
-                         class="flex-award"/>
-                    <p class="flex-award">{{ post.get_field('text_award') }}</p>
-                </div>
+    <div class="project_container">
+        <div class="project_award">
+            <h3>{{ post.get_field('title_award') }}</h3>
+            <div class="award_container">
+                <img src="{{ post.get_field('image_award') }}" alt="{{ post.get_field('text_award') }}"
+                     class="flex-award"/>
+                <p class="flex-award">{{ post.get_field('text_award') }}</p>
             </div>
-
         </div>
-        <div class="project_process">
 
-            <h3>What is involved</h3>
-            <div class="project-process-items">
-                {% for item in post.get_field('process') %}
-                    <div class='process-items'>
-                        <div class="circle-process">
-                            <img src="{{ item.pictogram_process }}" alt="{{ item.title_process }}">
-                        </div>
-                        <h4>{{ item.title_process }}</h4>
-                        <h5>{{ item.subtitle_process }}</h5>
-                        <p>{{ item.text_process }}</p>
+    </div>
+    <div class="project_process">
+        <h3>What is involved</h3>
+        <div class="project-process-items">
+            {% for item in post.get_field('process') %}
+                <div class='process-items'>
+                    <div class="circle-process">
+                        <img src="{{ item.pictogram_process }}" alt="{{ item.title_process }}">
                     </div>
-                {% endfor %}
-            </div>
-            <div class="project_process_overview">
-                <a href="{{ post.get_field('link_button') }}">
-                    <button>{{ post.get_field('text_button') }}</button>
-                </a>
-            </div>
+                    <h4>{{ item.title_process }}</h4>
+                    <h5>{{ item.subtitle_process }}</h5>
+                    <p>{{ item.text_process }}</p>
+                </div>
+            {% endfor %}
         </div>
-    </div>
-
-    <div class='project_plugin'>
-
-        <div class="project_map">
-            <h3>{{ post.get_field('title_project_map') }}</h3>
-            <div class="imagemappro">
-                {% filter shortcodes %}
-                    [imp1]
-                {% endfilter %}
-            </div>
-        </div>
-    </div>
-
-
-    <div class="project_volunteer">
-        <div class="project_volunteer_overview">
-            <h3>{{ post.get_field('title_volunteer') }}</h3>
-            <a href="{{ post.get_field('button_volunteer_link') }}">
-                <button>{{ post.get_field('text_button_volunteer') }}</button>
+        <div class="project_process_overview">
+            <a href="{{ post.get_field('link_button') }}">
+                <button>{{ post.get_field('text_button') }}</button>
             </a>
         </div>
+    </div>
+</div>
 
-        <div class="project_volunteer_repeater">
-          <div class="project-volunteering">
+<div class='project_plugin'>
+
+    <div class="project_map">
+        <h3>{{ post.get_field('title_project_map') }}</h3>
+        <div class="imagemappro">
+            {% filter shortcodes %}
+                [imp1]
+            {% endfilter %}
+        </div>
+    </div>
+</div>
+
+
+<div class="project_volunteer">
+    <div class="project_volunteer_overview">
+        <h3>{{ post.get_field('title_volunteer') }}</h3>
+        <a href="{{ post.get_field('button_volunteer_link') }}">
+            <button>{{ post.get_field('text_button_volunteer') }}</button>
+        </a>
+    </div>
+
+    <div class="project_volunteer_repeater">
+        <div class="project-volunteering">
             {% for item in post.get_field('volunteer') %}
                 <div class='volunteer-items grid-project'>
                     <img class="picture_volunteer" src="{{ item.picture_volunteer }}"
@@ -81,81 +80,81 @@
                     <p class="testimony_volunteer">{{ item.testimony_volunteer }}</p>
                 </div>
             {% endfor %}
-            </div>
-        </div>
-
-        <div class="project_extra">
-            <div class="first-bloc organic">
-                <h3>{{ post.get_field('extra_title') }}</h3>
-                <div class="trip-info">
-                    <h4>{{ post.get_field('extra_subtitle') }}</h4>
-                    <p>{{ post.get_field('extra_presentation') }}</p>
-                </div>
-            </div>
-            <div class="second-bloc organics">
-                <img src="{{ post.get_field('extra_image') }}" alt="{{ post.get_field('extra_presentation') }}">
-            </div>
-
-        </div>
-
-    </div>
-    <div class="latest_news">
-        <h3>{{ post.get_field('latest_news_category_name') }}</h3>
-        <div class="news-feed">
-            {% for item in post.get_field('news') %}
-                <a href="{{ item.news_link }}">
-                    <div class='news-img'>
-                        <p class='news-info1'>{{ item.news_date | date("M Y") }}</p>
-                        <p class='news-info2'>{{ item.news_description }}</p>
-                        <img src="{{ item.news_background_image }}" alt="{{ item.news_date }}">
-
-                    </div>
-                </a>
-            {% endfor %}
         </div>
     </div>
 
-    <div class="project_contact">
-        <div class="project_contact-center">
-            <h3 class='contact-project_title'>{{ post.get_field('title_contact') }}</h3>
-            <div class="project_tst">
+    <div class="project_extra">
+        <div class="first-bloc organic">
+            <h3>{{ post.get_field('extra_title') }}</h3>
+            <div class="trip-info">
+                <h4>{{ post.get_field('extra_subtitle') }}</h4>
+                <p>{{ post.get_field('extra_presentation') }}</p>
+            </div>
+        </div>
+        <div class="second-bloc organics">
+            <img src="{{ post.get_field('extra_image') }}" alt="{{ post.get_field('extra_presentation') }}">
+        </div>
 
-                <div class="blue-separator">
+    </div>
+
+</div>
+<div class="latest_news">
+    <h3>{{ post.get_field('latest_news_category_name') }}</h3>
+    <div class="news-feed">
+        {% for item in post.get_field('news') %}
+            <a href="{{ item.news_link }}">
+                <div class='news-img'>
+                    <p class='news-info1'>{{ item.news_date | date("M Y") }}</p>
+                    <p class='news-info2'>{{ item.news_description }}</p>
+                    <img src="{{ item.news_background_image }}" alt="{{ item.news_date }}">
 
                 </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
 
-                <div class='first-bloc'>
-                  <div class="">
+<div class="project_contact">
+    <div class="project_contact-center">
+        <h3 class='contact-project_title'>{{ post.get_field('title_contact') }}</h3>
+        <div class="project_tst">
+
+            <div class="blue-separator">
+
+            </div>
+
+            <div class='first-bloc'>
+                <div class="">
                     <a href="{{ post.get_field('view_the_team_link') }}">
                         <button>
                             {{ post.get_field('view_the_team_title') }}
                         </button>
                     </a>
-                  </div>
-                    <div class='phone-project'>
-                        <h4>{{ post.get_field('phone_title') }}</h4>
-                        <p>{{ post.get_field('phone_content') }}</p>
-                    </div>
-                    <div class='email-project'>
-                        <h4>{{ post.get_field('email_title') }}</h4>
-                        <p>{{ post.get_field('email_content') }}</p>
-                    </div>
-                    <div class='mail-project'>
-                        <h4>{{ post.get_field('mail_title') }}</h4>
-                        <p>{{ post.get_field('mail_content') }}</p>
-                    </div>
                 </div>
-                <div class="second-bloc">
-                    <div class='location-project'>
-
-                        <img src="{{ post.get_field('location_image') }}" alt="location_content"/>
-
-                    </div>
+                <div class='phone-project'>
+                    <h4>{{ post.get_field('phone_title') }}</h4>
+                    <p>{{ post.get_field('phone_content') }}</p>
+                </div>
+                <div class='email-project'>
+                    <h4>{{ post.get_field('email_title') }}</h4>
+                    <p>{{ post.get_field('email_content') }}</p>
+                </div>
+                <div class='mail-project'>
+                    <h4>{{ post.get_field('mail_title') }}</h4>
+                    <p>{{ post.get_field('mail_content') }}</p>
                 </div>
             </div>
-            <p class='loc-info'>{{ post.get_field('location_content') }}</p>
+            <div class="second-bloc">
+                <div class='location-project'>
+
+                    <img src="{{ post.get_field('location_image') }}" alt="location_content"/>
+
+                </div>
+            </div>
         </div>
+        <p class='loc-info'>{{ post.get_field('location_content') }}</p>
     </div>
+</div>
 
 </div>
 
@@ -166,21 +165,21 @@
             <p>{{ post.get_field('partners_description') }}</p>
         </div>
 
-    <ul>
-        {% for item in post.get_field('partners') %}
-            <li class="partners_logo partners_logo_{{ loop.index }}" data-tab="{{ loop.index }}">
-                <img src="{{ item.partner_logo }}" alt="{{ item.partner_presentation }}">
-            </li>
-        {% endfor %}
-    </ul>
-
-    <div class="partners__info">
-        <div class="project_partners_repeater container-grid__partners">
+        <ul>
             {% for item in post.get_field('partners') %}
+                <li class="partners_logo partners_logo_{{ loop.index }}" data-tab="{{ loop.index }}">
+                    <img src="{{ item.partner_logo }}" alt="{{ item.partner_presentation }}">
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="partners__info">
+            <div class="project_partners_repeater container-grid__partners">
+                {% for item in post.get_field('partners') %}
                     <p class='partner_text partner_text_{{ loop.index }}'>
                         {{ item.partner_presentation }}
                     </p>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
-    </div>
-{% endblock %}
+        {% endblock %}

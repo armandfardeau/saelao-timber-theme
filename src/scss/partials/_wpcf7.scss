@@ -32,3 +32,12 @@
     border: none;
   }
 }
+
+.wpcf7-mail-sent-ok {
+  border: 2px solid $primaryBlue !important;
+  border-radius: 5px;
+}
+
+.wpcf7-validation-errors{
+  border-radius: 5px;
+}
