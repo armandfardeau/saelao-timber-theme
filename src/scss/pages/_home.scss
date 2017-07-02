@@ -169,7 +169,7 @@
 
 .live {
   h2 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
@@ -198,6 +198,9 @@
   background-image: url('../images/helpus.png');
   background-size: cover;
   height: 270px;
+  @media screen and (min-width: 1680px) {
+    height: 24vh;
+  }
   @media screen and (max-width: 442px) {
     height: 38vh;
   }
