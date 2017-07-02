@@ -1,26 +1,22 @@
 {% extends 'base.twig' %}
 
 {% block before_content %}
-    <div class='sidenav' id='mySidenav'>
-        <img onclick="closeNav()" id='crossmenu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/cross.png"
-             alt="">
-        <div class="mobile-links">
-            {% include "header-menu.twig" %}
-        </div>
-    </div>
-
     <div>
-        <h1 id='ctn-movable' class='home-presentation__text'>
+        <h1 class='home-presentation__text'>
             {% block header_content %}
             {{ home.get_field('home_presentation_title') }}
             <span>{{ home.get_field('home_presentation_subtitle') }}</span>
             {% endblock %}
         </h1>
-        <div id='ctn-donate' class="mobile-donation">
-            Donate
-        </div>
+        <a href="#" class="donate-button mobile-donate-button">
+            <span>I want to</span>
+            <span class="donate-bigger">donate</span>
+        </a>
     </div>
-    <div class="header__border">
-        <img src="{{ home.get_field('header_background_cropper') }}">
+    <div class="header__border" style="background-image: url({{ home.get_field('header_background_cropper') }})"></div>
+    <div class="page-with-header">
+{% endblock %}
+
+{% block after_content %}
     </div>
 {% endblock %}

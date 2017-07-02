@@ -1,4 +1,4 @@
-function myFunction1() {
+/*function myFunction1() {
     var x = document.getElementById('myDIV1');
     var y = document.getElementById('myARROW1');
     if (x.style.display === 'none') {
@@ -58,9 +58,14 @@ function closeNav() {
     document.getElementById("ctn-donate").style.margin = "auto";
     document.getElementById("ctn-donate").style.marginTop = "-60px";
     document.getElementById("ctn-movable").style.marginLeft = "50px";
-};
+};*/
 
 jQuery(document).ready(function($) {
+    $('.navbar-toggle').on('click', function (e) {
+       e.preventDefault();
+        $('.navbar').toggleClass('navbar-toggled');
+    });
+
     $('.programs_single:not(:first)').hide();
     $('.programs_faq_content').hide();
 

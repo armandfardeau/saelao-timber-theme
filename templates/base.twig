@@ -6,60 +6,54 @@
 {% endblock %}
 
 <body class="{{ body_class }}" data-template="base.twig">
-<div id='headertransi'>
+<header>
 
+    <div class="header"
     {% if header_background is defined %}
-        <img src="{{ header_background }}" class='header'>
+        style="background-image: url({{ header_background }})"
     {% elseif post.has_field('background_image_presentation') %}
-        <img src="{{ post.get_field('background_image_presentation') }}" alt="Background image presentation" class='header'>
+        style="background-image: url({{ post.get_field('background_image_presentation') }})"
     {% else %}
-        <img src="{{ home.get_field('header_background_image') }}" class='header'>
+        style="background-image: url({{ home.get_field('header_background_image') }})"
     {% endif %}
+    ></div>
 
     {% block header %}
-    <div class='menu-navigation'>
-        <div class="menu-mobile">
-            <img onclick="openNav()" id='menu' class='iconeMenu' src="{{ site.theme.link }}/dist/images/menu.png"
-                 alt="">
-        </div>
-        <div class='menu-navigation__logo'>
-            <a href="{{ site.url }}">
-                <img src="{{ home.get_field('header_logo') }}">
+
+    <div class="navbar">
+        <div class="navbar-header">
+            <a href="{{ site.url }}" class="navbar-brand">
+                <img class="navbar-brand-img" src="{{ home.get_field('header_logo') }}" alt="EEFA LAO">
             </a>
         </div>
-
-
-        <nav id="nav-main" class="menu-navigation__elements" role="navigation">
-            <div class='menu-navigation__elements'>
-                {% include "menu.twig" with {'headerMenu': headerMenu.get_items} %}
-            </div>
-        </nav><!-- #nav -->
-        <div class='menu-navigation__button'>
-            {% if(home.get_field('donate_button_link_type') == 'URL') %}
-                <a href="{{ home.get_field('donate_button_link') }}"
-                   class='button-donate__text'>{{ home.get_field('donate_button_message') }}</a>
-            {% elseif (home.get_field('donate_button_link_type') == 'SHORTCODE') %}
-                {{ home.get_field('donate_button_link') |shortcodes }}
-            {% endif %}
+        <nav class="navbar-menu">
+            {% include "menu.twig" with {'items': headerMenu.get_items} %}
+        </nav>
+        <div class="navbar-donate">
+            <a href="#" class="donate-button">
+                <span>I want to</span>
+                <span class="donate-bigger">donate</span>
+            </a>
+        </div>
+        <div class="navbar-mobile">
+            <img class="navbar-toggle navbar-toggle-on" src="{{ site.theme.link }}/dist/images/menu.png" />
+            <img class="navbar-toggle navbar-toggle-off" src="{{ site.theme.link }}/dist/images/cross.png" />
         </div>
     </div>
-</div>
+</header>
 
 {% endblock %}
-</div>
 
 <section id="content" role="main" class="content-wrapper">
-
     {% if title %}<h1>{{ title }}</h1>{% endif %}
     <div class="wrapper {{ sidebar_class }}">
-        {% block before_content %}
-        {% endblock %}
+        {% block before_content %}{% endblock %}
         {% block content %}
             Sorry, no content
         {% endblock %}
+        {% block after_content %}{% endblock %}
     </div>
 </section>
-
 
 {% block footer %}
     <footer id="footer">
