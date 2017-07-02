@@ -318,6 +318,9 @@
   background-image: url('../images/helpus.png');
   background-size: cover;
   height: 270px;
+  @media screen and (max-width: 442px) {
+    height: 38vh;
+  }
   h3 {
     font-size: 2em;
     text-transform: uppercase;
