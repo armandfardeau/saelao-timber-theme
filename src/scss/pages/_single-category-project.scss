@@ -242,6 +242,15 @@
     font-size: 1.55em;
     text-transform: uppercase;
   }
+  @media screen and(max-width: 368px) {
+    margin-top: 40vh;
+  }
+  @media screen and(max-width: 300px) {
+    margin-top: 45vh;
+  }
+  @media screen and(max-width: 300px) {
+    margin-top: 50vh;
+  }
 }
 
 .project_volunteer_overview {
