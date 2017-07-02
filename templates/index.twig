@@ -14,21 +14,19 @@
         <div class='timeline-place'>
             <section id="timeline">
                 <div class='timeline__border'></div>
-                {% set i = 0 %}
                 {% for item in home.get_field('values') %}
-                    {% set i = i + 1 %}
                     <div class="timeline-block">
                         <div class="timeline-img">
                             <img src="{{ item.value_icon }}" alt="{{ item.value_title }}">
-
                         </div> <!-- cd-timeline-img -->
+
                         <div class="timeline-content">
-                            <h2>{{ item.value_title }} <img onclick="myFunction{{ i }}()" id='myARROW{{ i }}'
-                                                            class='Arrow'
-                                                            src="{{ site.theme.link }}/dist/images/arrowleft.png"
-                                                            alt="" style="transform: rotate(0deg);"></h2>
+                            <h2>
+                                {{ item.value_title }}
+                                <img class='arrow-toggle-timeline' src="{{ site.theme.link }}/dist/images/arrowleft.png" />
+                            </h2>
                             <h3>{{ item.value_subtitle }}</h3>
-                            <p id='myDIV{{ i }}'>{{ item.value_description }}</p>
+                            <p class="desc-toggle-timeline">{{ item.value_description }}</p>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
                 {% endfor %}
@@ -80,7 +78,7 @@
         </div>
     </div>
 
-    <div class='live container-grid__live'>
+    <div class='live container-grid'>
         <div class='part__text help'>
             <h2>{{ home.get_field('want_to_help_us_title') }}</h2>
             <a href="{{ home.get_field('want_to_help_us_button_link') }}">
@@ -95,7 +93,7 @@
         </div>
 
         <div class='live-collection'>
-            <div class="live-container container-grid__live">
+            <div class="live-container">
                 {% if(home.get_field('activate') == 'true') %}
                     {% filter shortcodes %}
                         {{ home.get_field('live_shortcode') }}
@@ -122,7 +120,7 @@
         </div>
     </div>
     <div class="partners__info">
-        <div class='container-grid__partners'>
+        <div class='container-grid'>
             {% for item in home.get_field('partners') %}
                 <p class='partner_text partner_text_{{ loop.index }}'>
                     {{ item.partners_description }}

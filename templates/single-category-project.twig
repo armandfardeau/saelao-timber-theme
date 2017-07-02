@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<div class='container-grid-project'>
+<div class='container-grid'>
     <div class='presentation__text'>
         <img src="{{ post.get_field('logo_project') }}" alt="{{ post.get_field('project_title') }}"
              class='img-project'>
@@ -71,7 +71,7 @@
     <div class="project_volunteer_repeater">
         <div class="project-volunteering">
             {% for item in post.get_field('volunteer') %}
-                <div class='volunteer-items grid-project'>
+                <div class='volunteer-items container-grid'>
                     <img class="picture_volunteer" src="{{ item.picture_volunteer }}"
                          alt="{{ item.name_volunteer }}">
                     <h4 class="name_volunteer">{{ item.name_volunteer }}</h4>
@@ -174,7 +174,7 @@
         </ul>
 
         <div class="partners__info">
-            <div class="project_partners_repeater container-grid__partners">
+            <div class="project_partners_repeater container-grid">
                 {% for item in post.get_field('partners') %}
                     <p class='partner_text partner_text_{{ loop.index }}'>
                         {{ item.partner_presentation }}
