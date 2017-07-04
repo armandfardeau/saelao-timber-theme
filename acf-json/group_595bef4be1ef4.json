@@ -86,7 +86,7 @@
                 {
                     "key": "field_595bef4c7eff3",
                     "label": "gallery button text",
-                    "name": "gallery button text",
+                    "name": "gallery_button_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -122,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1499197653
+    "modified": 1499198166
 }
