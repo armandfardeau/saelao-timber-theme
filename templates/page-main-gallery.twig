@@ -1,0 +1,24 @@
+{% extends "base-with-header.twig" %}
+
+{% block content %}
+    <div class='container-grid'>
+        <div class='presentation__text'>
+            <div class='part__text teamtext'>
+                <h2>{{ post.title }}</h2>
+            </div>
+            <p>{{ post.content }}</p>
+        </div>
+        <div class="resources_section">
+            {% for item in post.get_field('gallery') %}
+                <div class="resources_item">
+                    <a href="{{ item.gallery_link }}" class="resources_item-inside">
+                        <img src="{{ item.gallery_background_image }}" alt="{{ item.gallery_name }}">
+                        <h2 class="part__text">{{ item.gallery_name }}</h2>
+                        <p class="viewpro">{{ item.gallery_button_text }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div><!-- /content-wrapper -->
+
+{% endblock %}
