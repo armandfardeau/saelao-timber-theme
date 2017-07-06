@@ -31,8 +31,8 @@
         </nav>
         <div class="navbar-donate">
             <a href="{{ home.get_field('donate_button_link') }}" class="donate-button">
-                <span>I want to</span>
-                <span class="donate-bigger">{{ home.get_field('donate_button_message') }}</span>
+                <span>{{ home.get_field('donate_button_message') }}</span>
+                <span class="donate-bigger">{{ home.get_field('donate_button_message_bigger') }}</span>
             </a>
         </div>
         <div class="navbar-mobile">
