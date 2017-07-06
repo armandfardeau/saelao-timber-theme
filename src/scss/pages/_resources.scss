@@ -93,6 +93,7 @@
     max-width: 250px;
     width: 100%;
     height: auto;
+    margin: 0 auto;
 
     &.resource_placeholder {
       background: #CCC;
@@ -127,10 +128,6 @@
       justify-content: center;
       text-align: center;
       margin-top: 15px;
-    }
-
-    .resource_img {
-      max-width: 100%;
     }
   }
 }
