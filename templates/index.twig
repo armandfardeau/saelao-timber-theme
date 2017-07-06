@@ -15,20 +15,27 @@
             <section id="timeline">
                 <div class='timeline__border'></div>
                 {% for item in home.get_field('values') %}
+
                     <div class="timeline-block">
                         <div class="timeline-img">
                             <img src="{{ item.value_icon }}" alt="{{ item.value_title }}">
                         </div> <!-- cd-timeline-img -->
 
                         <div class="timeline-content">
+
                             <h2>
                                 {{ item.value_title }}
-                                <img class='arrow-toggle-timeline' src="{{ site.theme.link }}/dist/images/arrowleft.png" />
+                                <img class='arrow-toggle-timeline'
+                                     src="{{ site.theme.link }}/dist/images/arrowleft.png"/>
                             </h2>
+
                             <h3>{{ item.value_subtitle }}</h3>
-                            <p class="desc-toggle-timeline">{{ item.value_description }}</p>
+                            <a href="{{ item.value_link }}">
+                                <p class="desc-toggle-timeline">{{ item.value_description }}</p>
+                            </a>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
+
                 {% endfor %}
                 <div class='timeline-end__border'></div>
             </section>
